@@ -480,7 +480,7 @@ a {
 
 /* Compact project images: use cover for screenshots like Logistics Routing */
 .compact-project-image {
-  height: 210px;
+  height: 245px;
   background: linear-gradient(135deg, #07131f, #0d1b2a);
 }
 
