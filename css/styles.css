@@ -271,40 +271,40 @@ a {
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .profile-panel {
   position: relative;
-  width: min(100%, 430px);
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: min(100%, 450px);
+  min-height: 560px;
+  padding: 24px;
 }
 
 .profile-panel::before {
   content: "";
   position: absolute;
-  inset: 24px;
-  border-radius: 34px;
+  inset: 0;
+  border-radius: 36px;
   background:
-    linear-gradient(rgba(56, 189, 248, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
     linear-gradient(135deg, #10233a, #0d1b2a 60%, #06111d);
-  background-size: 30px 30px, 30px 30px, auto;
+  background-size: 38px 38px, 38px 38px, auto;
   border: 1px solid rgba(56, 189, 248, 0.22);
-  box-shadow: var(--shadow);
+  box-shadow: 0 28px 60px rgba(13, 27, 42, 0.20);
 }
 
 .profile-image-wrap {
   position: relative;
   z-index: 2;
-  width: 285px;
-  height: 350px;
-  border-radius: 32px;
+  width: 290px;
+  height: 360px;
+  margin: 42px auto 0;
+  border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(234, 246, 245, 0.22);
-  box-shadow: 0 24px 55px rgba(13, 27, 42, 0.35);
+  border: 1px solid rgba(234, 246, 245, 0.18);
+  box-shadow: 0 26px 55px rgba(13, 27, 42, 0.30);
   background: var(--bg-dark);
 }
 
@@ -320,12 +320,14 @@ a {
 .profile-info-card {
   position: absolute;
   z-index: 3;
-  left: 18px;
-  right: 18px;
-  bottom: 32px;
-  padding: 18px;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: calc(100% - 56px);
+  max-width: 350px;
+  padding: 16px 18px 18px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.97);
   border: 1px solid var(--border);
   box-shadow: 0 18px 35px rgba(13, 27, 42, 0.18);
 }
@@ -333,49 +335,27 @@ a {
 .profile-info-card h3 {
   color: var(--bg-dark);
   line-height: 1.15;
-  margin: 6px 0;
+  margin: 6px 0 8px;
+  font-size: 0.98rem;
 }
 
 .profile-info-card p {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.90rem;
+  line-height: 1.45;
 }
 
 .profile-location {
   color: var(--primary);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
 
+/* hide floating labels */
 .floating-skill {
-  position: absolute;
-  z-index: 4;
-  padding: 10px 14px;
-  border-radius: 999px;
-  color: #e8fbff;
-  background: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(10px);
-  font-size: 0.82rem;
-  font-weight: 800;
-  box-shadow: 0 12px 28px rgba(13, 27, 42, 0.22);
-}
-
-.skill-one {
-  top: 86px;
-  left: 0;
-}
-
-.skill-two {
-  top: 150px;
-  right: 0;
-}
-
-.skill-three {
-  bottom: 145px;
-  left: 8px;
+  display: none;
 }
 
 /* SECTIONS */
@@ -840,32 +820,30 @@ a {
   }
 
   .profile-panel {
-    min-height: 470px;
-    margin-top: 18px;
+    width: 100%;
+    min-height: 500px;
+    padding: 18px;
   }
 
   .profile-image-wrap {
-    width: 245px;
+    width: 250px;
     height: 310px;
+    margin-top: 28px;
   }
 
-  .floating-skill {
-    font-size: 0.76rem;
+  .profile-info-card {
+    width: calc(100% - 36px);
+    max-width: 320px;
+    bottom: 18px;
+    padding: 14px 16px 16px;
   }
 
-  .skill-one {
-    top: 70px;
-    left: 6px;
+  .profile-info-card h3 {
+    font-size: 0.94rem;
   }
 
-  .skill-two {
-    top: 124px;
-    right: 4px;
-  }
-
-  .skill-three {
-    bottom: 132px;
-    left: 12px;
+  .profile-info-card p {
+    font-size: 0.88rem;
   }
 
   .map-gallery,
@@ -892,12 +870,17 @@ a {
     display: none;
   }
 
-  .profile-info-card {
-    left: 10px;
-    right: 10px;
+  .profile-panel {
+    min-height: 470px;
   }
 
-  .floating-skill {
-    display: none;
+  .profile-image-wrap {
+    width: 220px;
+    height: 280px;
+  }
+
+  .profile-info-card {
+    width: calc(100% - 24px);
+    max-width: 300px;
   }
 }
