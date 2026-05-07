@@ -123,68 +123,134 @@
     <!-- PROJECTS SECTION -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Featured Work</p>
-          <h2>GIS Automation & Spatial Analysis Projects</h2>
-          <p>
-            Selected projects showing how I use GIS, Python, databases, and web mapping
-            to make spatial workflows more practical and repeatable.
-          </p>
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">Featured Work</p>
+            <h2>GIS Automation & Spatial Analysis Projects</h2>
+            <p>
+              Selected projects showing how I use GIS, Python, databases, and web mapping
+              to make spatial workflows more practical and repeatable.
+            </p>
+          </div>
+
+          <a href="projects.html" class="section-link">View all projects →</a>
         </div>
 
         <div class="project-grid">
-          <article class="project-card featured-card">
-            <div class="project-tag">Flagship Project</div>
-            <h3>Geo Copilot: Natural Language GIS Tool</h3>
-            <p>
-              A custom ArcGIS Pro tool that translates natural language prompts into controlled
-              geoprocessing workflows using ArcPy and LLM-based reasoning.
-            </p>
-
-            <div class="tool-list">
-              <span>ArcGIS Pro</span>
-              <span>ArcPy</span>
-              <span>Python</span>
-              <span>LLMs</span>
+          <article class="project-card project-card-image featured-card">
+            <div class="project-image">
+              <img
+                src="assets/images/projects/geo-copilot/card-photo.png"
+                alt="Geo Copilot project thumbnail showing ArcGIS Pro connected with GPT-5 and Llama 3.1 8B"
+              />
             </div>
 
-            <a href="#" class="card-link">Case study coming soon →</a>
+            <div class="project-card-content">
+              <div class="project-tag">MGIS Capstone Project</div>
+
+              <h3>Geo Copilot: Natural Language GIS Tool</h3>
+
+              <p>
+                An MGIS capstone project exploring whether large language models can turn plain-English
+                GIS requests into reviewable ArcGIS Pro geoprocessing workflows. The tool reads active
+                map context, builds structured prompts, and lets users inspect commands before execution.
+              </p>
+
+              <div class="tool-list">
+                <span>ArcGIS Pro</span>
+                <span>ArcPy</span>
+                <span>GPT-5</span>
+                <span>Llama 3.1 8B</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/salman12haider13/arcgis-geo-copilot-llm"
+                  class="card-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View GitHub →
+                </a>
+                <a href="#" class="card-link muted-link">Case study coming soon</a>
+              </div>
+            </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-tag">Routing / Web GIS</div>
-            <h3>Logistics Routing MVP</h3>
-            <p>
-              A web-based routing demo using PostGIS, pgRouting, Flask, Docker, and Leaflet
-              to calculate route alternatives and blocked-zone scenarios.
-            </p>
-
-            <div class="tool-list">
-              <span>PostGIS</span>
-              <span>Flask</span>
-              <span>Leaflet</span>
-              <span>Docker</span>
+          <article class="project-card project-card-compact">
+            <div class="project-visual routing-visual" aria-hidden="true">
+              <span class="route-dot dot-one"></span>
+              <span class="route-dot dot-two"></span>
+              <span class="route-dot dot-three"></span>
+              <span class="route-path"></span>
             </div>
 
-            <a href="#" class="card-link">Project page coming soon →</a>
+            <div class="project-card-content">
+              <div class="project-tag">Routing / Web GIS</div>
+
+              <h3>Logistics Routing MVP</h3>
+
+              <p>
+                A web-based routing demo using PostGIS, pgRouting, Flask, Docker, and Leaflet
+                to calculate route alternatives and blocked-zone scenarios.
+              </p>
+
+              <div class="tool-list">
+                <span>PostGIS</span>
+                <span>Flask</span>
+                <span>Leaflet</span>
+                <span>Docker</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo"
+                class="card-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-tag">ArcPy Automation</div>
-            <h3>Drone Route Report Automation</h3>
-            <p>
-              An ArcGIS Pro toolbox that supports drone route planning, route reporting,
-              and repeatable analysis from structured input data.
-            </p>
-
-            <div class="tool-list">
-              <span>Python</span>
-              <span>ArcPy</span>
-              <span>Google Maps API</span>
+          <article class="project-card project-card-compact">
+            <div class="project-visual drone-visual" aria-hidden="true">
+              <span class="drone-grid"></span>
+              <span class="drone-path"></span>
+              <span class="drone-node node-one"></span>
+              <span class="drone-node node-two"></span>
             </div>
 
-            <a href="#" class="card-link">Project page coming soon →</a>
+            <div class="project-card-content">
+              <div class="project-tag">ArcPy Automation</div>
+
+              <h3>Drone Route Report Automation</h3>
+
+              <p>
+                An ArcGIS Pro toolbox that supports drone route planning, route reporting,
+                and repeatable analysis from structured input data.
+              </p>
+
+              <div class="tool-list">
+                <span>Python</span>
+                <span>ArcPy</span>
+                <span>Google Maps API</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/arcgis-drone-route-report-automation"
+                class="card-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
           </article>
+        </div>
+
+        <div class="section-bottom-action">
+          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
         </div>
       </div>
     </section>
@@ -357,6 +423,7 @@
 
         <div class="contact-links">
           <a href="mailto:Salman12haider13@gmail.com" class="btn btn-primary">Email Me</a>
+
           <a
             href="https://github.com/salman12haider13"
             class="btn btn-secondary"
@@ -365,6 +432,7 @@
           >
             GitHub
           </a>
+
           <a
             href="https://www.linkedin.com/in/salman12haider13"
             class="btn btn-secondary"

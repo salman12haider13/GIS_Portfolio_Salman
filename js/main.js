@@ -15,7 +15,9 @@ const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navMenu.classList.remove("active");
-    navToggle.setAttribute("aria-expanded", "false");
+    if (navMenu && navToggle) {
+      navMenu.classList.remove("active");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
   });
 });
