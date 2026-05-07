@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salman Haider | GIS Portfolio Demo</title>
-  <meta name="description" content="Demo GIS portfolio for Salman Haider - GIS Specialist, Spatial Analyst, ArcGIS and Python Automation." />
+
+  <title>Salman Haider | GIS Specialist & Spatial Analyst</title>
+  <meta
+    name="description"
+    content="Portfolio of Salman Haider, a GIS Specialist and Spatial Analyst focused on ArcGIS Pro, spatial analysis, cartography, Python automation, and geospatial workflows."
+  />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <nav class="navbar container">
-      <a href="#home" class="logo">
+      <a href="#home" class="logo" aria-label="Go to homepage">
         <span class="logo-mark">GIS</span>
         <span class="logo-text">Salman Haider</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -33,6 +41,7 @@
         <li><a href="#maps">Maps</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact" class="nav-button">Contact</a></li>
       </ul>
     </nav>
@@ -43,57 +52,69 @@
     <section class="hero" id="home">
       <div class="hero-grid container">
         <div class="hero-content">
-          <p class="eyebrow">GIS Portfolio Demo</p>
+          <p class="eyebrow">GIS Portfolio</p>
+
           <h1>Salman Haider</h1>
+
           <h2>GIS Specialist | Spatial Analyst | ArcGIS & Python Automation</h2>
+
           <p class="hero-text">
             I work with spatial data, maps, and GIS workflows to support better decision-making.
-            My work includes ArcGIS Pro analysis, cartography, Python automation, web mapping,
+            My work focuses on ArcGIS Pro analysis, cartography, Python automation, web mapping,
             and applied geospatial projects.
           </p>
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#maps" class="btn btn-secondary">View Map Gallery</a>
+            <a
+              href="assets/docs/Salman_Haider_CV.pdf"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Download CV
+            </a>
           </div>
 
           <div class="hero-stats">
             <div>
-              <strong>8</strong>
-              <span>GitHub Projects</span>
+              <strong>ArcGIS Pro</strong>
+              <span>Spatial analysis & mapping</span>
             </div>
+
             <div>
-              <strong>20+</strong>
-              <span>Static Maps</span>
+              <strong>Python / ArcPy</strong>
+              <span>GIS workflow automation</span>
             </div>
+
             <div>
-              <strong>GIS + Python</strong>
-              <span>Main Focus</span>
+              <strong>Cartography</strong>
+              <span>Static maps & visual storytelling</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="GIS themed visual card">
-          <div class="map-panel">
-            <div class="map-topbar">
-              <span></span><span></span><span></span>
-              <p>Spatial Workflow Preview</p>
+        <div class="hero-visual" aria-label="Professional headshot and GIS skill highlights">
+          <div class="profile-panel">
+            <div class="profile-image-wrap">
+              <img
+                src="assets/images/profile/salman-headshot.png"
+                alt="Salman Haider professional headshot"
+                class="profile-photo"
+                draggable="false"
+              />
             </div>
-            <div class="fake-map">
-              <div class="grid-overlay"></div>
-              <div class="route-line"></div>
-              <div class="point point-a"></div>
-              <div class="point point-b"></div>
-              <div class="point point-c"></div>
-              <div class="layer-card layer-one">ArcGIS Pro</div>
-              <div class="layer-card layer-two">Python / ArcPy</div>
-              <div class="layer-card layer-three">Spatial Analysis</div>
+
+            <div class="profile-info-card">
+              <span class="profile-location">Calgary, AB</span>
+              <h3>GIS Specialist & Spatial Analyst</h3>
+              <p>ArcGIS Pro · Python · Spatial Analysis · Web Mapping</p>
             </div>
-            <div class="coordinate-strip">
-              <span>51.0447° N</span>
-              <span>114.0719° W</span>
-              <span>Calgary, AB</span>
-            </div>
+
+            <div class="floating-skill skill-one">ArcGIS Pro</div>
+            <div class="floating-skill skill-two">Python / ArcPy</div>
+            <div class="floating-skill skill-three">Spatial Analysis</div>
           </div>
         </div>
       </div>
@@ -106,7 +127,7 @@
           <p class="eyebrow">Featured Work</p>
           <h2>GIS Automation & Spatial Analysis Projects</h2>
           <p>
-            A few selected projects showing how I use GIS, Python, databases, and web mapping
+            Selected projects showing how I use GIS, Python, databases, and web mapping
             to make spatial workflows more practical and repeatable.
           </p>
         </div>
@@ -119,13 +140,15 @@
               A custom ArcGIS Pro tool that translates natural language prompts into controlled
               geoprocessing workflows using ArcPy and LLM-based reasoning.
             </p>
+
             <div class="tool-list">
               <span>ArcGIS Pro</span>
               <span>ArcPy</span>
               <span>Python</span>
               <span>LLMs</span>
             </div>
-            <a href="#" class="card-link">View demo case study →</a>
+
+            <a href="#" class="card-link">Case study coming soon →</a>
           </article>
 
           <article class="project-card">
@@ -135,13 +158,15 @@
               A web-based routing demo using PostGIS, pgRouting, Flask, Docker, and Leaflet
               to calculate route alternatives and blocked-zone scenarios.
             </p>
+
             <div class="tool-list">
               <span>PostGIS</span>
               <span>Flask</span>
               <span>Leaflet</span>
               <span>Docker</span>
             </div>
-            <a href="#" class="card-link">View project →</a>
+
+            <a href="#" class="card-link">Project page coming soon →</a>
           </article>
 
           <article class="project-card">
@@ -151,12 +176,14 @@
               An ArcGIS Pro toolbox that supports drone route planning, route reporting,
               and repeatable analysis from structured input data.
             </p>
+
             <div class="tool-list">
               <span>Python</span>
               <span>ArcPy</span>
               <span>Google Maps API</span>
             </div>
-            <a href="#" class="card-link">View project →</a>
+
+            <a href="#" class="card-link">Project page coming soon →</a>
           </article>
         </div>
       </div>
@@ -227,16 +254,19 @@
             <p>Cleaning, projections, spatial data management, and database-ready GIS layers.</p>
             <span>ArcGIS Pro · QGIS · SQL · PostgreSQL</span>
           </div>
+
           <div class="skill-card">
             <h3>Spatial Analysis</h3>
             <p>Network analysis, raster/vector workflows, MCDA, suitability, and accessibility.</p>
             <span>ArcGIS Spatial Analyst · Remote Sensing · GEE</span>
           </div>
+
           <div class="skill-card">
             <h3>Automation</h3>
             <p>Python scripts and ArcPy tools that reduce repetitive GIS work.</p>
             <span>Python · ArcPy · Toolboxes · Automation</span>
           </div>
+
           <div class="skill-card">
             <h3>Web Mapping</h3>
             <p>Simple interactive maps, dashboards, and web-based spatial demos.</p>
@@ -254,7 +284,7 @@
           <h2>GIS experience across analysis, mapping, and automation</h2>
           <p>
             My work combines academic GIS training, professional mapping experience,
-            and practical automation projects. This section would later connect to the full CV.
+            and practical automation projects.
           </p>
         </div>
 
@@ -264,16 +294,52 @@
             <h3>MGIS, University of Calgary</h3>
             <p>Graduate-level GIS, spatial analysis, cartography, databases, and applied projects.</p>
           </div>
+
           <div class="timeline-item">
             <span>2021 – 2024</span>
             <h3>GIS Coordinator, Franchise Ready</h3>
             <p>Territory mapping, demographic analysis, site selection, and GIS workflow automation.</p>
           </div>
+
           <div class="timeline-item">
             <span>2021</span>
             <h3>GIS Associate, Greenage Services</h3>
             <p>Cadastral mapping, satellite imagery processing, and GIS database support.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Certificates</p>
+          <h2>Professional Training & Certifications</h2>
+          <p>
+            A selection of GIS, cartography, Python, SQL, and environmental training certificates.
+            Certificate previews will be added here as the portfolio is built.
+          </p>
+        </div>
+
+        <div class="certificate-preview-grid">
+          <article class="certificate-card">
+            <span>LinkedIn Learning</span>
+            <h3>Learning ArcGIS Python Scripting</h3>
+            <p>March 2023</p>
+          </article>
+
+          <article class="certificate-card">
+            <span>LinkedIn Learning</span>
+            <h3>PostgreSQL: Advanced Queries</h3>
+            <p>March 2023</p>
+          </article>
+
+          <article class="certificate-card">
+            <span>Esri</span>
+            <h3>ArcGIS Pro Basics</h3>
+            <p>September 2024</p>
+          </article>
         </div>
       </div>
     </section>
@@ -284,13 +350,29 @@
         <p class="eyebrow">Contact</p>
         <h2>Let’s connect</h2>
         <p>
-          This demo section can later include your real email, GitHub, LinkedIn, resume download,
-          and a short message for recruiters or GIS teams.
+          I’m open to GIS Analyst, GIS Specialist, spatial analysis, cartography,
+          and GIS automation opportunities. Feel free to reach out if my work fits
+          your team or project.
         </p>
+
         <div class="contact-links">
-          <a href="mailto:example@email.com" class="btn btn-primary">Email Me</a>
-          <a href="#" class="btn btn-secondary">GitHub</a>
-          <a href="#" class="btn btn-secondary">LinkedIn</a>
+          <a href="mailto:Salman12haider13@gmail.com" class="btn btn-primary">Email Me</a>
+          <a
+            href="https://github.com/salman12haider13"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/salman12haider13"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
@@ -298,7 +380,7 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© 2026 Salman Haider. Demo portfolio layout.</p>
+      <p>© 2026 Salman Haider. GIS Portfolio.</p>
       <p>Built with HTML, CSS, and JavaScript.</p>
     </div>
   </footer>
