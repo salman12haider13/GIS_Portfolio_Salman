@@ -46,3 +46,122 @@ if (filterButtons.length && filterItems.length) {
     });
   });
 }
+
+// Homepage map showcase slider
+const maps = [
+  {
+    title: "Paradise Valley Trail Run Routes",
+    category: "Terrain / Route Mapping",
+    text:
+      "A terrain-focused race route map showing 5K and 10K trail routes with elevation, route context, and supporting map elements.",
+    focus: "Route design, terrain, elevation profile",
+    tools: "ArcGIS Pro, cartographic layout",
+    image: "assets/images/maps/previews/paradise-valley-trail-run.jpg",
+    full: "assets/images/maps/full/paradise-valley-trail-run.jpg",
+    pdf: "assets/images/maps/pdf/paradise-valley-trail-run.pdf",
+    alt: "Paradise Valley Trail Run route map preview"
+  },
+  {
+    title: "Heathrow’s Global Reach",
+    category: "Flowline Cartography",
+    text:
+      "A global aviation flow map showing Heathrow’s international connections using a dark basemap, curved flowlines, and strong visual hierarchy.",
+    focus: "Flowlines, global connections, visual hierarchy",
+    tools: "ArcGIS Pro, cartographic design",
+    image: "assets/images/maps/previews/heathrow-global-reach.jpg",
+    full: "assets/images/maps/full/heathrow-global-reach.jpg",
+    pdf: "assets/images/maps/pdf/heathrow-global-reach.pdf",
+    alt: "Heathrow global reach flowline map preview"
+  },
+  {
+    title: "Calgary Park Accessibility",
+    category: "Urban GIS / Accessibility",
+    text:
+      "An urban GIS map exploring park accessibility and social deprivation patterns in Calgary, designed for planning and equity-focused interpretation.",
+    focus: "Accessibility, social deprivation, urban planning",
+    tools: "ArcGIS Pro, spatial analysis",
+    image: "assets/images/maps/previews/calgary-park-accessibility.jpg",
+    full: "assets/images/maps/full/calgary-park-accessibility.jpg",
+    pdf: "assets/images/maps/pdf/calgary-park-accessibility.pdf",
+    alt: "Calgary park accessibility map preview"
+  },
+  {
+    title: "Flood Affected Settlements of Chiniot",
+    category: "Disaster Mapping",
+    text:
+      "A flood impact map showing affected settlements, district context, satellite imagery, and supporting location information for disaster mapping.",
+    focus: "Flood impact, settlements, satellite imagery",
+    tools: "ArcGIS Pro, remote sensing context",
+    image: "assets/images/maps/previews/flood-affected-settlements.jpg",
+    full: "assets/images/maps/full/flood-affected-settlements.jpg",
+    pdf: "assets/images/maps/pdf/flood-affected-settlements.pdf",
+    alt: "Flood affected settlements of Chiniot map preview"
+  }
+];
+
+let currentMapIndex = 0;
+
+const mapImage = document.querySelector("#mapShowcaseImage");
+const mapCategory = document.querySelector("#mapShowcaseCategory");
+const mapTitle = document.querySelector("#mapShowcaseTitle");
+const mapText = document.querySelector("#mapShowcaseText");
+const mapFocus = document.querySelector("#mapShowcaseFocus");
+const mapTools = document.querySelector("#mapShowcaseTools");
+const mapFull = document.querySelector("#mapShowcaseFull");
+const mapPdf = document.querySelector("#mapShowcasePdf");
+const prevMap = document.querySelector("#prevMap");
+const nextMap = document.querySelector("#nextMap");
+const mapThumbButtons = document.querySelectorAll(".map-thumb-button");
+
+function updateMapShowcase(index) {
+  if (!mapImage || !mapCategory || !mapTitle || !mapText || !mapFocus || !mapTools) {
+    return;
+  }
+
+  const selectedMap = maps[index];
+
+  mapImage.src = selectedMap.image;
+  mapImage.alt = selectedMap.alt;
+  mapCategory.textContent = selectedMap.category;
+  mapTitle.textContent = selectedMap.title;
+  mapText.textContent = selectedMap.text;
+  mapFocus.textContent = selectedMap.focus;
+  mapTools.textContent = selectedMap.tools;
+
+  if (mapFull) {
+    mapFull.href = selectedMap.full;
+  }
+
+  if (mapPdf) {
+    mapPdf.href = selectedMap.pdf;
+  }
+
+  mapThumbButtons.forEach((button) => {
+    const buttonIndex = Number(button.dataset.mapIndex);
+
+    if (buttonIndex === index) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+}
+
+if (prevMap && nextMap && mapThumbButtons.length) {
+  prevMap.addEventListener("click", () => {
+    currentMapIndex = (currentMapIndex - 1 + maps.length) % maps.length;
+    updateMapShowcase(currentMapIndex);
+  });
+
+  nextMap.addEventListener("click", () => {
+    currentMapIndex = (currentMapIndex + 1) % maps.length;
+    updateMapShowcase(currentMapIndex);
+  });
+
+  mapThumbButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      currentMapIndex = Number(button.dataset.mapIndex);
+      updateMapShowcase(currentMapIndex);
+    });
+  });
+}

@@ -10,7 +10,6 @@
     content="Portfolio of Salman Haider, a GIS Specialist and Spatial Analyst focused on ArcGIS Pro, spatial analysis, cartography, Python automation, and geospatial workflows."
   />
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,8 +17,8 @@
     rel="stylesheet"
   >
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/map-showcase.css" />
 </head>
 
 <body>
@@ -37,7 +36,7 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="#maps">Maps</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -259,50 +258,100 @@
       </div>
     </section>
 
-    <!-- MAP GALLERY SECTION -->
+    <!-- MAP SHOWCASE SECTION -->
     <section class="section section-soft" id="maps">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Cartography</p>
-          <h2>Static Maps & Spatial Visualization</h2>
-          <p>
-            Selected map layouts showing urban analysis, environmental mapping, routing,
-            health geography, reference mapping, and disaster mapping.
-          </p>
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">Cartography</p>
+            <h2>Static Maps & Spatial Visualization</h2>
+            <p>
+              Selected map layouts showing cartography, spatial analysis, urban GIS,
+              environmental mapping, transportation, and disaster mapping.
+            </p>
+          </div>
+
+          <a href="cartography.html" class="section-link">View all maps →</a>
         </div>
 
-        <div class="map-gallery">
-          <article class="map-card">
-            <div class="map-thumb contour-thumb"></div>
-            <div class="map-card-body">
-              <span>Terrain / Route Mapping</span>
-              <h3>Paradise Valley Trail Run Routes</h3>
-            </div>
-          </article>
+        <div class="map-showcase" aria-label="Featured static map showcase">
+          <div class="map-showcase-preview">
+            <img
+              id="mapShowcaseImage"
+              src="assets/images/maps/previews/paradise-valley-trail-run.jpg"
+              alt="Paradise Valley Trail Run route map preview"
+            />
+          </div>
 
-          <article class="map-card">
-            <div class="map-thumb flight-thumb"></div>
-            <div class="map-card-body">
-              <span>Flowline Cartography</span>
-              <h3>Heathrow’s Global Reach</h3>
-            </div>
-          </article>
+          <div class="map-showcase-info">
+            <span class="map-category" id="mapShowcaseCategory">Terrain / Route Mapping</span>
+            <h3 id="mapShowcaseTitle">Paradise Valley Trail Run Routes</h3>
+            <p id="mapShowcaseText">
+              A terrain-focused race route map showing 5K and 10K trail routes with elevation,
+              route context, and supporting map elements.
+            </p>
 
-          <article class="map-card">
-            <div class="map-thumb urban-thumb"></div>
-            <div class="map-card-body">
-              <span>Urban GIS</span>
-              <h3>Calgary Park Accessibility</h3>
-            </div>
-          </article>
+            <div class="map-meta-list">
+              <div>
+                <strong>Focus</strong>
+                <span id="mapShowcaseFocus">Route design, terrain, elevation profile</span>
+              </div>
 
-          <article class="map-card">
-            <div class="map-thumb flood-thumb"></div>
-            <div class="map-card-body">
-              <span>Disaster Mapping</span>
-              <h3>Flood Affected Settlements</h3>
+              <div>
+                <strong>Tools</strong>
+                <span id="mapShowcaseTools">ArcGIS Pro, cartographic layout</span>
+              </div>
             </div>
-          </article>
+
+            <div class="map-showcase-actions">
+              <a
+                href="assets/images/maps/full/paradise-valley-trail-run.jpg"
+                class="btn btn-primary"
+                id="mapShowcaseFull"
+                target="_blank"
+                rel="noopener"
+              >
+                View Full Map
+              </a>
+
+              <a
+                href="assets/images/maps/pdf/paradise-valley-trail-run.pdf"
+                class="btn btn-secondary"
+                id="mapShowcasePdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Open PDF
+              </a>
+            </div>
+
+            <div class="map-slider-controls" aria-label="Map showcase controls">
+              <button class="map-control-btn" id="prevMap" type="button">← Previous</button>
+              <button class="map-control-btn" id="nextMap" type="button">Next →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-thumb-strip" aria-label="Featured map thumbnails">
+          <button class="map-thumb-button active" type="button" data-map-index="0">
+            <span>01</span>
+            Trail Routes
+          </button>
+
+          <button class="map-thumb-button" type="button" data-map-index="1">
+            <span>02</span>
+            Heathrow Reach
+          </button>
+
+          <button class="map-thumb-button" type="button" data-map-index="2">
+            <span>03</span>
+            Park Access
+          </button>
+
+          <button class="map-thumb-button" type="button" data-map-index="3">
+            <span>04</span>
+            Flood Mapping
+          </button>
         </div>
       </div>
     </section>
