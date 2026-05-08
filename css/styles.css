@@ -1653,3 +1653,59 @@ button {
     width: 100%;
   }
 }
+
+/* =========================================================
+   HERO CREDIBILITY STATS
+   ========================================================= */
+
+.hero-stats-strip {
+  background: rgba(255, 253, 247, 0.88);
+}
+
+.hero-stats-strip div {
+  padding: 18px 20px;
+}
+
+.hero-stats-strip strong {
+  color: var(--green-dark);
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero-stats-strip span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .hero-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stats-strip div:nth-child(2) {
+    border-right: none;
+  }
+
+  .hero-stats-strip div:nth-child(1),
+  .hero-stats-strip div:nth-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-stats-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats-strip div {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-stats-strip div:last-child {
+    border-bottom: none;
+  }
+}
