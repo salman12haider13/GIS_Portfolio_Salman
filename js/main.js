@@ -22,7 +22,53 @@ navLinks.forEach((link) => {
   });
 });
 
-// Project filter buttons for projects.html
+// Highlight active section in navbar while scrolling
+const sectionLinks = document.querySelectorAll(".nav-menu a[href^='#']");
+const sections = Array.from(sectionLinks)
+  .map((link) => {
+    const section = document.querySelector(link.getAttribute("href"));
+    return section ? { section, link } : null;
+  })
+  .filter(Boolean);
+
+function setActiveNavLink() {
+  const scrollPosition = window.scrollY + 120;
+
+  let current = sections[0];
+
+  sections.forEach((item) => {
+    if (item.section.offsetTop <= scrollPosition) {
+      current = item;
+    }
+  });
+
+  sectionLinks.forEach((link) => link.classList.remove("active"));
+
+  if (current && current.link) {
+    current.link.classList.add("active");
+  }
+}
+
+if (sections.length) {
+  window.addEventListener("scroll", setActiveNavLink);
+  window.addEventListener("load", setActiveNavLink);
+}
+
+// Show more / show fewer project cards
+const projectGrid = document.querySelector("#projectGrid");
+const toggleProjects = document.querySelector("#toggleProjects");
+
+if (projectGrid && toggleProjects) {
+  toggleProjects.addEventListener("click", () => {
+    const isExpanded = projectGrid.classList.toggle("expanded");
+
+    toggleProjects.textContent = isExpanded
+      ? "Show Fewer Projects ↑"
+      : "Show More Projects ↓";
+  });
+}
+
+// Project filter buttons for older/secondary pages if needed
 const filterButtons = document.querySelectorAll(".filter-btn");
 const filterItems = document.querySelectorAll("[data-category]");
 
@@ -57,8 +103,7 @@ const maps = [
     focus: "Route design, terrain, elevation profile",
     tools: "ArcGIS Pro, cartographic layout",
     image: "assets/images/maps/previews/paradise-valley-trail-run.jpg",
-    full: "assets/images/maps/full/paradise-valley-trail-run.jpg",
-    pdf: "assets/images/maps/pdf/paradise-valley-trail-run.pdf",
+    story: "maps/paradise-valley-trail-run.html",
     alt: "Paradise Valley Trail Run route map preview"
   },
   {
@@ -69,8 +114,7 @@ const maps = [
     focus: "Flowlines, global connections, visual hierarchy",
     tools: "ArcGIS Pro, cartographic design",
     image: "assets/images/maps/previews/heathrow-global-reach.jpg",
-    full: "assets/images/maps/full/heathrow-global-reach.jpg",
-    pdf: "assets/images/maps/pdf/heathrow-global-reach.pdf",
+    story: "maps/heathrow-global-reach.html",
     alt: "Heathrow global reach flowline map preview"
   },
   {
@@ -81,8 +125,7 @@ const maps = [
     focus: "Accessibility, social deprivation, urban planning",
     tools: "ArcGIS Pro, spatial analysis",
     image: "assets/images/maps/previews/calgary-park-accessibility.jpg",
-    full: "assets/images/maps/full/calgary-park-accessibility.jpg",
-    pdf: "assets/images/maps/pdf/calgary-park-accessibility.pdf",
+    story: "maps/calgary-park-accessibility.html",
     alt: "Calgary park accessibility map preview"
   },
   {
@@ -93,8 +136,7 @@ const maps = [
     focus: "Flood impact, settlements, satellite imagery",
     tools: "ArcGIS Pro, remote sensing context",
     image: "assets/images/maps/previews/flood-affected-settlements.jpg",
-    full: "assets/images/maps/full/flood-affected-settlements.jpg",
-    pdf: "assets/images/maps/pdf/flood-affected-settlements.pdf",
+    story: "maps/flood-affected-settlements.html",
     alt: "Flood affected settlements of Chiniot map preview"
   }
 ];
@@ -107,19 +149,24 @@ const mapTitle = document.querySelector("#mapShowcaseTitle");
 const mapText = document.querySelector("#mapShowcaseText");
 const mapFocus = document.querySelector("#mapShowcaseFocus");
 const mapTools = document.querySelector("#mapShowcaseTools");
-const mapFull = document.querySelector("#mapShowcaseFull");
-const mapPdf = document.querySelector("#mapShowcasePdf");
+const mapStory = document.querySelector("#mapShowcaseStory");
 const prevMap = document.querySelector("#prevMap");
 const nextMap = document.querySelector("#nextMap");
 const mapThumbButtons = document.querySelectorAll(".map-thumb-button");
 
 function updateMapShowcase(index) {
-  if (!mapImage || !mapCategory || !mapTitle || !mapText || !mapFocus || !mapTools) {
+  if (!mapImage || !mapCategory || !mapTitle || !mapText || !mapFocus || !mapTools || !mapStory) {
     return;
   }
 
   const selectedMap = maps[index];
+  const preview = mapImage.closest(".map-story-preview");
 
+  if (preview) {
+    preview.classList.remove("image-missing");
+  }
+
+  mapImage.style.display = "block";
   mapImage.src = selectedMap.image;
   mapImage.alt = selectedMap.alt;
   mapCategory.textContent = selectedMap.category;
@@ -127,14 +174,7 @@ function updateMapShowcase(index) {
   mapText.textContent = selectedMap.text;
   mapFocus.textContent = selectedMap.focus;
   mapTools.textContent = selectedMap.tools;
-
-  if (mapFull) {
-    mapFull.href = selectedMap.full;
-  }
-
-  if (mapPdf) {
-    mapPdf.href = selectedMap.pdf;
-  }
+  mapStory.href = selectedMap.story;
 
   mapThumbButtons.forEach((button) => {
     const buttonIndex = Number(button.dataset.mapIndex);

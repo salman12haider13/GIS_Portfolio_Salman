@@ -18,14 +18,13 @@
   >
 
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/map-showcase.css" />
 </head>
 
 <body>
   <header class="site-header">
     <nav class="navbar container">
       <a href="#home" class="logo" aria-label="Go to homepage">
-        <span class="logo-mark">GIS</span>
+        <span class="logo-mark">SH</span>
         <span class="logo-text">Salman Haider</span>
       </a>
 
@@ -36,7 +35,7 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#maps">Maps</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -49,8 +48,8 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero" id="home">
-      <div class="hero-grid container">
-        <div class="hero-content">
+      <div class="container hero-layout">
+        <div class="hero-copy">
           <p class="eyebrow">GIS Portfolio</p>
 
           <h1>Salman Haider</h1>
@@ -65,7 +64,7 @@
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#maps" class="btn btn-secondary">View Map Gallery</a>
+            <a href="#maps" class="btn btn-secondary">View Maps</a>
             <a
               href="assets/docs/Salman_Haider_CV.pdf"
               class="btn btn-secondary"
@@ -75,46 +74,45 @@
               Download CV
             </a>
           </div>
-
-          <div class="hero-stats">
-            <div>
-              <strong>ArcGIS Pro</strong>
-              <span>Spatial analysis & mapping</span>
-            </div>
-
-            <div>
-              <strong>Python / ArcPy</strong>
-              <span>GIS workflow automation</span>
-            </div>
-
-            <div>
-              <strong>Cartography</strong>
-              <span>Static maps & visual storytelling</span>
-            </div>
-          </div>
         </div>
 
-        <div class="hero-visual" aria-label="Professional headshot and GIS skill highlights">
-          <div class="profile-panel">
-            <div class="profile-image-wrap">
-              <img
-                src="assets/images/profile/salman-headshot.png"
-                alt="Salman Haider professional headshot"
-                class="profile-photo"
-                draggable="false"
-              />
-            </div>
-
-            <div class="profile-info-card">
-              <span class="profile-location">Calgary, AB</span>
-              <h3>GIS Specialist & Spatial Analyst</h3>
-              <p>ArcGIS Pro · Python · Spatial Analysis · Web Mapping</p>
-            </div>
-
-            <div class="floating-skill skill-one">ArcGIS Pro</div>
-            <div class="floating-skill skill-two">Python / ArcPy</div>
-            <div class="floating-skill skill-three">Spatial Analysis</div>
+        <aside class="hero-profile-card" aria-label="Professional headshot and profile summary">
+          <div class="profile-image-frame">
+            <img
+              src="assets/images/profile/salman-headshot.png"
+              alt="Salman Haider professional headshot"
+              class="profile-photo"
+              draggable="false"
+            />
           </div>
+
+          <div class="profile-card-content">
+            <span>Calgary, AB</span>
+            <h3>GIS Specialist & Spatial Analyst</h3>
+            <p>ArcGIS Pro · Python · Spatial Analysis · Web Mapping</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container hero-strip">
+        <div>
+          <strong>ArcGIS Pro</strong>
+          <span>Spatial analysis & mapping</span>
+        </div>
+
+        <div>
+          <strong>Python / ArcPy</strong>
+          <span>GIS workflow automation</span>
+        </div>
+
+        <div>
+          <strong>PostGIS / Web GIS</strong>
+          <span>Routing, databases & web mapping</span>
+        </div>
+
+        <div>
+          <strong>Cartography</strong>
+          <span>Static maps & visual storytelling</span>
         </div>
       </div>
     </section>
@@ -122,37 +120,33 @@
     <!-- PROJECTS SECTION -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="eyebrow">Featured Work</p>
-            <h2>GIS Automation & Spatial Analysis Projects</h2>
-            <p>
-              Selected projects showing how I use GIS, Python, databases, and web mapping
-              to make spatial workflows more practical and repeatable.
-            </p>
-          </div>
-
-          <a href="projects.html" class="section-link">View all projects →</a>
+        <div class="section-heading wide-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>GIS projects, automation tools, and spatial workflows</h2>
+          <p>
+            A selected collection of GIS work showing spatial analysis, ArcGIS Pro automation,
+            web mapping, routing, remote sensing, and data processing. The full technical details
+            are available through each GitHub repository.
+          </p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card project-card-image featured-card">
-            <div class="project-image">
+        <div class="project-grid-b" id="projectGrid">
+          <!-- 1 -->
+          <article class="portfolio-project-card featured-project">
+            <div class="project-card-media">
               <img
                 src="assets/images/projects/geo-copilot/card-photo.png"
                 alt="Geo Copilot project thumbnail showing ArcGIS Pro connected with GPT-5 and Llama 3.1 8B"
               />
             </div>
 
-            <div class="project-card-content">
-              <div class="project-tag">MGIS Capstone Project</div>
-
+            <div class="project-card-body">
+              <span class="project-type">MGIS Capstone Project</span>
               <h3>Geo Copilot: Natural Language GIS Tool</h3>
-
               <p>
-                An MGIS capstone project exploring whether large language models can turn plain-English
-                GIS requests into reviewable ArcGIS Pro geoprocessing workflows. The tool reads active
-                map context, builds structured prompts, and lets users inspect commands before execution.
+                An ArcGIS Pro script tool exploring how large language models can turn plain-English
+                GIS requests into reviewable geoprocessing workflows using ArcPy, active map context,
+                and controlled tool definitions.
               </p>
 
               <div class="tool-list">
@@ -162,33 +156,29 @@
                 <span>Llama 3.1 8B</span>
               </div>
 
-              <div class="project-links">
-                <a
-                  href="https://github.com/salman12haider13/arcgis-geo-copilot-llm"
-                  class="card-link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  View GitHub →
-                </a>
-                <a href="#" class="card-link muted-link">Case study coming soon</a>
-              </div>
+              <a
+                href="https://github.com/salman12haider13/arcgis-geo-copilot-llm"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
             </div>
           </article>
 
-          <article class="project-card project-card-compact">
-            <div class="project-image compact-project-image">
+          <!-- 2 -->
+          <article class="portfolio-project-card featured-project">
+            <div class="project-card-media">
               <img
                 src="assets/images/projects/logistics-routing/card-photo.png"
                 alt="Logistics Routing MVP interface showing route alternatives, blocked zones, and route summary"
               />
             </div>
 
-            <div class="project-card-content">
-              <div class="project-tag">Routing / Web GIS</div>
-
+            <div class="project-card-body">
+              <span class="project-type">Routing / Web GIS</span>
               <h3>Logistics Routing MVP</h3>
-
               <p>
                 A self-hosted routing MVP for logistics and convoy-style planning. The app uses
                 OpenStreetMap data, PostGIS, pgRouting, Flask, Docker, and Leaflet to calculate
@@ -205,7 +195,7 @@
 
               <a
                 href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo"
-                class="card-link"
+                class="text-link"
                 target="_blank"
                 rel="noopener"
               >
@@ -214,23 +204,22 @@
             </div>
           </article>
 
-          <article class="project-card project-card-compact">
-            <div class="project-image compact-project-image">
+          <!-- 3 -->
+          <article class="portfolio-project-card featured-project">
+            <div class="project-card-media">
               <img
                 src="assets/images/projects/drone-route-automation/card-photo.png"
                 alt="Drone Route Report Automation map showing flight path, drive path, and route summary table"
               />
             </div>
 
-            <div class="project-card-content">
-              <div class="project-tag">Freelance GIS Automation</div>
-
+            <div class="project-card-body">
+              <span class="project-type">Freelance GIS Automation</span>
               <h3>Drone Route Report Automation</h3>
-
               <p>
                 A freelance ArcGIS Pro toolbox built for Talyn Air to compare drone flight routes
-                with driving routes. The tool reads route data from Excel, generates flight and
-                drive paths, calculates time savings and GHG savings, and creates report-ready GIS outputs.
+                with driving routes. The tool reads route data from Excel, generates flight and drive
+                paths, calculates time savings and GHG savings, and creates report-ready GIS outputs.
               </p>
 
               <div class="tool-list">
@@ -242,7 +231,142 @@
 
               <a
                 href="https://github.com/salman12haider13/arcgis-drone-route-report-automation"
-                class="card-link"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="portfolio-project-card compact-project">
+            <div class="project-card-body">
+              <span class="project-type">Environmental GIS / ArcPy</span>
+              <h3>Forestry Sampling Point Generator</h3>
+              <p>
+                Generates candidate forestry sampling points using GIS constraints such as forest cover,
+                slope, road proximity, and spacing rules.
+              </p>
+
+              <div class="tool-list">
+                <span>ArcPy</span>
+                <span>Spatial Analysis</span>
+                <span>Forestry</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="portfolio-project-card compact-project">
+            <div class="project-card-body">
+              <span class="project-type">GIS QA/QC</span>
+              <h3>Spatial Reference Checker</h3>
+              <p>
+                Batch-checks spatial reference information across GIS datasets and helps flag projection
+                or coordinate system issues before analysis.
+              </p>
+
+              <div class="tool-list">
+                <span>ArcPy</span>
+                <span>Projections</span>
+                <span>QA/QC</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/arcpy-spatial-reference-checker"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="portfolio-project-card compact-project">
+            <div class="project-card-body">
+              <span class="project-type">Google Earth Engine</span>
+              <h3>GEE NDVI Zonal Stats</h3>
+              <p>
+                A Google Earth Engine workflow for calculating NDVI-based zonal statistics,
+                useful for vegetation analysis, environmental monitoring, and area-based summaries.
+              </p>
+
+              <div class="tool-list">
+                <span>GEE</span>
+                <span>NDVI</span>
+                <span>Zonal Statistics</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/GEE_NDVI_ZonalStats"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="portfolio-project-card compact-project extra-project">
+            <div class="project-card-body">
+              <span class="project-type">Survey Data / ArcPy</span>
+              <h3>CSV Survey Points to Feature Class</h3>
+              <p>
+                Converts structured CSV survey records into ArcGIS point features, including coordinate
+                handling and feature class creation for mapping and analysis.
+              </p>
+
+              <div class="tool-list">
+                <span>Python</span>
+                <span>ArcPy</span>
+                <span>CSV</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/csv-survey-points-arcpy"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="portfolio-project-card compact-project extra-project">
+            <div class="project-card-body">
+              <span class="project-type">LiDAR / Terrain Data</span>
+              <h3>ASCII XYZ LiDAR Metadata Extractor</h3>
+              <p>
+                A Python utility for reading ASCII XYZ LiDAR-style data and extracting useful metadata
+                such as extents, point counts, elevation range, and tile-level summaries.
+              </p>
+
+              <div class="tool-list">
+                <span>Python</span>
+                <span>LiDAR</span>
+                <span>Metadata</span>
+              </div>
+
+              <a
+                href="https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor"
+                class="text-link"
                 target="_blank"
                 rel="noopener"
               >
@@ -253,45 +377,50 @@
         </div>
 
         <div class="section-bottom-action">
-          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+          <button class="btn btn-secondary" id="toggleProjects" type="button">
+            Show More Projects ↓
+          </button>
         </div>
       </div>
     </section>
 
     <!-- MAP SHOWCASE SECTION -->
-    <section class="section section-soft" id="maps">
+    <section class="section map-section" id="maps">
       <div class="container">
-        <div class="section-heading section-heading-row">
-          <div>
-            <p class="eyebrow">Cartography</p>
-            <h2>Static Maps & Spatial Visualization</h2>
-            <p>
-              Selected map layouts showing cartography, spatial analysis, urban GIS,
-              environmental mapping, transportation, and disaster mapping.
-            </p>
-          </div>
-
-          <a href="cartography.html" class="section-link">View all maps →</a>
+        <div class="section-heading wide-heading">
+          <p class="eyebrow">Cartography</p>
+          <h2>Static maps and spatial storytelling</h2>
+          <p>
+            These map layouts show my cartographic work across terrain mapping, flowline cartography,
+            urban GIS, environmental analysis, public health, and disaster mapping. Each map will have
+            its own story page with project context, process, design choices, and findings.
+          </p>
         </div>
 
-        <div class="map-showcase" aria-label="Featured static map showcase">
-          <div class="map-showcase-preview">
+        <div class="map-story-showcase">
+          <button class="map-arrow map-arrow-left" id="prevMap" type="button" aria-label="Previous map">
+            ←
+          </button>
+
+          <div class="map-story-preview">
             <img
               id="mapShowcaseImage"
               src="assets/images/maps/previews/paradise-valley-trail-run.jpg"
               alt="Paradise Valley Trail Run route map preview"
+              onerror="this.closest('.map-story-preview').classList.add('image-missing'); this.style.display='none';"
             />
           </div>
 
-          <div class="map-showcase-info">
+          <div class="map-story-panel">
             <span class="map-category" id="mapShowcaseCategory">Terrain / Route Mapping</span>
             <h3 id="mapShowcaseTitle">Paradise Valley Trail Run Routes</h3>
+
             <p id="mapShowcaseText">
               A terrain-focused race route map showing 5K and 10K trail routes with elevation,
               route context, and supporting map elements.
             </p>
 
-            <div class="map-meta-list">
+            <div class="map-story-meta">
               <div>
                 <strong>Focus</strong>
                 <span id="mapShowcaseFocus">Route design, terrain, elevation profile</span>
@@ -303,33 +432,14 @@
               </div>
             </div>
 
-            <div class="map-showcase-actions">
-              <a
-                href="assets/images/maps/full/paradise-valley-trail-run.jpg"
-                class="btn btn-primary"
-                id="mapShowcaseFull"
-                target="_blank"
-                rel="noopener"
-              >
-                View Full Map
-              </a>
-
-              <a
-                href="assets/images/maps/pdf/paradise-valley-trail-run.pdf"
-                class="btn btn-secondary"
-                id="mapShowcasePdf"
-                target="_blank"
-                rel="noopener"
-              >
-                Open PDF
-              </a>
-            </div>
-
-            <div class="map-slider-controls" aria-label="Map showcase controls">
-              <button class="map-control-btn" id="prevMap" type="button">← Previous</button>
-              <button class="map-control-btn" id="nextMap" type="button">Next →</button>
-            </div>
+            <a href="maps/paradise-valley-trail-run.html" class="btn btn-primary" id="mapShowcaseStory">
+              View Map Story
+            </a>
           </div>
+
+          <button class="map-arrow map-arrow-right" id="nextMap" type="button" aria-label="Next map">
+            →
+          </button>
         </div>
 
         <div class="map-thumb-strip" aria-label="Featured map thumbnails">
@@ -359,46 +469,50 @@
     <!-- SKILLS SECTION -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading wide-heading">
           <p class="eyebrow">Skill Stack</p>
-          <h2>GIS Skills Organized by Workflow</h2>
+          <h2>GIS skills organized by workflow</h2>
           <p>
             Instead of only listing software, this section shows how the tools fit into real GIS work.
           </p>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-card">
+        <div class="skills-grid-b">
+          <div class="skill-card-b">
+            <span>01</span>
             <h3>Data Preparation</h3>
             <p>Cleaning, projections, spatial data management, and database-ready GIS layers.</p>
-            <span>ArcGIS Pro · QGIS · SQL · PostgreSQL</span>
+            <strong>ArcGIS Pro · QGIS · SQL · PostgreSQL</strong>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card-b">
+            <span>02</span>
             <h3>Spatial Analysis</h3>
             <p>Network analysis, raster/vector workflows, MCDA, suitability, and accessibility.</p>
-            <span>ArcGIS Spatial Analyst · Remote Sensing · GEE</span>
+            <strong>ArcGIS Spatial Analyst · Remote Sensing · GEE</strong>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card-b">
+            <span>03</span>
             <h3>Automation</h3>
             <p>Python scripts and ArcPy tools that reduce repetitive GIS work.</p>
-            <span>Python · ArcPy · Toolboxes · Automation</span>
+            <strong>Python · ArcPy · Toolboxes · Automation</strong>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card-b">
+            <span>04</span>
             <h3>Web Mapping</h3>
-            <p>Simple interactive maps, dashboards, and web-based spatial demos.</p>
-            <span>Leaflet · Mapbox GL JS · ArcGIS Online</span>
+            <p>Interactive maps, dashboards, and web-based spatial demos.</p>
+            <strong>Leaflet · Mapbox GL JS · ArcGIS Online</strong>
           </div>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section class="section section-dark" id="experience">
-      <div class="container experience-layout">
-        <div>
+    <section class="section experience-section" id="experience">
+      <div class="container experience-b">
+        <div class="section-heading">
           <p class="eyebrow">Background</p>
           <h2>GIS experience across analysis, mapping, and automation</h2>
           <p>
@@ -407,20 +521,20 @@
           </p>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
+        <div class="timeline-b">
+          <div class="timeline-item-b">
             <span>2024 – Present</span>
             <h3>MGIS, University of Calgary</h3>
             <p>Graduate-level GIS, spatial analysis, cartography, databases, and applied projects.</p>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item-b">
             <span>2021 – 2024</span>
             <h3>GIS Coordinator, Franchise Ready</h3>
             <p>Territory mapping, demographic analysis, site selection, and GIS workflow automation.</p>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item-b">
             <span>2021</span>
             <h3>GIS Associate, Greenage Services</h3>
             <p>Cadastral mapping, satellite imagery processing, and GIS database support.</p>
@@ -432,29 +546,29 @@
     <!-- CERTIFICATES SECTION -->
     <section class="section" id="certificates">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading wide-heading">
           <p class="eyebrow">Certificates</p>
-          <h2>Professional Training & Certifications</h2>
+          <h2>Professional training and certifications</h2>
           <p>
             A selection of GIS, cartography, Python, SQL, and environmental training certificates.
             Certificate previews will be added here as the portfolio is built.
           </p>
         </div>
 
-        <div class="certificate-preview-grid">
-          <article class="certificate-card">
+        <div class="certificate-preview-grid-b">
+          <article class="certificate-card-b">
             <span>LinkedIn Learning</span>
             <h3>Learning ArcGIS Python Scripting</h3>
             <p>March 2023</p>
           </article>
 
-          <article class="certificate-card">
+          <article class="certificate-card-b">
             <span>LinkedIn Learning</span>
             <h3>PostgreSQL: Advanced Queries</h3>
             <p>March 2023</p>
           </article>
 
-          <article class="certificate-card">
+          <article class="certificate-card-b">
             <span>Esri</span>
             <h3>ArcGIS Pro Basics</h3>
             <p>September 2024</p>
@@ -464,8 +578,8 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="section contact-section" id="contact">
-      <div class="container contact-card">
+    <section class="section contact-section-b" id="contact">
+      <div class="container contact-card-b">
         <p class="eyebrow">Contact</p>
         <h2>Let’s connect</h2>
         <p>
