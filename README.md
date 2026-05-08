@@ -1,29 +1,45 @@
-# GIS Portfolio Demo Skeleton
+# Salman Haider GIS Portfolio
 
-This is a simple static demo for Salman Haider's GIS portfolio direction.
+A professional GIS portfolio website for Salman Haider, focused on GIS analysis, cartography, ArcGIS Pro automation, web mapping, spatial data workflows, and applied geospatial projects.
 
-## Theme
-Layered Spatial Portfolio
+## Portfolio Focus
 
-## Positioning
 GIS Specialist | Spatial Analyst | ArcGIS & Python Automation
 
-## Files
-- `index.html` - main demo page
-- `css/styles.css` - all styling and responsive design
-- `js/main.js` - small mobile navigation script
-- `assets/images/` - place future project screenshots and map images here
-- `assets/docs/` - place resume/CV PDF here later
+This portfolio highlights selected GIS projects, map stories, technical skills, professional background, certificates, and contact information.
 
-## How to run locally
-1. Open this folder in VS Code.
-2. Install the VS Code extension **Live Server** if you do not already have it.
-3. Right click `index.html`.
-4. Click **Open with Live Server**.
+## Main Sections
 
-Or simply double-click `index.html` to open it in your browser.
+- Hero / Profile Summary
+- GIS Projects
+- Static Maps & Spatial Visualization
+- GIS Skills
+- Experience & Education
+- Certificates
+- Contact
 
-## Notes
-This is only a visual demo. The project names, links, screenshots, and text can be replaced later with final portfolio content.
+## Technologies Used
 
-xxxx
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages-ready static structure
+
+## File Structure
+
+- `index.html` — main portfolio page
+- `css/styles.css` — main website styling
+- `js/main.js` — navigation, project expansion, map slider, certificate expansion
+- `maps/` — individual map story pages
+- `css/maps/` — map story page styles
+- `js/maps/` — map story page scripts
+- `assets/images/` — project, map, logo, and profile images
+- `assets/docs/` — CV and certificate PDFs
+
+## Local Preview
+
+Open `index.html` directly in a browser, or use the VS Code Live Server extension for local development.
+
+## Deployment
+
+This is a static website and can be hosted on GitHub Pages, Netlify, Vercel, or Cloudflare Pages.
