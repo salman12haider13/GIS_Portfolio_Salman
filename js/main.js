@@ -21,3 +21,28 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+// Project filter buttons for projects.html
+const filterButtons = document.querySelectorAll(".filter-btn");
+const filterItems = document.querySelectorAll("[data-category]");
+
+if (filterButtons.length && filterItems.length) {
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedFilter = button.dataset.filter;
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      filterItems.forEach((item) => {
+        const categories = item.dataset.category.split(" ");
+
+        if (selectedFilter === "all" || categories.includes(selectedFilter)) {
+          item.classList.remove("is-hidden");
+        } else {
+          item.classList.add("is-hidden");
+        }
+      });
+    });
+  });
+}
