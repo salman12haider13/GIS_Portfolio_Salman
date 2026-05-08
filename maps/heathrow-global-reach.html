@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Heathrow’s Global Reach | Salman Haider GIS Portfolio</title>
+  <meta
+    name="description"
+    content="Map story for Heathrow’s Global Reach, showing flowline cartography, customized projections, global flight distances, and North America tourism connections from London Heathrow."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/maps/heathrow-global-reach.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="../index.html#home" class="logo" aria-label="Go to homepage">
+        <span class="logo-mark">SH</span>
+        <span class="logo-text">Salman Haider</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#maps">Maps</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#certificates">Certificates</a></li>
+        <li><a href="../index.html#contact" class="nav-button">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- MAP STORY HERO -->
+    <section class="map-story-hero">
+      <div class="container map-story-hero-grid">
+        <div class="map-story-hero-copy">
+          <a href="../index.html#maps" class="back-link">← Back to Maps</a>
+
+          <p class="eyebrow">Flowline Cartography</p>
+
+          <h1>Heathrow’s Global Reach</h1>
+
+          <p>
+            I created these flow maps to show how London Heathrow connects to the world.
+            The first map focuses on global flight distance, while the second map focuses
+            on North America as a major tourism region connected to Heathrow by nonstop flights.
+          </p>
+
+          <div class="map-story-actions">
+            <a
+              href="../assets/images/maps/full/heathrow-global-reach.jpg"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              View Main Map
+            </a>
+
+            <a
+              href="../assets/images/maps/pdf/heathrow-global-reach.pdf"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Open PDF
+            </a>
+          </div>
+        </div>
+
+        <aside class="map-story-summary-card">
+          <div>
+            <strong>Map Type</strong>
+            <span>Global and regional flight flow maps</span>
+          </div>
+
+          <div>
+            <strong>GIS Focus</strong>
+            <span>Origin-destination flowlines, projection customization, tourism data, regional inset mapping</span>
+          </div>
+
+          <div>
+            <strong>Tools Used</strong>
+            <span>ArcGIS Pro, XY to Line, custom projections, Natural Earth data, tourism data</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MAP PREVIEWS -->
+    <section class="map-preview-section">
+      <div class="container">
+        <div class="map-preview-stack">
+          <article class="map-preview-card">
+            <div class="map-preview-heading">
+              <div>
+                <p class="eyebrow">Layout 01</p>
+                <h2>Global flight distance from Heathrow</h2>
+              </div>
+
+              <a
+                href="../assets/images/maps/full/heathrow-global-reach.jpg"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View full map →
+              </a>
+            </div>
+
+            <img
+              src="../assets/images/maps/full/heathrow-global-reach.jpg"
+              alt="Heathrow global reach flowline map showing worldwide flight connections classified by distance"
+            />
+          </article>
+
+          <article class="map-preview-card">
+            <div class="map-preview-heading">
+              <div>
+                <p class="eyebrow">Layout 02</p>
+                <h2>Heathrow connections to North America</h2>
+              </div>
+
+              <a
+                href="../assets/images/maps/full/heathrow-north-america-tourism.jpg"
+                class="text-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View full map →
+              </a>
+            </div>
+
+            <img
+              src="../assets/images/maps/full/heathrow-north-america-tourism.jpg"
+              alt="Heathrow North America tourism flow map showing nonstop flights from London to North American destinations"
+            />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY CONTENT -->
+    <section class="map-story-content-section">
+      <div class="container map-story-layout">
+        <article class="map-story-main">
+          <section class="story-block">
+            <p class="eyebrow">Purpose</p>
+            <h2>What these maps were made for</h2>
+            <p>
+              These layouts were designed as advertisement-style maps for Heathrow Airport.
+              Instead of only showing airport locations, I wanted the maps to communicate a
+              simple travel message: Heathrow connects London to many places around the world.
+              The first layout answers “how far can Heathrow take you?” and the second layout
+              answers “where can Heathrow take you for popular travel experiences?”
+            </p>
+
+            <p>
+              Because the maps were meant to work visually as advertisements, I kept the message
+              direct and made the flight lines the main focus. The layouts needed to be attractive,
+              easy to understand quickly, and still cartographically meaningful.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Process</p>
+            <h2>How I created the flowline maps</h2>
+            <p>
+              I used flight origin-destination data for London Heathrow and converted the
+              destination coordinates into flight flowlines. Each line represents a nonstop
+              connection between Heathrow and another destination. For the global layout, I
+              classified the flights by distance so the viewer could quickly see short, medium,
+              and long-distance connections.
+            </p>
+
+            <p>
+              For the second layout, I focused on North America and combined the flight lines
+              with tourism data. This allowed the map to show not only where Heathrow flies,
+              but also how those destinations relate to popular travel regions. I also used an
+              inset world map to show the larger global flight network and highlight where the
+              regional map fits within it.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Projection Choice</p>
+            <h2>Why projection mattered</h2>
+            <p>
+              Projection choice was one of the most important parts of this project because
+              flowline maps can be strongly affected by how the world is displayed. For the
+              global layout, I used a Natural Earth projection and customized it so the map was
+              centered close to Heathrow. This helped the routes spread outward from one point
+              in a balanced and visually clear way.
+            </p>
+
+            <p>
+              I chose Natural Earth because it gives the world a smooth, balanced appearance
+              without making the layout feel too distorted. It also created a rounded world-map
+              shape that worked well with the dark advertisement style.
+            </p>
+
+            <p>
+              For the North America layout, I used a Mercator-style projection for the main
+              regional map because it filled the rectangular layout space well and made the
+              North Atlantic connections easy to read. I used a Natural Earth projection for the
+              inset map because it gave a clearer global overview.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Design Choices</p>
+            <h2>How I styled the maps</h2>
+            <p>
+              I used a dark background so the flight lines would stand out immediately. In the
+              global layout, the countries are kept in gray so they provide geographic context
+              without competing with the flowlines. The flight lines are separated into distance
+              classes, with brighter colors used to keep longer-distance connections prominent.
+            </p>
+
+            <p>
+              In the North America layout, I used bright blue flight lines over warm tourism
+              colors. The warm country shading helps show tourism intensity, while the blue
+              curves keep the Heathrow connections visually separate. I also labeled the North
+              American destinations so the viewer could identify the cities without needing to
+              interpret the map only from the legend.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Findings</p>
+            <h2>What the maps show</h2>
+            <p>
+              The global layout shows Heathrow as a major international hub, with flight paths
+              extending across North America, South America, Africa, the Middle East, Asia, and
+              Australia. The longest connections are visually emphasized, helping the map support
+              the message that Heathrow connects London to distant parts of the world.
+            </p>
+
+            <p>
+              The North America layout shows that Heathrow has many nonstop connections to major
+              destinations across Canada and the United States. The map also connects those routes
+              to tourism patterns, showing North America as a major travel region with strong visitor
+              numbers. In this layout, the flowlines and tourism shading work together to support
+              the travel advertisement message.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Reflection</p>
+            <h2>What I learned from this map</h2>
+            <p>
+              This project helped me understand that flow maps are not just about drawing curved
+              lines. The projection, line color, line hierarchy, basemap style, label placement, and
+              legend design all affect how the audience interprets the map. A projection that looks
+              good for a global advertisement may not be the best choice for a regional map, so the
+              projection has to match the purpose of each layout.
+            </p>
+
+            <p>
+              I also learned that flowlines can become cluttered very quickly. The main challenge was
+              keeping the map visually exciting while still readable. Using a dark background, grouped
+              distance classes, and careful label placement helped make the layouts more balanced.
+            </p>
+          </section>
+        </article>
+
+        <aside class="map-story-sidebar">
+          <div class="sidebar-card">
+            <h3>Key outputs</h3>
+            <ul>
+              <li>Global Heathrow flowline map</li>
+              <li>Flight distance classification</li>
+              <li>North America tourism-focused layout</li>
+              <li>Regional map with city labels</li>
+              <li>World inset map showing global context</li>
+              <li>Customized projection information</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Skills shown</h3>
+            <ul>
+              <li>XY to Line flow mapping</li>
+              <li>Projection selection and customization</li>
+              <li>Distance-based line classification</li>
+              <li>Tourism data visualization</li>
+              <li>Inset map design</li>
+              <li>Dark theme cartographic layout</li>
+              <li>Advertisement-style map design</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Main takeaway</h3>
+            <p>
+              These maps show how customized projections and flowline styling can turn flight
+              data into a clear visual story about global connectivity and travel reach.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- NEXT / PREVIOUS -->
+    <section class="map-story-nav-section">
+      <div class="container map-story-nav">
+        <a href="paradise-valley-trail-run.html" class="btn btn-secondary">← Previous Map Story</a>
+        <a href="flood-affected-settlements.html" class="btn btn-primary">Next Map Story →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Salman Haider. GIS Portfolio.</p>
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="../js/maps/heathrow-global-reach.js"></script>
+</body>
+</html>
