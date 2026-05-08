@@ -1,0 +1,216 @@
+/* Pakistan PRHPS Coverage Map story page */
+
+.map-story-hero {
+  padding: 58px 0 42px;
+  background:
+    radial-gradient(circle at 15% 22%, rgba(47, 128, 166, 0.13), transparent 28%),
+    radial-gradient(circle at 88% 70%, rgba(15, 118, 110, 0.10), transparent 32%),
+    var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.map-story-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.75fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.map-story-hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.map-story-hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+
+.map-story-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.map-story-summary-card {
+  display: grid;
+  gap: 12px;
+}
+
+.map-story-summary-card div {
+  padding: 18px;
+  border-radius: 20px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.map-story-summary-card strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.map-story-summary-card span {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Map preview */
+.map-preview-section {
+  padding: 40px 0;
+}
+
+.map-preview-card {
+  padding: 18px;
+  border-radius: 28px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.map-preview-card img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+/* Story layout */
+.map-story-content-section {
+  padding: 58px 0;
+  background: var(--paper-card);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.map-story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 46px;
+  align-items: start;
+}
+
+.map-story-main {
+  display: grid;
+  gap: 34px;
+}
+
+.story-block h2 {
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.story-block p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.story-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar */
+.map-story-sidebar {
+  position: sticky;
+  top: 92px;
+  display: grid;
+  gap: 16px;
+}
+
+.sidebar-card {
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.sidebar-card h3 {
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.sidebar-card ul {
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.sidebar-card li {
+  margin-bottom: 8px;
+}
+
+.sidebar-card p {
+  color: var(--muted);
+}
+
+/* Bottom navigation */
+.map-story-nav-section {
+  padding: 34px 0 70px;
+}
+
+.map-story-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .map-story-hero-grid,
+  .map-story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-story-sidebar {
+    position: static;
+  }
+
+  .map-story-nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 760px) {
+  .map-story-hero {
+    padding: 44px 0 34px;
+  }
+
+  .map-story-actions .btn,
+  .map-story-nav .btn {
+    width: 100%;
+  }
+
+  .map-preview-card {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .map-preview-card img {
+    border-radius: 14px;
+  }
+
+  .map-story-content-section {
+    padding: 44px 0;
+  }
+
+  .sidebar-card {
+    padding: 20px;
+  }
+}

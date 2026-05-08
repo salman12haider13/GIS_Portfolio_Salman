@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pakistan PRHPS Coverage Map | Salman Haider GIS Portfolio</title>
+  <meta
+    name="description"
+    content="Map story for the Geographic Coverage of the Pakistan Rural Household Panel Survey PRHPS, Rounds I–III, showing surveyed districts across Pakistan."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/maps/pakistan-prhps-coverage-map.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="../index.html#home" class="logo" aria-label="Go to homepage">
+        <span class="logo-mark">SH</span>
+        <span class="logo-text">Salman Haider</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#maps">Maps</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#certificates">Certificates</a></li>
+        <li><a href="../index.html#contact" class="nav-button">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- MAP STORY HERO -->
+    <section class="map-story-hero">
+      <div class="container map-story-hero-grid">
+        <div class="map-story-hero-copy">
+          <a href="../index.html#maps" class="back-link">← Back to Maps</a>
+
+          <p class="eyebrow">Survey Coverage / Administrative Mapping</p>
+
+          <h1>Pakistan PRHPS Coverage Map</h1>
+
+          <p>
+            I created this map to show the geographic coverage of the Pakistan Rural Household
+            Panel Survey (PRHPS), Rounds I–III. The purpose was to identify which districts were
+            included in the survey and place them within Pakistan’s wider district framework.
+          </p>
+
+          <div class="map-story-actions">
+            <a
+              href="../assets/images/maps/full/pakistan-prhps-coverage-map.jpg"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              View Full Map
+            </a>
+
+            <a
+              href="../assets/images/maps/pdf/pakistan-prhps-coverage-map.pdf"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Open PDF
+            </a>
+          </div>
+        </div>
+
+        <aside class="map-story-summary-card">
+          <div>
+            <strong>Map Type</strong>
+            <span>Survey coverage and administrative district map</span>
+          </div>
+
+          <div>
+            <strong>GIS Focus</strong>
+            <span>District boundary mapping, surveyed area selection, attribute-based symbology, labeling, report-ready layout</span>
+          </div>
+
+          <div>
+            <strong>Tools Used</strong>
+            <span>ArcGIS Pro, Pakistan district boundaries, attribute selection, labeling, layout design</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MAP PREVIEW -->
+    <section class="map-preview-section">
+      <div class="container">
+        <div class="map-preview-card">
+          <img
+            src="../assets/images/maps/full/pakistan-prhps-coverage-map.jpg"
+            alt="Geographic coverage map of the Pakistan Rural Household Panel Survey PRHPS Rounds I to III showing surveyed districts across Pakistan"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY CONTENT -->
+    <section class="map-story-content-section">
+      <div class="container map-story-layout">
+        <article class="map-story-main">
+          <section class="story-block">
+            <p class="eyebrow">Purpose</p>
+            <h2>What this map was made for</h2>
+            <p>
+              The purpose of this map was to show where the Pakistan Rural Household Panel Survey
+              was conducted. Survey datasets are often listed in tables, but a district list does not
+              immediately show the geographic spread of the sample. By mapping the surveyed districts,
+              I wanted to make the survey coverage easier to understand.
+            </p>
+
+            <p>
+              This type of map is useful for reports, research papers, survey documentation, and
+              presentations because it quickly communicates where the data came from. It helps the
+              viewer understand the regional distribution of the PRHPS sample instead of reading the
+              coverage only as a list of district names.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Data</p>
+            <h2>What data I used</h2>
+            <p>
+              I used district-level administrative boundary data for Pakistan as the main base layer.
+              The full district framework is shown in grey so the surveyed districts can be understood
+              in national context. The surveyed PRHPS districts are highlighted with separate colors
+              and labeled by name.
+            </p>
+
+            <p>
+              The map includes districts such as Attock, Bahawalnagar, Bhakkar, Dadu, Dera Ghazi Khan,
+              Faisalabad, Hyderabad, Jacobabad, Jhang, Kasur, Khanewal, Mansehra, Multan, Nowshera,
+              Rahim Yar Khan, Sanghar, Sargodha, Thatta, and Vehari.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">GIS Process</p>
+            <h2>How I created the survey coverage layer</h2>
+            <p>
+              I started with the Pakistan district boundary layer and selected the districts included
+              in PRHPS Rounds I–III from the attribute table. After identifying the surveyed districts,
+              I symbolized them separately from the rest of Pakistan’s districts. This allowed the
+              surveyed areas to stand out while still keeping the national district framework visible.
+            </p>
+
+            <p>
+              I also labeled each surveyed district so the map could be read without needing to cross-check
+              the legend constantly. The final layout includes a legend, graticule coordinates, spatial
+              reference information, a scale bar, a north arrow, and a source note for the administrative
+              boundary data.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Spatial Reference</p>
+            <h2>Why I included coordinate system information</h2>
+            <p>
+              I included the spatial reference information because this map is meant to work as a formal
+              research and documentation product. The map uses GCS WGS 1984, with map units in degrees
+              and EPSG/WKID 4326. Including this information helps make the map more transparent and
+              reproducible for anyone using it in a GIS workflow.
+            </p>
+
+            <p>
+              The graticule around the map also supports geographic orientation. It helps viewers see
+              the surveyed districts in relation to Pakistan’s broader latitude and longitude extent.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Cartographic Design</p>
+            <h2>How I designed the map</h2>
+            <p>
+              The design is intentionally formal and report-oriented. I used neutral grey for all
+              non-surveyed districts so they provide national context without competing with the main
+              message. The surveyed districts use bright contrasting colors so each district can be
+              visually separated and quickly identified.
+            </p>
+
+            <p>
+              The title is placed prominently in the upper-left corner so the purpose of the map is
+              clear immediately. The legend is placed on the right side near the highlighted districts,
+              making it easier to connect the colors with the district names. Labels were added directly
+              to the surveyed districts to make the map self-explanatory.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Findings</p>
+            <h2>What the map shows</h2>
+            <p>
+              The map shows that PRHPS coverage is spread across multiple parts of Pakistan instead of
+              being concentrated in a single region. Surveyed districts appear in Punjab, Sindh, Khyber
+              Pakhtunkhwa, and northern areas. This gives the survey a wider geographic footprint and
+              helps show the range of administrative areas included in the sample.
+            </p>
+
+            <p>
+              The map also shows that many surveyed districts are located in clusters, especially across
+              parts of Punjab and Sindh. Seeing these patterns spatially is useful because it helps the
+              reader understand where the survey is strong geographically and where coverage is less
+              visible.
+            </p>
+          </section>
+
+          <section class="story-block">
+            <p class="eyebrow">Reflection</p>
+            <h2>What I learned from this map</h2>
+            <p>
+              This project helped me understand the value of turning tabular survey information into a
+              spatial product. A survey coverage table can tell which districts were included, but a map
+              shows the geographic distribution, regional spread, and administrative context much more
+              clearly.
+            </p>
+
+            <p>
+              I also improved my skills in administrative boundary mapping, attribute selection,
+              district-level symbology, labeling, layout design, coordinate system documentation, and
+              producing publication-style survey coverage maps.
+            </p>
+          </section>
+        </article>
+
+        <aside class="map-story-sidebar">
+          <div class="sidebar-card">
+            <h3>Key outputs</h3>
+            <ul>
+              <li>Pakistan district boundary map</li>
+              <li>Highlighted PRHPS surveyed districts</li>
+              <li>District labels and legend</li>
+              <li>Graticule coordinate frame</li>
+              <li>Spatial reference information</li>
+              <li>Report-ready survey coverage layout</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Skills shown</h3>
+            <ul>
+              <li>Administrative boundary mapping</li>
+              <li>Attribute-based district selection</li>
+              <li>Survey coverage visualization</li>
+              <li>Label placement</li>
+              <li>Legend organization</li>
+              <li>Coordinate system documentation</li>
+              <li>Formal cartographic layout design</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Main takeaway</h3>
+            <p>
+              This map converts PRHPS district coverage from a table into a clear geographic product,
+              making the survey’s regional spread across Pakistan much easier to understand.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- NEXT / PREVIOUS -->
+    <section class="map-story-nav-section">
+      <div class="container map-story-nav">
+        <a href="stillbirths-neonatal-deaths-asia.html" class="btn btn-secondary">← Previous Map Story</a>
+        <a href="../index.html#maps" class="btn btn-primary">Back to Map Gallery →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Salman Haider. GIS Portfolio.</p>
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="../js/maps/pakistan-prhps-coverage-map.js"></script>
+</body>
+</html>
