@@ -246,3 +246,22 @@ if (prevMap && nextMap && mapThumbButtons.length) {
     });
   });
 }
+
+// Expand / collapse certificates section
+const certificatesList = document.querySelector("#certificatesList");
+const showMoreCertificatesBtn = document.querySelector("#showMoreCertificates");
+
+if (certificatesList && showMoreCertificatesBtn) {
+  showMoreCertificatesBtn.addEventListener("click", () => {
+    const isExpanded = certificatesList.classList.toggle("show-all");
+
+    showMoreCertificatesBtn.classList.toggle("is-open", isExpanded);
+    showMoreCertificatesBtn.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    const buttonText = showMoreCertificatesBtn.querySelector("span:first-child");
+
+    if (buttonText) {
+      buttonText.textContent = isExpanded ? "Show fewer certificates" : "Show more certificates";
+    }
+  });
+}
