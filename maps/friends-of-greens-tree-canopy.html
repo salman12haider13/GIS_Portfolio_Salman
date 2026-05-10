@@ -1,287 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Friends of Greens Tree Canopy | Salman Haider GIS Portfolio</title>
-  <meta
-    name="description"
-    content="Map story for Friends of Greens Street Tree Planting, an environmental GIS map showing tree planting activity and tree canopy cover across Calgary electoral divisions."
-  />
-
+  <meta name="description" content="Map story for Friends of Greens Tree Canopy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/maps/friends-of-greens-tree-canopy.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
   <header class="site-header">
     <nav class="navbar container">
-      <a href="../index.html#home" class="logo" aria-label="Go to homepage">
-        <span class="logo-mark">SH</span>
-        <span class="logo-text">Salman Haider</span>
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
+      <a href="../index.html#home" class="logo"><span class="logo-mark">SH</span><span class="logo-text">Salman Haider</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="../index.html#projects">Projects</a></li>
         <li><a href="../index.html#maps">Maps</a></li>
         <li><a href="../index.html#skills">Skills</a></li>
         <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../index.html#certificates">Certificates</a></li>
-        <li><a href="../index.html#contact" class="nav-button">Contact</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- MAP STORY HERO -->
-    <section class="map-story-hero">
-      <div class="container map-story-hero-grid">
-        <div class="map-story-hero-copy">
+    <section class="map-hero">
+      <div class="container map-hero-grid">
+        <div>
           <a href="../index.html#maps" class="back-link">← Back to Maps</a>
-
-          <p class="eyebrow">Environmental GIS / Urban Greening</p>
-
+          <span class="eyebrow">Environmental GIS / Urban Greening</span>
           <h1>Friends of Greens Tree Canopy</h1>
-
-          <p>
-            I created this map to show the relationship between Friends of Greens street tree
-            planting activity and tree canopy cover across Calgary electoral divisions. The map
-            shows where trees were planted between January 2018 and April 2019, and how those
-            planting efforts compare with existing canopy coverage.
-          </p>
-
-          <div class="map-story-actions">
-            <a
-              href="../assets/images/maps/full/friends-of-greens-tree-canopy.jpg"
-              class="btn btn-primary"
-              target="_blank"
-              rel="noopener"
-            >
-              View Full Map
-            </a>
-
-            <a
-              href="../assets/images/maps/pdf/friends-of-greens-tree-canopy.pdf"
-              class="btn btn-secondary"
-              target="_blank"
-              rel="noopener"
-            >
-              Open PDF
-            </a>
+          <p>I created this map to show the relationship between Friends of Greens street tree planting activity and tree canopy cover across Calgary electoral divisions. The map shows where trees were planted between January 2018 and April 2019, and how those planting efforts compare with existing canopy coverage.</p>
+          <div class="map-actions">
+            <a href="../assets/images/maps/full/friends-of-greens-tree-canopy.jpg" class="btn btn-primary" target="_blank" rel="noopener">View Full Map</a>
+            <a href="../assets/images/maps/pdf/friends-of-greens-tree-canopy.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Open PDF</a>
           </div>
         </div>
-
-        <aside class="map-story-summary-card">
-          <div>
-            <strong>Map Type</strong>
-            <span>Tree planting and canopy cover map</span>
-          </div>
-
-          <div>
-            <strong>GIS Focus</strong>
-            <span>Urban canopy mapping, graduated symbols, choropleth mapping, normalization, environmental planning</span>
-          </div>
-
-          <div>
-            <strong>Tools Used</strong>
-            <span>ArcGIS Pro, data joins, classification, graduated symbols, layout design</span>
-          </div>
+        <aside class="map-summary">
+          <div class="map-summary-item"><strong>Map Type</strong><span>Tree planting and canopy cover map</span></div>
+          <div class="map-summary-item"><strong>GIS Focus</strong><span>Urban canopy mapping, graduated symbols, choropleth mapping, normalization, environmental planning</span></div>
+          <div class="map-summary-item"><strong>Tools Used</strong><span>ArcGIS Pro, data joins, classification, graduated symbols, layout design</span></div>
         </aside>
       </div>
     </section>
 
-    <!-- MAP PREVIEW -->
-    <section class="map-preview-section">
-      <div class="container">
-        <div class="map-preview-card">
-          <img
-            src="../assets/images/maps/full/friends-of-greens-tree-canopy.jpg"
-            alt="Friends of Greens street tree planting map showing trees planted per Calgary electoral division and percent tree canopy cover"
-          />
-        </div>
-      </div>
-    </section>
+    <section class="map-preview-sec"><div class="container"><article class="map-preview-card"><img src="../assets/images/maps/full/friends-of-greens-tree-canopy.jpg" alt="Friends of Greens street tree planting map showing trees planted per Calgary electoral division and percent tree canopy cover"></article></div></section>
 
-    <!-- STORY CONTENT -->
-    <section class="map-story-content-section">
-      <div class="container map-story-layout">
-        <article class="map-story-main">
-          <section class="story-block">
-            <p class="eyebrow">Purpose</p>
-            <h2>What this map was made for</h2>
-            <p>
-              The purpose of this map was to compare street tree planting activity with existing
-              tree canopy cover across Calgary electoral divisions. I wanted the map to show not
-              only where trees were planted, but also whether planting activity was happening in
-              places with lower canopy cover or in areas that already had stronger tree coverage.
-            </p>
-
-            <p>
-              This makes the map useful for thinking about urban greening priorities. Tree planting
-              is connected to shade, heat reduction, air quality, stormwater benefits, and neighbourhood
-              livability, so the spatial pattern of planting matters.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Data and Method</p>
-            <h2>How I built the map</h2>
-            <p>
-              I worked with electoral division boundary data and tree canopy percentage data. I joined
-              the canopy cover values to the electoral division polygons and classified the polygons
-              into canopy percentage ranges. These ranges were shown with a blue-to-green color ramp,
-              where lighter blue areas represent lower canopy coverage and darker green areas represent
-              higher canopy coverage.
-            </p>
-
-            <p>
-              I then added the tree planting records as point data and symbolized them with graduated
-              circles. Larger red and orange circles represent places where more trees were planted,
-              while smaller yellow circles represent fewer planted trees. The planting totals were
-              normalized by electoral division size in square miles so larger divisions would not dominate
-              the interpretation only because they cover more area.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Map Design</p>
-            <h2>How I showed two variables together</h2>
-            <p>
-              This map uses a bivariate-style design because it shows two related environmental variables
-              at the same time. The polygon color shows percent canopy cover, while the graduated point
-              symbols show tree planting activity. This allows the viewer to compare where trees were
-              planted against the existing level of canopy cover.
-            </p>
-
-            <p>
-              I kept the overall layout simple so the data remained the focus. The light background gives
-              the map a clean appearance. The blue-to-green canopy ramp supports the environmental theme,
-              and the yellow-to-red planting points stand out clearly against both the blue and green fills.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Cartographic Choices</p>
-            <h2>Why I chose these symbols and colors</h2>
-            <p>
-              I used blue for low canopy areas and green for higher canopy areas because this makes the
-              map easy to interpret visually. Blue suggests limited vegetation or lower canopy presence,
-              while green naturally communicates stronger vegetation coverage. For planting activity,
-              I used graduated yellow, orange, and red circles so higher planting totals would immediately
-              stand out.
-            </p>
-
-            <p>
-              The legend was placed on the left side to make both variables easy to read. The map title
-              and subtitle clearly identify the subject, geography, and time period. I also used a green
-              north arrow to match the environmental theme and keep the layout visually consistent.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Findings</p>
-            <h2>What the map shows</h2>
-            <p>
-              The map shows that canopy cover is not evenly distributed across Calgary electoral divisions.
-              Some central and inner divisions have stronger canopy cover, while several outer or larger
-              divisions show lower canopy coverage. Tree planting activity also varies by neighbourhood,
-              with some areas showing larger planting totals than others.
-            </p>
-
-            <p>
-              By comparing the point symbols with the canopy background, the map helps identify whether
-              planting efforts are reaching lower-canopy areas. This type of comparison can support future
-              planting decisions by highlighting areas where canopy improvement may still be needed.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Reflection</p>
-            <h2>What I learned from this map</h2>
-            <p>
-              This project helped me understand how useful GIS can be for urban environmental planning.
-              A map like this can communicate more than one dataset at once, but the design has to be
-              handled carefully. If the canopy colors or planting symbols are too similar, the relationship
-              between the two variables becomes difficult to read.
-            </p>
-
-            <p>
-              I also learned the value of normalization. Without normalizing tree planting by electoral
-              division size, larger divisions could appear more important simply because they cover more
-              area. The final map improved my skills in data joining, classification, graduated symbology,
-              environmental mapping, and visual communication for urban greening decisions.
-            </p>
-          </section>
-        </article>
-
-        <aside class="map-story-sidebar">
-          <div class="sidebar-card">
-            <h3>Key outputs</h3>
-            <ul>
-              <li>Tree canopy choropleth map</li>
-              <li>Graduated tree planting symbols</li>
-              <li>Electoral division comparison</li>
-              <li>Normalized planting totals</li>
-              <li>Combined canopy and planting visualization</li>
-              <li>Clean environmental map layout</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Skills shown</h3>
-            <ul>
-              <li>Environmental GIS mapping</li>
-              <li>Data joins</li>
-              <li>Choropleth classification</li>
-              <li>Graduated symbol design</li>
-              <li>Normalization by area</li>
-              <li>Bivariate-style cartography</li>
-              <li>Urban greening interpretation</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Main takeaway</h3>
-            <p>
-              The map shows how tree planting activity can be compared with existing canopy cover to
-              support better urban greening decisions and identify areas where canopy improvement may
-              still be needed.
-            </p>
-          </div>
+    <section class="map-story-body">
+      <div class="container map-story-grid">
+        <article class="map-story-main"><section class="story-section"><span class="eyebrow">Purpose</span><h2>What this map was made for</h2><p>The purpose of this map was to compare street tree planting activity with existing tree canopy cover across Calgary electoral divisions. I wanted the map to show not only where trees were planted, but also whether planting activity was happening in places with lower canopy cover or in areas that already had stronger tree coverage.</p><p>This makes the map useful for thinking about urban greening priorities. Tree planting is connected to shade, heat reduction, air quality, stormwater benefits, and neighbourhood livability, so the spatial pattern of planting matters.</p></section><section class="story-section"><span class="eyebrow">Data and Method</span><h2>How I built the map</h2><p>I worked with electoral division boundary data and tree canopy percentage data. I joined the canopy cover values to the electoral division polygons and classified the polygons into canopy percentage ranges. These ranges were shown with a blue-to-green color ramp, where lighter blue areas represent lower canopy coverage and darker green areas represent higher canopy coverage.</p><p>I then added the tree planting records as point data and symbolized them with graduated circles. Larger red and orange circles represent places where more trees were planted, while smaller yellow circles represent fewer planted trees. The planting totals were normalized by electoral division size in square miles so larger divisions would not dominate the interpretation only because they cover more area.</p></section><section class="story-section"><span class="eyebrow">Map Design</span><h2>How I showed two variables together</h2><p>This map uses a bivariate-style design because it shows two related environmental variables at the same time. The polygon color shows percent canopy cover, while the graduated point symbols show tree planting activity. This allows the viewer to compare where trees were planted against the existing level of canopy cover.</p><p>I kept the overall layout simple so the data remained the focus. The light background gives the map a clean appearance. The blue-to-green canopy ramp supports the environmental theme, and the yellow-to-red planting points stand out clearly against both the blue and green fills.</p></section><section class="story-section"><span class="eyebrow">Cartographic Choices</span><h2>Why I chose these symbols and colors</h2><p>I used blue for low canopy areas and green for higher canopy areas because this makes the map easy to interpret visually. Blue suggests limited vegetation or lower canopy presence, while green naturally communicates stronger vegetation coverage. For planting activity, I used graduated yellow, orange, and red circles so higher planting totals would immediately stand out.</p><p>The legend was placed on the left side to make both variables easy to read. The map title and subtitle clearly identify the subject, geography, and time period. I also used a green north arrow to match the environmental theme and keep the layout visually consistent.</p></section><section class="story-section"><span class="eyebrow">Findings</span><h2>What the map shows</h2><p>The map shows that canopy cover is not evenly distributed across Calgary electoral divisions. Some central and inner divisions have stronger canopy cover, while several outer or larger divisions show lower canopy coverage. Tree planting activity also varies by neighbourhood, with some areas showing larger planting totals than others.</p><p>By comparing the point symbols with the canopy background, the map helps identify whether planting efforts are reaching lower-canopy areas. This type of comparison can support future planting decisions by highlighting areas where canopy improvement may still be needed.</p></section><section class="story-section"><span class="eyebrow">Reflection</span><h2>What I learned from this map</h2><p>This project helped me understand how useful GIS can be for urban environmental planning. A map like this can communicate more than one dataset at once, but the design has to be handled carefully. If the canopy colors or planting symbols are too similar, the relationship between the two variables becomes difficult to read.</p><p>I also learned the value of normalization. Without normalizing tree planting by electoral division size, larger divisions could appear more important simply because they cover more area. The final map improved my skills in data joining, classification, graduated symbology, environmental mapping, and visual communication for urban greening decisions.</p></section></article>
+        <aside class="map-sidebar">
+          <div class="side-card"><h3>Key outputs</h3><ul><li>Tree canopy choropleth map</li><li>Graduated tree planting symbols</li><li>Electoral division comparison</li><li>Normalized planting totals</li><li>Combined canopy and planting visualization</li><li>Clean environmental map layout</li></ul></div>
+          <div class="side-card"><h3>Skills shown</h3><ul><li>Environmental GIS mapping</li><li>Data joins</li><li>Choropleth classification</li><li>Graduated symbol design</li><li>Normalization by area</li><li>Bivariate-style cartography</li><li>Urban greening interpretation</li></ul></div>
+          <div class="side-card"><h3>Main takeaway</h3><p>The map shows how tree planting activity can be compared with existing canopy cover to support better urban greening decisions and identify areas where canopy improvement may still be needed.</p></div>
         </aside>
       </div>
     </section>
 
-    <!-- NEXT / PREVIOUS -->
-    <section class="map-story-nav-section">
-      <div class="container map-story-nav">
-        <a href="calgary-park-accessibility.html" class="btn btn-secondary">← Previous Map Story</a>
-        <a href="stillbirths-neonatal-deaths-asia.html" class="btn btn-primary">Next Map Story →</a>
-      </div>
-    </section>
+    <section class="map-nav-bottom"><div class="container"><div class="map-nav-row"><a href="calgary-park-accessibility.html" class="btn btn-secondary">← Previous Map Story</a><a href="stillbirths-neonatal-deaths-asia.html" class="btn btn-primary">Next Map Story →</a></div></div></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>© 2026 Salman Haider. GIS Portfolio.</p>
-      <p>Built with HTML, CSS, and JavaScript.</p>
-    </div>
-  </footer>
-
-  <script src="../js/maps/friends-of-greens-tree-canopy.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Salman Haider. GIS Portfolio.</p><p>Built with HTML, CSS, and JavaScript.</p></div></footer>
+  <script src="../script.js"></script>
 </body>
 </html>

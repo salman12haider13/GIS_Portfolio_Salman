@@ -1,307 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Carpet Community Spatial Overview | Salman Haider GIS Portfolio</title>
-  <meta
-    name="description"
-    content="Map story for the Red Carpet Community Spatial Overview, an urban GIS and community mapping project using OpenStreetMap edits, Calgary open data, ArcGIS Pro, and 2D/3D GIS workflows."
-  />
-
+  <meta name="description" content="Map story for Red Carpet Community Spatial Overview.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/maps/red-carpet-community-overview.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
   <header class="site-header">
     <nav class="navbar container">
-      <a href="../index.html#home" class="logo" aria-label="Go to homepage">
-        <span class="logo-mark">SH</span>
-        <span class="logo-text">Salman Haider</span>
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
+      <a href="../index.html#home" class="logo"><span class="logo-mark">SH</span><span class="logo-text">Salman Haider</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="../index.html#projects">Projects</a></li>
         <li><a href="../index.html#maps">Maps</a></li>
         <li><a href="../index.html#skills">Skills</a></li>
         <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../index.html#certificates">Certificates</a></li>
-        <li><a href="../index.html#contact" class="nav-button">Contact</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- MAP STORY HERO -->
-    <section class="map-story-hero">
-      <div class="container map-story-hero-grid">
-        <div class="map-story-hero-copy">
+    <section class="map-hero">
+      <div class="container map-hero-grid">
+        <div>
           <a href="../index.html#maps" class="back-link">← Back to Maps</a>
-
-          <p class="eyebrow">Urban GIS / Community Mapping</p>
-
+          <span class="eyebrow">Urban GIS / Community Mapping</span>
           <h1>Red Carpet Community Spatial Overview</h1>
-
-          <p>
-            I created this map to show a spatial overview of the Red Carpet community in
-            southeast Calgary. The map brings together community boundaries, road networks,
-            parks and open spaces, building types, bus stops, and postboxes to communicate
-            how the neighbourhood is organized and connected.
-          </p>
-
-          <div class="map-story-actions">
-            <a
-              href="../assets/images/maps/full/red-carpet-community-overview.jpg"
-              class="btn btn-primary"
-              target="_blank"
-              rel="noopener"
-            >
-              View Full Map
-            </a>
-
-            <a
-              href="../assets/images/maps/pdf/red-carpet-community-overview.pdf"
-              class="btn btn-secondary"
-              target="_blank"
-              rel="noopener"
-            >
-              Open PDF
-            </a>
+          <p>I created this map to show a spatial overview of the Red Carpet community in southeast Calgary. The map brings together community boundaries, road networks, parks and open spaces, building types, bus stops, and postboxes to communicate how the neighbourhood is organized and connected.</p>
+          <div class="map-actions">
+            <a href="../assets/images/maps/full/red-carpet-community-overview.jpg" class="btn btn-primary" target="_blank" rel="noopener">View Full Map</a>
+            <a href="../assets/images/maps/pdf/red-carpet-community-overview.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Open PDF</a>
           </div>
         </div>
-
-        <aside class="map-story-summary-card">
-          <div>
-            <strong>Map Type</strong>
-            <span>Urban community overview map</span>
-          </div>
-
-          <div>
-            <strong>GIS Focus</strong>
-            <span>OpenStreetMap editing, POI mapping, building classification, geodatabase organization, 2D layout, and 3D scene preparation</span>
-          </div>
-
-          <div>
-            <strong>Tools Used</strong>
-            <span>OpenStreetMap, Overpass Turbo, QGIS, ArcGIS Pro, ArcGIS Online, Calgary Open Data</span>
-          </div>
+        <aside class="map-summary">
+          <div class="map-summary-item"><strong>Map Type</strong><span>Urban community overview map</span></div>
+          <div class="map-summary-item"><strong>GIS Focus</strong><span>OpenStreetMap editing, POI mapping, building classification, geodatabase organization, 2D layout, and 3D scene preparation</span></div>
+          <div class="map-summary-item"><strong>Tools Used</strong><span>OpenStreetMap, Overpass Turbo, QGIS, ArcGIS Pro, ArcGIS Online, Calgary Open Data</span></div>
         </aside>
       </div>
     </section>
 
-    <!-- MAP PREVIEW -->
-    <section class="map-preview-section">
-      <div class="container">
-        <div class="map-preview-card">
-          <img
-            src="../assets/images/maps/full/red-carpet-community-overview.jpg"
-            alt="Spatial overview map of the Red Carpet community in Calgary showing buildings, roads, parks, bus stops, postboxes, community boundary, inset map, and legend"
-          />
-        </div>
-      </div>
-    </section>
+    <section class="map-preview-sec"><div class="container"><article class="map-preview-card"><img src="../assets/images/maps/full/red-carpet-community-overview.jpg" alt="Spatial overview map of the Red Carpet community in Calgary showing buildings, roads, parks, bus stops, postboxes, community boundary, inset map, and legend"></article></div></section>
 
-    <!-- STORY CONTENT -->
-    <section class="map-story-content-section">
-      <div class="container map-story-layout">
-        <article class="map-story-main">
-          <section class="story-block">
-            <p class="eyebrow">Purpose</p>
-            <h2>What this map was made for</h2>
-            <p>
-              The purpose of this map was to create a clear neighbourhood-level overview of
-              Red Carpet in southeast Calgary. I wanted the map to show the community boundary
-              and the main features inside it, including roads, buildings, parks, bus stops,
-              postboxes, and local services.
-            </p>
-
-            <p>
-              This type of map is useful when someone wants to understand the structure of a
-              community at a local scale. It shows how the road network connects different parts
-              of the neighbourhood, where open spaces are located, and how residential, apartment,
-              and retail buildings are distributed.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Data Creation</p>
-            <h2>How I used and improved OpenStreetMap data</h2>
-            <p>
-              A major part of this project was creating and improving spatial data in OpenStreetMap.
-              I focused on the Red Carpet community and updated features such as buildings, addresses,
-              amenities, and local points of interest. These edits helped make the community data more
-              complete before bringing it into a GIS environment.
-            </p>
-
-            <p>
-              The mapping work included edits to features such as Elliston Park buildings, Canada Post
-              mailboxes, 7-Eleven, Petro-Canada, Calgary Village Mobile Home Park, and several address
-              records. I then used the edited OSM data as part of the GIS workflow for building the final
-              2D cartographic layout.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">ETL Workflow</p>
-            <h2>How I moved the data into GIS</h2>
-            <p>
-              After editing the data, I extracted OpenStreetMap features and prepared them for use in
-              ArcGIS Pro. The workflow involved downloading or querying OSM data, converting it into
-              GIS-ready formats, and organizing the layers into a file geodatabase. This included layers
-              for buildings, bus stops, community boundary, parks and grounds, postboxes, and roads.
-            </p>
-
-            <p>
-              This step was important because a clean geodatabase makes the final map easier to manage.
-              Instead of working with loose files, I organized the layers into a structured GIS workspace
-              so they could be clipped, symbolized, labeled, and used for both 2D mapping and 3D scene
-              preparation.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Map Design</p>
-            <h2>How I designed the community overview</h2>
-            <p>
-              The map uses the Red Carpet community boundary as the main visual frame. I used a bright
-              red outline so the community extent is immediately visible. Roads were shown in light gray
-              and white so they support navigation without overpowering the map. Parks and open spaces
-              were shown in green because that color is easy to associate with open land and recreation.
-            </p>
-
-            <p>
-              Buildings were separated into categories such as houses, apartments, retail, and others.
-              This helps the viewer understand land use patterns inside the community. I used soft colors
-              for building categories so the map remained readable even though there are many small
-              building footprints.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Map Elements</p>
-            <h2>How the layout supports interpretation</h2>
-            <p>
-              I included an inset map of Calgary to show where Red Carpet is located within the city.
-              This helps viewers understand the broader urban context before looking at the detailed
-              community map. The legend explains the road, park, building, bus stop, postbox, and
-              community boundary symbols.
-            </p>
-
-            <p>
-              I also included spatial reference information because this project involved data creation,
-              editing, and GIS processing. The scale bar, north arrow, title, data sources, and legend
-              make the layout work as a complete cartographic product rather than only a screenshot of
-              GIS layers.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Findings</p>
-            <h2>What the map shows</h2>
-            <p>
-              The map shows that Red Carpet has a long and narrow community shape, with 17 Avenue SE
-              forming an important edge along the south side and 68 Street SE along the east side. The
-              community contains a mix of residential housing, apartment buildings, retail/service
-              locations, parks, and mobile home areas.
-            </p>
-
-            <p>
-              The building pattern also shows how different types of development are arranged in the
-              neighbourhood. Residential housing dominates much of the map, while apartment and retail
-              features are concentrated in more specific areas. Bus stops and postboxes help show small
-              but important neighbourhood services and accessibility points.
-            </p>
-          </section>
-
-          <section class="story-block">
-            <p class="eyebrow">Reflection</p>
-            <h2>What I learned from this map</h2>
-            <p>
-              This project helped me understand how important data creation is in GIS. A map is only as
-              useful as the data behind it, and sometimes the data needs to be edited or improved before
-              it can support analysis or cartography. Working with OpenStreetMap gave me hands-on
-              experience with volunteered geographic information and real-world feature editing.
-            </p>
-
-            <p>
-              I also learned how an ETL workflow connects different tools together. The project moved
-              from OSM editing, to data extraction, to QGIS conversion, to ArcGIS Pro mapping, to
-              geodatabase organization, and finally to 2D and 3D GIS outputs. This made it a useful
-              example of practical urban GIS work from data creation to final map design.
-            </p>
-          </section>
-        </article>
-
-        <aside class="map-story-sidebar">
-          <div class="sidebar-card">
-            <h3>Key outputs</h3>
-            <ul>
-              <li>2D cartographic layout of Red Carpet</li>
-              <li>Community boundary map</li>
-              <li>Building type classification</li>
-              <li>Road, bus stop, and postbox layers</li>
-              <li>Parks and open space mapping</li>
-              <li>Calgary inset location map</li>
-              <li>Organized geodatabase structure</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Skills shown</h3>
-            <ul>
-              <li>OpenStreetMap editing</li>
-              <li>POI and building data creation</li>
-              <li>Overpass / OSM data extraction</li>
-              <li>QGIS to ArcGIS Pro workflow</li>
-              <li>File geodatabase organization</li>
-              <li>Urban cartographic layout</li>
-              <li>3D scene preparation</li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Main takeaway</h3>
-            <p>
-              This map shows how community-level GIS work often starts with data creation and editing,
-              not just final visualization. The final layout communicates Red Carpet’s built environment,
-              services, and neighbourhood structure.
-            </p>
-          </div>
+    <section class="map-story-body">
+      <div class="container map-story-grid">
+        <article class="map-story-main"><section class="story-section"><span class="eyebrow">Purpose</span><h2>What this map was made for</h2><p>The purpose of this map was to create a clear neighbourhood-level overview of Red Carpet in southeast Calgary. I wanted the map to show the community boundary and the main features inside it, including roads, buildings, parks, bus stops, postboxes, and local services.</p><p>This type of map is useful when someone wants to understand the structure of a community at a local scale. It shows how the road network connects different parts of the neighbourhood, where open spaces are located, and how residential, apartment, and retail buildings are distributed.</p></section><section class="story-section"><span class="eyebrow">Data Creation</span><h2>How I used and improved OpenStreetMap data</h2><p>A major part of this project was creating and improving spatial data in OpenStreetMap. I focused on the Red Carpet community and updated features such as buildings, addresses, amenities, and local points of interest. These edits helped make the community data more complete before bringing it into a GIS environment.</p><p>The mapping work included edits to features such as Elliston Park buildings, Canada Post mailboxes, 7-Eleven, Petro-Canada, Calgary Village Mobile Home Park, and several address records. I then used the edited OSM data as part of the GIS workflow for building the final 2D cartographic layout.</p></section><section class="story-section"><span class="eyebrow">ETL Workflow</span><h2>How I moved the data into GIS</h2><p>After editing the data, I extracted OpenStreetMap features and prepared them for use in ArcGIS Pro. The workflow involved downloading or querying OSM data, converting it into GIS-ready formats, and organizing the layers into a file geodatabase. This included layers for buildings, bus stops, community boundary, parks and grounds, postboxes, and roads.</p><p>This step was important because a clean geodatabase makes the final map easier to manage. Instead of working with loose files, I organized the layers into a structured GIS workspace so they could be clipped, symbolized, labeled, and used for both 2D mapping and 3D scene preparation.</p></section><section class="story-section"><span class="eyebrow">Map Design</span><h2>How I designed the community overview</h2><p>The map uses the Red Carpet community boundary as the main visual frame. I used a bright red outline so the community extent is immediately visible. Roads were shown in light gray and white so they support navigation without overpowering the map. Parks and open spaces were shown in green because that color is easy to associate with open land and recreation.</p><p>Buildings were separated into categories such as houses, apartments, retail, and others. This helps the viewer understand land use patterns inside the community. I used soft colors for building categories so the map remained readable even though there are many small building footprints.</p></section><section class="story-section"><span class="eyebrow">Map Elements</span><h2>How the layout supports interpretation</h2><p>I included an inset map of Calgary to show where Red Carpet is located within the city. This helps viewers understand the broader urban context before looking at the detailed community map. The legend explains the road, park, building, bus stop, postbox, and community boundary symbols.</p><p>I also included spatial reference information because this project involved data creation, editing, and GIS processing. The scale bar, north arrow, title, data sources, and legend make the layout work as a complete cartographic product rather than only a screenshot of GIS layers.</p></section><section class="story-section"><span class="eyebrow">Findings</span><h2>What the map shows</h2><p>The map shows that Red Carpet has a long and narrow community shape, with 17 Avenue SE forming an important edge along the south side and 68 Street SE along the east side. The community contains a mix of residential housing, apartment buildings, retail/service locations, parks, and mobile home areas.</p><p>The building pattern also shows how different types of development are arranged in the neighbourhood. Residential housing dominates much of the map, while apartment and retail features are concentrated in more specific areas. Bus stops and postboxes help show small but important neighbourhood services and accessibility points.</p></section><section class="story-section"><span class="eyebrow">Reflection</span><h2>What I learned from this map</h2><p>This project helped me understand how important data creation is in GIS. A map is only as useful as the data behind it, and sometimes the data needs to be edited or improved before it can support analysis or cartography. Working with OpenStreetMap gave me hands-on experience with volunteered geographic information and real-world feature editing.</p><p>I also learned how an ETL workflow connects different tools together. The project moved from OSM editing, to data extraction, to QGIS conversion, to ArcGIS Pro mapping, to geodatabase organization, and finally to 2D and 3D GIS outputs. This made it a useful example of practical urban GIS work from data creation to final map design.</p></section></article>
+        <aside class="map-sidebar">
+          <div class="side-card"><h3>Key outputs</h3><ul><li>2D cartographic layout of Red Carpet</li><li>Community boundary map</li><li>Building type classification</li><li>Road, bus stop, and postbox layers</li><li>Parks and open space mapping</li><li>Calgary inset location map</li><li>Organized geodatabase structure</li></ul></div>
+          <div class="side-card"><h3>Skills shown</h3><ul><li>OpenStreetMap editing</li><li>POI and building data creation</li><li>Overpass / OSM data extraction</li><li>QGIS to ArcGIS Pro workflow</li><li>File geodatabase organization</li><li>Urban cartographic layout</li><li>3D scene preparation</li></ul></div>
+          <div class="side-card"><h3>Main takeaway</h3><p>This map shows how community-level GIS work often starts with data creation and editing, not just final visualization. The final layout communicates Red Carpet's built environment, services, and neighbourhood structure.</p></div>
         </aside>
       </div>
     </section>
 
-    <!-- NEXT / PREVIOUS -->
-    <section class="map-story-nav-section">
-      <div class="container map-story-nav">
-        <a href="town-of-olds-reference-map.html" class="btn btn-secondary">← Previous Map Story</a>
-        <a href="housing-cost-da-vs-ct.html" class="btn btn-primary">Next Map Story →</a>
-      </div>
-    </section>
+    <section class="map-nav-bottom"><div class="container"><div class="map-nav-row"><a href="town-of-olds-reference-map.html" class="btn btn-secondary">← Previous Map Story</a><a href="housing-cost-da-vs-ct.html" class="btn btn-primary">Next Map Story →</a></div></div></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>© 2026 Salman Haider. GIS Portfolio.</p>
-      <p>Built with HTML, CSS, and JavaScript.</p>
-    </div>
-  </footer>
-
-  <script src="../js/maps/red-carpet-community-overview.js"></script>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Salman Haider. GIS Portfolio.</p><p>Built with HTML, CSS, and JavaScript.</p></div></footer>
+  <script src="../script.js"></script>
 </body>
 </html>
