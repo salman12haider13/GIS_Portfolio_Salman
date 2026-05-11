@@ -1268,3 +1268,185 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .reveal { opacity: 1; transform: none; transition: none; }
   * { animation: none !important; transition-duration: 0.01ms !important; }
 }
+
+/* =========================================================
+   OFF THE MAP PAGE
+   ========================================================= */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 26px;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.life-hero {
+  padding: 82px 0 38px;
+}
+
+.life-hero-content {
+  max-width: 820px;
+}
+
+.life-hero-content h1 {
+  max-width: 920px;
+  font-size: clamp(2.7rem, 6vw, 5.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.life-hero-content p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.life-gallery-section {
+  padding: 34px 0 88px;
+}
+
+.life-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.life-card {
+  grid-column: span 4;
+  padding: 12px;
+  border-radius: 26px;
+  background: rgba(255, 253, 247, 0.90);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.life-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 104, 70, 0.30);
+  box-shadow: var(--shadow);
+}
+
+.life-card.wide {
+  grid-column: span 6;
+}
+
+.life-card.tall {
+  grid-column: span 4;
+}
+
+.life-photo-frame {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle, rgba(47, 104, 70, 0.08) 1px, transparent 1px),
+    #f0ebe1;
+  background-size: 18px 18px;
+  border: 1px solid var(--line-soft);
+}
+
+.life-card.wide .life-photo-frame {
+  height: 300px;
+}
+
+.life-card.tall .life-photo-frame {
+  height: 390px;
+}
+
+.life-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.life-card p {
+  padding: 12px 6px 2px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.life-closing {
+  padding: 78px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+
+.life-note {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 44px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 253, 247, 0.90);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.life-note h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.065em;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.life-note p {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 26px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 980px) {
+  .life-card,
+  .life-card.wide,
+  .life-card.tall {
+    grid-column: span 6;
+  }
+
+  .life-photo-frame,
+  .life-card.wide .life-photo-frame,
+  .life-card.tall .life-photo-frame {
+    height: 330px;
+  }
+}
+
+@media (max-width: 640px) {
+  .life-hero {
+    padding: 54px 0 28px;
+  }
+
+  .life-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .life-card,
+  .life-card.wide,
+  .life-card.tall {
+    grid-column: span 1;
+  }
+
+  .life-photo-frame,
+  .life-card.wide .life-photo-frame,
+  .life-card.tall .life-photo-frame {
+    height: 300px;
+  }
+
+  .life-note {
+    padding: 30px 22px;
+  }
+}
