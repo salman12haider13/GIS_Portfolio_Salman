@@ -1,45 +1,27 @@
-# Salman Haider GIS Portfolio
+# Salman Haider — GIS Portfolio
 
-A professional GIS portfolio website for Salman Haider, focused on GIS analysis, cartography, ArcGIS Pro automation, web mapping, spatial data workflows, and applied geospatial projects.
+A single-page, mobile-responsive portfolio focused on spatial analysis, cartography, GIS automation, and web GIS.
 
-## Portfolio Focus
+## Site structure
 
-GIS Specialist | Spatial Analyst | ArcGIS & Python Automation
+- `index.html` — all portfolio content and project links
+- `portfolio.css` — the dark visual system and responsive layouts
+- `portfolio.js` — mobile navigation, image carousel, and the zoomable map viewer
+- `robots.txt` and `sitemap.xml` — crawler guidance and image discovery
+- `assets/images/maps/thumbs/` — optimized gallery images
+- `assets/images/maps/full/` — full-resolution maps used by the viewer
+- `assets/images/projects/` — project card images
+- `assets/images/off-the-map/web/` — optimized personal photographs
+- `assets/images/logos/` — employer and university marks
+- `assets/images/social/` — favicon and social-sharing preview
+- `assets/docs/Salman-Haider-GIS-Analyst-Resume.pdf` — current résumé
 
-This portfolio highlights selected GIS projects, map stories, technical skills, professional background, certificates, and contact information.
+## Local preview
 
-## Main Sections
+Serve the project folder with any static web server, then open `index.html`. For example:
 
-- Hero / Profile Summary
-- GIS Projects
-- Static Maps & Spatial Visualization
-- GIS Skills
-- Experience & Education
-- Certificates
-- Contact
+```powershell
+python -m http.server 4173
+```
 
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages-ready static structure
-
-## File Structure
-
-- `index.html` — main portfolio page
-- `css/styles.css` — main website styling
-- `js/main.js` — navigation, project expansion, map slider, certificate expansion
-- `maps/` — individual map story pages
-- `css/maps/` — map story page styles
-- `js/maps/` — map story page scripts
-- `assets/images/` — project, map, logo, and profile images
-- `assets/docs/` — CV and certificate PDFs
-
-## Local Preview
-
-Open `index.html` directly in a browser, or use the VS Code Live Server extension for local development.
-
-## Deployment
-
-This is a static website and can be hosted on GitHub Pages, Netlify, Vercel, or Cloudflare Pages.
+The site has no build step or runtime dependencies and is ready for GitHub Pages.

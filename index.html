@@ -1,710 +1,653 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salman Haider | GIS Specialist & Spatial Analyst</title>
-  <meta name="description" content="Portfolio of Salman Haider, a GIS Specialist and Spatial Analyst focused on ArcGIS Pro, spatial analysis, cartography, Python automation, and geospatial workflows.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Salman Haider | GIS Analyst in Canada</title>
+  <meta name="description" content="Explore Salman Haider’s GIS portfolio in Canada: spatial analysis, cartography, ArcGIS Pro, Python and ArcPy automation, remote sensing, and web GIS.">
+  <meta name="author" content="Salman Haider">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#181918">
+  <link rel="canonical" href="https://salmanhaider.pro/">
+  <link rel="alternate" hreflang="en-CA" href="https://salmanhaider.pro/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <link rel="icon" type="image/png" href="assets/images/social/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Salman Haider GIS Portfolio">
+  <meta property="og:title" content="Salman Haider | GIS Analyst in Canada">
+  <meta property="og:description" content="A GIS portfolio in Canada spanning spatial analysis, cartography, automation, remote sensing, and web GIS.">
+  <meta property="og:url" content="https://salmanhaider.pro/">
+  <meta property="og:image" content="https://salmanhaider.pro/assets/images/social/salman-haider-gis-portfolio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Salman Haider GIS portfolio featuring spatial analysis, cartography, and GIS automation">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Salman Haider | GIS Analyst in Canada">
+  <meta name="twitter:description" content="Spatial analysis, cartography, GIS automation, remote sensing, and web GIS projects.">
+  <meta name="twitter:image" content="https://salmanhaider.pro/assets/images/social/salman-haider-gis-portfolio.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://salmanhaider.pro/#website",
+        "url": "https://salmanhaider.pro/",
+        "name": "Salman Haider GIS Portfolio",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://salmanhaider.pro/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://salmanhaider.pro/#profile-page",
+        "url": "https://salmanhaider.pro/",
+        "name": "Salman Haider | GIS Analyst in Canada",
+        "description": "GIS portfolio covering spatial analysis, cartography, GIS automation, remote sensing, and web GIS.",
+        "inLanguage": "en-CA",
+        "isPartOf": { "@id": "https://salmanhaider.pro/#website" },
+        "mainEntity": { "@id": "https://salmanhaider.pro/#person" },
+        "dateModified": "2026-07-14"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://salmanhaider.pro/#person",
+        "name": "Salman Haider",
+        "url": "https://salmanhaider.pro/",
+        "image": "https://salmanhaider.pro/assets/images/profile/salman-headshot.webp",
+        "jobTitle": "GIS Analyst",
+        "description": "GIS analyst in Canada specializing in spatial analysis, cartography, Python and ArcPy automation, and web GIS.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/salman12haider13",
+          "https://github.com/salman12haider13"
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Calgary" },
+          { "@type": "CollegeOrUniversity", "name": "PMAS Arid Agriculture University" }
+        ],
+        "knowsAbout": [
+          "Geographic Information Systems",
+          "Spatial analysis",
+          "Cartography",
+          "GIS automation",
+          "ArcGIS Pro",
+          "Python",
+          "ArcPy",
+          "PostGIS",
+          "Web GIS",
+          "Remote sensing"
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="portfolio.css">
 </head>
-<body>
+<body class="portfolio-home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <nav class="navbar container">
-      <a href="#home" class="logo" aria-label="Go to homepage">
-        <span class="logo-mark">SH</span>
-        <span class="logo-text">Salman Haider</span>
+    <div class="site-nav wrap">
+      <a class="wordmark" href="#home" aria-label="Salman Haider, GIS Analyst, home">
+        <span>Salman Haider</span>
+        <span class="wordmark-role">/ GIS</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span>Menu</span>
       </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#projects">Automation</a></li>
-        <li><a href="#maps">Map Stories</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="off-the-map.html">Off the Map</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-    </nav>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#maps">Maps</a>
+        <a href="#profile">Profile</a>
+        <a href="#beyond">Beyond the Map</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="hero-eyebrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            GIS Portfolio
-          </div>
-          <h1>Salman Haider</h1>
-          <p class="hero-subtitle">GIS Analyst | ArcGIS & Python Automation</p>
-          <p class="hero-text">I work with spatial data, maps, and GIS workflows to support better decision-making. My work focuses on ArcGIS Pro analysis, cartography, Python automation, web mapping, and applied geospatial projects.</p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#maps" class="btn btn-secondary">View Maps</a>
-            <a href="assets/docs/Haider_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
-          </div>
+  <main id="main-content">
+    <section class="hero wrap" id="home">
+      <div class="hero-identity">
+        <img class="headshot" src="assets/images/profile/salman-headshot.webp" alt="Salman Haider" width="288" height="360">
+        <div>
+          <p class="eyebrow">GIS Analyst · Victoria, British Columbia</p>
+          <h1>Spatial analysis, cartography, and GIS automation.</h1>
         </div>
-
-        <aside class="hero-profile reveal">
-          <div class="profile-img-wrap">
-            <img src="assets/images/profile/salman-headshot.png" alt="Salman Haider professional headshot" draggable="false">
-          </div>
-          <div class="profile-body">
-            <span class="loc">Victoria, BC</span>
-            <h3>GIS Analyst</h3>
-            <p>ArcGIS Pro · Python · Spatial Analysis · Web Mapping</p>
-          </div>
-        </aside>
       </div>
 
-      <div class="container stats-strip reveal">
-        <div class="stat-item">
-          <div class="stat-num">10</div>
-          <div class="stat-label">Years in GIS</div>
-          <div class="stat-desc">Academic training, mapping, and applied GIS work since 2016</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">200+</div>
-          <div class="stat-label">Freelance Projects</div>
-          <div class="stat-desc">Territory mapping, spatial analysis, reporting, and automation</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">35+</div>
-          <div class="stat-label">Certificates</div>
-          <div class="stat-desc">GIS, remote sensing, Python, databases, and web mapping</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">MGIS</div>
-          <div class="stat-label">Master of GIS</div>
-          <div class="stat-desc">University of Calgary</div>
+      <div class="hero-intro">
+        <p>I turn complex spatial data into clear maps, defensible analysis, and repeatable GIS workflows for planning and operational decisions.</p>
+        <div class="text-links">
+          <a href="#work">Explore GIS projects ↓</a>
+          <a href="assets/docs/Salman-Haider-GIS-Analyst-Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header center reveal">
-          <span class="eyebrow">Automation & Web GIS</span>
-            <h2>Programming and GIS automation projects</h2>
-            <p>
-              This section is where I show the more technical side of my GIS work. These projects focus on
-              Python, ArcPy, web GIS, data processing, and workflow automation. I use this section
-              to show how I build tools and scripts that make GIS work faster, more repeatable, and easier
-              to review.
-            </p>
+    <div class="capability-strip" aria-label="Core areas of work">
+      <div class="wrap capability-list">
+        <span>Spatial analysis</span>
+        <span>Cartographic design</span>
+        <span>Python &amp; ArcPy</span>
+        <span>Web GIS</span>
+      </div>
+    </div>
+
+    <section class="section wrap" id="work">
+      <header class="section-intro split-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Analysis with a clear question and a useful answer.</h2>
+        </div>
+        <p>Featured case studies connect spatial questions to transparent methods, defensible findings, and clear communication.</p>
+      </header>
+
+      <article class="case-study">
+        <div class="case-index">
+          <span>01</span>
+          <span>Spatial analysis</span>
         </div>
 
-        <div class="project-grid" id="projectGrid">
-          <article class="project-card featured reveal">
-            <div class="project-media">
-              <img src="assets/images/projects/geo-copilot/card-photo.png" alt="Geo Copilot project thumbnail showing ArcGIS Pro connected with GPT-5 and Llama 3.1 8B">
-            </div>
-            <div class="project-body">
-              <span class="project-tag">MGIS Capstone Project</span>
-              <h3>Geo Copilot: Natural Language GIS Tool</h3>
-              <p>An ArcGIS Pro script tool exploring how large language models can turn plain-English GIS requests into reviewable geoprocessing workflows using ArcPy, active map context, and controlled tool definitions.</p>
-              <div class="project-tools"><span>ArcGIS Pro</span><span>ArcPy</span><span>GPT-5</span><span>Llama 3.1 8B</span></div>
-              <a href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+        <div class="case-media case-media-pair">
+          <a class="map-trigger" href="assets/images/maps/full/calgary-park-accessibility.jpg" data-title="Calgary Park Accessibility" data-full="assets/images/maps/full/calgary-park-accessibility.jpg" data-alt="Calgary park accessibility and social deprivation map">
+            <img src="assets/images/maps/thumbs/calgary-park-accessibility.webp" alt="Calgary park accessibility and social deprivation map" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+          <a class="map-trigger" href="assets/images/maps/full/calgary-new-park-location.jpg" data-title="Optimal Location for a New Community Park" data-full="assets/images/maps/full/calgary-new-park-location.jpg" data-alt="Equity-weighted candidate location for a new community park in Calgary">
+            <img src="assets/images/maps/thumbs/calgary-new-park-location.webp" alt="Equity-weighted candidate location for a new community park in Calgary" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+        </div>
+
+        <div class="case-copy">
+          <h3>Where could a new Calgary park improve access most?</h3>
+          <p>I mapped 15-minute walking access to community parks, then combined the service gaps with population and Pampalon social-deprivation data. An equity-weighted location-allocation model identified a candidate site where a new park could improve access for underserved residents. The result is a defensible planning starting point—not a final decision—because land availability, growth, and community input still matter.</p>
+          <p class="method">ArcGIS Pro · Network Analyst · Service areas · Location-allocation · Equity weighting</p>
+        </div>
+      </article>
+
+      <article class="case-study case-study-reverse" id="case-study-geo-copilot">
+        <div class="case-index">
+          <span>02</span>
+          <span>GIS automation</span>
+        </div>
+
+        <div class="case-media case-media-landscape">
+          <a class="case-project-link" href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" target="_blank" rel="noopener" aria-label="View Geo Copilot source code on GitHub">
+            <img src="assets/images/projects/geo-copilot/case-study-wide.webp" alt="Geo Copilot connecting plain-language requests to controlled ArcGIS Pro geoprocessing workflows with GPT-5 and Llama 3.1" loading="lazy" width="1600" height="1000">
+          </a>
+        </div>
+
+        <div class="case-copy">
+          <h3>Can natural language become reliable GIS automation?</h3>
+          <p>For my MGIS capstone, I built an ArcGIS Pro script tool that converts plain-language requests into controlled, inspectable geoprocessing workflows. Tested across 36 scenarios, the strongest GPT-based workflow achieved 91.7% function-selection accuracy and 83.3% parameter accuracy. The result demonstrates both the potential of language-assisted GIS and the importance of validation, explicit tools, and transparent execution.</p>
+          <p class="method">ArcGIS Pro · ArcPy · GPT-5 · Llama 3.1 · Workflow validation</p>
+          <a class="case-link" href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" target="_blank" rel="noopener">View Geo Copilot source code on GitHub ↗</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section-tinted" id="projects">
+      <div class="wrap">
+        <header class="section-intro split-heading">
+          <div>
+            <p class="eyebrow">Programming &amp; GIS automation</p>
+            <h2>Tools built to make spatial work more useful and repeatable.</h2>
+          </div>
+          <p>Practical GIS tools spanning desktop analysis, spatial databases, web mapping, remote sensing, and data-quality workflows.</p>
+        </header>
+
+        <div class="project-grid">
+          <article class="project-card" id="project-geo-copilot">
+            <img class="project-image" src="assets/images/projects/geo-copilot/case-study-wide.webp" alt="Geo Copilot workflow connecting ArcGIS Pro with GPT-5 and Llama 3.1" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">MGIS capstone · GIS automation</p>
+              <h3>Geo Copilot</h3>
+              <p>An ArcGIS Pro script tool that turns plain-language requests into controlled, inspectable geoprocessing workflows. Across 36 test scenarios, the strongest GPT-based workflow reached 91.7% function-selection accuracy and 83.3% parameter accuracy.</p>
+              <p class="method">ArcGIS Pro · ArcPy · GPT-5 · Llama 3.1</p>
+              <a href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" target="_blank" rel="noopener">View Geo Copilot source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal">
-            <div class="project-media">
-              <img src="assets/images/projects/logistics-routing/card-photo.png" alt="Logistics Routing MVP interface showing route alternatives, blocked zones, and route summary">
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Routing / Web GIS</span>
+          <article class="project-card" id="project-logistics-routing">
+            <img class="project-image" src="assets/images/projects/logistics-routing/card-wide.webp" alt="Logistics routing project with a mapped route and route-alternative technology stack" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Routing · Web GIS</p>
               <h3>Logistics Routing MVP</h3>
-              <p>A self-hosted routing MVP for logistics and convoy-style planning. The app uses OpenStreetMap data, PostGIS, pgRouting, Flask, Docker, and Leaflet to calculate route alternatives with blocked zones and traffic-delay points.</p>
-              <div class="project-tools"><span>PostGIS</span><span>pgRouting</span><span>Flask</span><span>Leaflet</span><span>Docker</span></div>
-              <a href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>A self-hosted routing application that calculates alternatives around blocked zones and traffic-delay points using OpenStreetMap data, PostGIS, pgRouting, Flask, Docker, and Leaflet.</p>
+              <p class="method">PostGIS · pgRouting · Flask · Leaflet · Docker</p>
+              <a href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo" target="_blank" rel="noopener">View Logistics Routing source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal">
-            <div class="project-media">
-              <img src="assets/images/projects/drone-route-automation/card-photo.png" alt="Drone Route Report Automation map showing flight path, drive path, and route summary table">
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Freelance GIS Automation</span>
+          <article class="project-card" id="project-drone-route-automation">
+            <img class="project-image" src="assets/images/projects/drone-route-automation/card-wide.webp" alt="Drone route automation comparing direct flight and driving routes with report metrics" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Freelance · Applied automation</p>
               <h3>Drone Route Report Automation</h3>
-              <p>A freelance ArcGIS Pro toolbox built for Talyn Air to compare drone flight routes with driving routes. The tool reads route data from Excel, generates flight and drive paths, calculates time savings and GHG savings, and creates report-ready GIS outputs.</p>
-              <div class="project-tools"><span>ArcGIS Pro</span><span>ArcPy</span><span>Google Maps API</span><span>Excel</span></div>
-              <a href="https://github.com/salman12haider13/arcgis-drone-route-report-automation" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>A toolbox built for Talyn Air that reads route inputs from Excel, generates drone and driving paths, calculates time and greenhouse-gas savings, and creates report-ready GIS outputs.</p>
+              <p class="method">ArcGIS Pro · ArcPy · Google Maps API · Excel</p>
+              <a href="https://github.com/salman12haider13/arcgis-drone-route-report-automation" target="_blank" rel="noopener">View Drone Route Automation source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card compact reveal">
-            <div class="project-body">
-              <span class="project-tag">Environmental GIS / ArcPy</span>
+          <article class="project-card" id="project-forestry-sampling">
+            <img class="project-image" src="assets/images/projects/forestry-sampling/card-wide.webp" alt="Forestry sampling workflow showing valid points, slope constraints, and road exclusions" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Environmental GIS · ArcPy</p>
               <h3>Forestry Sampling Point Generator</h3>
-              <p>Generates candidate forestry sampling points using GIS constraints such as forest cover, slope, road proximity, and spacing rules.</p>
-              <div class="project-tools"><span>ArcPy</span><span>Spatial Analysis</span><span>Forestry</span></div>
-              <a href="https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>Generates candidate sampling locations from forest cover, slope, road proximity, and minimum-spacing constraints.</p>
+              <p class="method">ArcPy · Spatial analysis · Forestry</p>
+              <a href="https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator" target="_blank" rel="noopener">View Forestry Sampling source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card compact reveal">
-            <div class="project-body">
-              <span class="project-tag">GIS QA/QC</span>
-              <h3>Spatial Reference Checker</h3>
-              <p>Batch-checks spatial reference information across GIS datasets and helps flag projection or coordinate system issues before analysis.</p>
-              <div class="project-tools"><span>ArcPy</span><span>Projections</span><span>QA/QC</span></div>
-              <a href="https://github.com/salman12haider13/arcpy-spatial-reference-checker" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
-            </div>
-          </article>
-
-          <article class="project-card compact reveal">
-            <div class="project-body">
-              <span class="project-tag">Google Earth Engine</span>
+          <article class="project-card" id="project-ndvi-zonal-stats">
+            <img class="project-image" src="assets/images/projects/ndvi-zonal-stats/card-wide.webp" alt="NDVI raster zones connected to mean vegetation statistics" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Remote sensing · Cloud GIS</p>
               <h3>GEE NDVI Zonal Stats</h3>
-              <p>A Google Earth Engine workflow for calculating NDVI-based zonal statistics, useful for vegetation analysis, environmental monitoring, and area-based summaries.</p>
-              <div class="project-tools"><span>GEE</span><span>NDVI</span><span>Zonal Statistics</span></div>
-              <a href="https://github.com/salman12haider13/GEE_NDVI_ZonalStats" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>Calculates vegetation-index summaries by polygon for environmental monitoring and area-based comparison in Google Earth Engine.</p>
+              <p class="method">Earth Engine · NDVI · Zonal statistics</p>
+              <a href="https://github.com/salman12haider13/GEE_NDVI_ZonalStats" target="_blank" rel="noopener">View NDVI Zonal Stats source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card compact hidden reveal">
-            <div class="project-body">
-              <span class="project-tag">Survey Data / ArcPy</span>
+          <article class="project-card" id="project-spatial-reference-checker">
+            <img class="project-image" src="assets/images/projects/spatial-reference-checker/card-wide.webp" alt="Spatial reference quality-control workflow comparing dataset EPSG codes with a target projection" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">GIS QA/QC</p>
+              <h3>Spatial Reference Checker</h3>
+              <p>Batch-inspects coordinate systems across GIS datasets and flags projection problems before they compromise analysis.</p>
+              <p class="method">ArcPy · Projections · Quality control</p>
+              <a href="https://github.com/salman12haider13/arcpy-spatial-reference-checker" target="_blank" rel="noopener">View Spatial Reference Checker on GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-csv-survey-points">
+            <img class="project-image" src="assets/images/projects/csv-survey-points/card-wide.webp" alt="CSV survey rows converted into mapped points and a GIS feature class" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Survey data · ArcPy</p>
               <h3>CSV Survey Points to Feature Class</h3>
-              <p>Converts structured CSV survey records into ArcGIS point features, including coordinate handling and feature class creation for mapping and analysis.</p>
-              <div class="project-tools"><span>Python</span><span>ArcPy</span><span>CSV</span></div>
-              <a href="https://github.com/salman12haider13/csv-survey-points-arcpy" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>Converts structured field-survey records into mapped point features with coordinate handling and repeatable feature-class creation.</p>
+              <p class="method">Python · ArcPy · CSV</p>
+              <a href="https://github.com/salman12haider13/csv-survey-points-arcpy" target="_blank" rel="noopener">View CSV Survey Points source code on GitHub ↗</a>
             </div>
           </article>
 
-          <article class="project-card compact hidden reveal">
-            <div class="project-body">
-              <span class="project-tag">LiDAR / Terrain Data</span>
+          <article class="project-card" id="project-lidar-metadata">
+            <img class="project-image" src="assets/images/projects/lidar-metadata/card-wide.webp" alt="LiDAR point cloud with extracted extent, elevation range, and point-count metadata" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">LiDAR · Terrain data</p>
               <h3>ASCII XYZ LiDAR Metadata Extractor</h3>
-              <p>A Python utility for reading ASCII XYZ LiDAR-style data and extracting useful metadata such as extents, point counts, elevation range, and tile-level summaries.</p>
-              <div class="project-tools"><span>Python</span><span>LiDAR</span><span>Metadata</span></div>
-              <a href="https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor" class="project-link" target="_blank" rel="noopener">View GitHub →</a>
+              <p>Reads ASCII XYZ point data and reports extents, point counts, elevation ranges, and tile-level metadata for faster data inspection.</p>
+              <p class="method">Python · LiDAR · Metadata</p>
+              <a href="https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor" target="_blank" rel="noopener">View LiDAR Metadata source code on GitHub ↗</a>
             </div>
           </article>
-        </div>
-
-        <div class="toggle-wrap reveal">
-          <button class="btn btn-secondary" id="toggleProjects" type="button">Show More Projects ↓</button>
         </div>
       </div>
     </section>
 
-    <!-- MAPS -->
-    <!-- MAPS -->
-    <section class="section section-alt" id="maps">
-      <div class="container">
-        <div class="section-header center reveal">
-          <span class="eyebrow">Cartography & Spatial Analysis</span>
-          <h2>Map-based analysis and cartographic projects</h2>
-          <p>
-            This section focuses on my map-based GIS work. These projects show how I use spatial analysis,
-            cartographic design, remote sensing, census data, and environmental or urban datasets to explain
-            patterns clearly. Each map story gives the context behind the final layout, including the purpose,
-            process, design choices, and main findings.
-          </p>
+    <section class="section wrap" id="maps">
+      <header class="section-intro split-heading">
+        <div>
+          <p class="eyebrow">Map gallery</p>
+          <h2>A complete gallery of cartographic work, shown without cropping.</h2>
         </div>
+        <p>Select any map to open a full-page viewer with zoom and drag controls.</p>
+      </header>
 
-        <div class="map-showcase reveal">
-          <div class="map-stage">
-            <button class="map-nav prev" id="prevMap" type="button" aria-label="Previous map">←</button>
+      <div class="map-grid">
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/calgary-park-accessibility.jpg" data-title="Calgary Park Accessibility" data-full="assets/images/maps/full/calgary-park-accessibility.jpg" data-alt="Calgary park accessibility and social deprivation map">
+            <img src="assets/images/maps/thumbs/calgary-park-accessibility.webp" alt="Calgary park accessibility and social deprivation map" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>Calgary Park Accessibility</h3>
+          <p>Walking service areas reveal where park access gaps overlap with higher social deprivation.</p>
+        </article>
 
-            <div class="map-preview">
-              <img
-                id="mapShowcaseImage"
-                src="assets/images/maps/previews/heathrow-global-reach.jpg"
-                alt="Heathrow global reach flowline map preview"
-              >
-            </div>
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/calgary-new-park-location.jpg" data-title="Optimal Location for a New Community Park" data-full="assets/images/maps/full/calgary-new-park-location.jpg" data-alt="Equity-weighted candidate location for a new Calgary park">
+            <img src="assets/images/maps/thumbs/calgary-new-park-location.webp" alt="Equity-weighted candidate location for a new Calgary park" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>New Community Park Location</h3>
+          <p>Location-allocation and equity-weighted demand identify a candidate site for further planning review.</p>
+        </article>
 
-            <div class="map-panel">
-              <span class="map-cat" id="mapShowcaseCategory">Flowline Cartography</span>
-              <h3 id="mapShowcaseTitle">Heathrow's Global Reach</h3>
-              <p id="mapShowcaseText">
-                A global aviation flow map showing Heathrow's international connections using a dark basemap,
-                curved flowlines, and strong visual hierarchy.
-              </p>
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/heathrow-global-reach.jpg" data-title="Heathrow’s Global Reach" data-full="assets/images/maps/full/heathrow-global-reach.jpg" data-alt="Global flight connections from Heathrow">
+            <img src="assets/images/maps/thumbs/heathrow-global-reach.webp" alt="Global flight connections from Heathrow" loading="lazy" width="1400" height="989">
+            <span>Open map</span>
+          </a>
+          <h3>Heathrow’s Global Reach</h3>
+          <p>Distance-classified flowlines turn nonstop flight data into an immediate picture of global reach.</p>
+        </article>
 
-              <div class="map-meta-grid">
-                <div class="map-meta-item">
-                  <strong>Focus</strong>
-                  <span id="mapShowcaseFocus">Flowlines, global connections, visual hierarchy</span>
-                </div>
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/heathrow-north-america-tourism.jpg" data-title="Heathrow Connections to North America" data-full="assets/images/maps/full/heathrow-north-america-tourism.jpg" data-alt="Heathrow nonstop routes and North American tourism map">
+            <img src="assets/images/maps/thumbs/heathrow-north-america-tourism.webp" alt="Heathrow nonstop routes and North American tourism map" loading="lazy" width="989" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>Heathrow: North America</h3>
+          <p>Nonstop routes and tourism data connect aviation reach with popular travel regions.</p>
+        </article>
 
-                <div class="map-meta-item">
-                  <strong>Tools</strong>
-                  <span id="mapShowcaseTools">ArcGIS Pro, cartographic design</span>
-                </div>
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/paradise-valley-trail-run.jpg" data-title="Paradise Valley Trail Run" data-full="assets/images/maps/full/paradise-valley-trail-run.jpg" data-alt="Trail race map with 5K and 10K routes, terrain, elevation profile, and 3D view">
+            <img src="assets/images/maps/thumbs/paradise-valley-trail-run.webp" alt="Trail race map with 5K and 10K routes, terrain, elevation profile, and 3D view" loading="lazy" width="1400" height="990">
+            <span>Open map</span>
+          </a>
+          <h3>Paradise Valley Trail Run</h3>
+          <p>Terrain, route hierarchy, distance markers, and an elevation profile support race preparation.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/friends-of-greens-tree-canopy.jpg" data-title="Friends of Greens Tree Canopy" data-full="assets/images/maps/full/friends-of-greens-tree-canopy.jpg" data-alt="Calgary tree canopy and planting activity map">
+            <img src="assets/images/maps/thumbs/friends-of-greens-tree-canopy.webp" alt="Calgary tree canopy and planting activity map" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>Tree Canopy &amp; Planting</h3>
+          <p>Existing canopy cover is compared with normalized planting activity to support greening priorities.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/flood-affected-settlements.jpg" data-title="Flood-Affected Settlements of Chiniot" data-full="assets/images/maps/full/flood-affected-settlements.jpg" data-alt="Flood-affected settlements of Chiniot map">
+            <img src="assets/images/maps/thumbs/flood-affected-settlements.webp" alt="Flood-affected settlements of Chiniot map" loading="lazy" width="990" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>Flood-Affected Settlements</h3>
+          <p>Satellite imagery and settlement locations communicate flood exposure within a clear regional context.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/housing-cost-da-vs-ct.png" data-title="Housing Cost: DA vs CT" data-full="assets/images/maps/full/housing-cost-da-vs-ct.png" data-alt="Housing cost comparison at dissemination area and census tract scales">
+            <img src="assets/images/maps/thumbs/housing-cost-da-vs-ct.webp" alt="Housing cost comparison at dissemination area and census tract scales" loading="lazy" width="1400" height="990">
+            <span>Open map</span>
+          </a>
+          <h3>Housing Cost: DA vs CT</h3>
+          <p>A side-by-side comparison shows how census geography changes the pattern the reader sees.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/housing-affordability-ct-2016-2021.png" data-title="Housing Affordability Change" data-full="assets/images/maps/full/housing-affordability-ct-2016-2021.png" data-alt="Calgary housing affordability change map">
+            <img src="assets/images/maps/thumbs/housing-affordability-ct-2016-2021.webp" alt="Calgary housing affordability change map" loading="lazy" width="1400" height="990">
+            <span>Open map</span>
+          </a>
+          <h3>Housing Affordability</h3>
+          <p>Census-tract change between 2016 and 2021 highlights areas facing greater affordability pressure.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/housing-cost-ct-2016-2021.png" data-title="Housing Cost Change, 2016–2021" data-full="assets/images/maps/full/housing-cost-ct-2016-2021.png" data-alt="Calgary housing cost change by census tract">
+            <img src="assets/images/maps/thumbs/housing-cost-ct-2016-2021.webp" alt="Calgary housing cost change by census tract" loading="lazy" width="1400" height="990">
+            <span>Open map</span>
+          </a>
+          <h3>Housing Cost Change</h3>
+          <p>Matched classifications make the shift in Calgary housing costs visible across two census years.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/town-of-olds-reference-map.jpg" data-title="Town of Olds Reference Map" data-full="assets/images/maps/full/town-of-olds-reference-map.jpg" data-alt="Detailed reference map for the Town of Olds">
+            <img src="assets/images/maps/thumbs/town-of-olds-reference-map.webp" alt="Detailed reference map for the Town of Olds" loading="lazy" width="1082" height="1400">
+            <span>Open map</span>
+          </a>
+          <h3>Town of Olds</h3>
+          <p>Road hierarchy, water, rail, labels, and an inset create an accessible regional reference map.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/red-carpet-community-overview.jpg" data-title="Red Carpet Community Spatial Overview" data-full="assets/images/maps/full/red-carpet-community-overview.jpg" data-alt="Red Carpet community spatial overview">
+            <img src="assets/images/maps/thumbs/red-carpet-community-overview.webp" alt="Red Carpet community spatial overview" loading="lazy" width="1400" height="1082">
+            <span>Open map</span>
+          </a>
+          <h3>Red Carpet Community</h3>
+          <p>A neighbourhood-scale layout organizes buildings, transit, parks, and roads for local orientation.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/pakistan-prhps-coverage-map.jpg" data-title="Pakistan Rural Household Panel Survey Coverage" data-full="assets/images/maps/full/pakistan-prhps-coverage-map.jpg" data-alt="Pakistan rural household panel survey coverage map">
+            <img src="assets/images/maps/thumbs/pakistan-prhps-coverage-map.webp" alt="Pakistan rural household panel survey coverage map" loading="lazy" width="1400" height="990">
+            <span>Open map</span>
+          </a>
+          <h3>PRHPS Coverage</h3>
+          <p>Surveyed districts are placed within national context to communicate the study’s geographic reach.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/stillbirths-neonatal-deaths-asia.jpg" data-title="Stillbirths and Neonatal Deaths in Asia" data-full="assets/images/maps/full/stillbirths-neonatal-deaths-asia.jpg" data-alt="Health geography maps of stillbirths and neonatal deaths in Asia">
+            <img src="assets/images/maps/thumbs/stillbirths-neonatal-deaths-asia.webp" alt="Health geography maps of stillbirths and neonatal deaths in Asia" loading="lazy" width="1400" height="906">
+            <span>Open map</span>
+          </a>
+          <h3>Stillbirths &amp; Neonatal Deaths</h3>
+          <p>Multiple thematic approaches compare related health outcomes across Asia.</p>
+        </article>
+
+        <article class="map-card">
+          <a class="map-trigger" href="assets/images/maps/full/global-stillbirths-population.jpg" data-title="Global Stillbirths and Population" data-full="assets/images/maps/full/global-stillbirths-population.jpg" data-alt="Global stillbirth and population thematic map">
+            <img src="assets/images/maps/thumbs/global-stillbirths-population.webp" alt="Global stillbirth and population thematic map" loading="lazy" width="1400" height="906">
+            <span>Open map</span>
+          </a>
+          <h3>Global Stillbirths</h3>
+          <p>A global thematic comparison places stillbirth outcomes alongside population context.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="profile">
+      <div class="wrap">
+        <header class="section-intro profile-intro">
+          <div>
+            <p class="eyebrow">Profile</p>
+            <h2>I work where spatial thinking, visual communication, and practical automation meet.</h2>
+          </div>
+          <p>My experience spans research, public-sector analysis, consulting, land records, and field-survey support. I care about analytical choices being explainable and maps being useful to the people who read them.</p>
+        </header>
+
+        <div class="profile-block">
+          <header class="profile-block-heading">
+            <p class="eyebrow">Experience</p>
+            <h3>Where I have worked</h3>
+          </header>
+
+          <ol class="experience-list">
+            <li class="experience-item">
+              <time datetime="2026-01">Jan 2026<br>— Apr 2026</time>
+              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
+              <div>
+                <p class="organization">University of Calgary</p>
+                <h4>GIS Research Assistant</h4>
+                <p>Built a multimodal public-transit accessibility analysis for fresh-food destinations. The work identified 12 Calgary dissemination areas with no access and 32 with limited access, affecting more than 33,000 residents.</p>
               </div>
+            </li>
 
-              <a href="maps/heathrow-global-reach.html" class="btn btn-primary" id="mapShowcaseStory">
-                View Map Story
-              </a>
-            </div>
+            <li class="experience-item">
+              <time datetime="2025-10">Oct 2025<br>— Nov 2025</time>
+              <div class="organization-logo organization-monogram" aria-label="British Columbia government"><span>BC</span></div>
+              <div>
+                <p class="organization">BC Ministry of Water, Land and Resource Stewardship</p>
+                <h4>Volunteer Student Research Assistant</h4>
+                <p>Created greenhouse-gas maps and environmental visualizations in ArcGIS Pro, Python, and R for economists and policy analysts in the Socio-Economic and Technical Analysis Division.</p>
+              </div>
+            </li>
 
-            <button class="map-nav next" id="nextMap" type="button" aria-label="Next map">→</button>
+            <li class="experience-item">
+              <time datetime="2021-11">Nov 2021<br>— Aug 2024</time>
+              <div class="organization-logo"><img src="assets/images/logos/franchise-ready.png" alt="Franchise Ready logo" loading="lazy" width="440" height="136"></div>
+              <div>
+                <p class="organization">Franchise Ready</p>
+                <h4>GIS Analyst</h4>
+                <p>Delivered more than 105 franchise territory projects using demographics, service areas, competitors, points of interest, dashboards, and web maps, while automating repeatable production and quality checks with Python and ArcPy.</p>
+              </div>
+            </li>
+
+            <li class="experience-item">
+              <time datetime="2021-04">Apr 2021<br>— Nov 2021</time>
+              <div class="organization-logo"><img src="assets/images/logos/greenage-services.png" alt="Greenage Services logo" loading="lazy" width="200" height="200"></div>
+              <div>
+                <p class="organization">Greenage Services</p>
+                <h4>GIS Associate</h4>
+                <p>Converted scanned cadastral records and AutoCAD plans into structured parcel datasets, maintained geodatabases, and used Python and OpenCV for map-record organization and attribute QA/QC.</p>
+              </div>
+            </li>
+
+            <li class="experience-item">
+              <time datetime="2020-10">Oct 2020<br>— Apr 2021</time>
+              <div class="organization-logo"><img src="assets/images/logos/mer-solutions.jpeg" alt="MER Solutions logo" loading="lazy" width="200" height="200"></div>
+              <div>
+                <p class="organization">MER Solutions</p>
+                <h4>GIS Technician</h4>
+                <p>Prepared survey-boundary and field maps for a government social-support program, linked household records to GIS features, and supported spatial and attribute validation.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="profile-block education-block">
+          <header class="profile-block-heading">
+            <p class="eyebrow">Education</p>
+            <h3>Academic foundation</h3>
+          </header>
+
+          <div class="education-grid">
+            <article class="education-item">
+              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
+              <div>
+                <time datetime="2024-08">Aug 2024 — May 2026</time>
+                <h4>Master of Geographic Information Systems</h4>
+                <p>University of Calgary · Calgary, Canada</p>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <div class="organization-logo"><img src="assets/images/logos/pmas-arid.png" alt="Arid Agriculture University logo" loading="lazy" width="1243" height="1232"></div>
+              <div>
+                <time datetime="2016-09">Sep 2016 — Oct 2020</time>
+                <h4>BSc Geoinformatics &amp; Earth Observation</h4>
+                <p>Arid Agriculture University · Rawalpindi, Pakistan</p>
+              </div>
+            </article>
           </div>
+        </div>
 
-          <div class="map-thumbs">
-            <button class="map-thumb active" type="button" data-map-index="0">
-              <span class="num">01</span>Heathrow
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="1">
-              <span class="num">02</span>Park Access
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="2">
-              <span class="num">03</span>Housing Cost
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="3">
-              <span class="num">04</span>Trail Routes
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="4">
-              <span class="num">05</span>Flood Chiniot
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="5">
-              <span class="num">06</span>Town of Olds
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="6">
-              <span class="num">07</span>Red Carpet
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="7">
-              <span class="num">08</span>Tree Canopy
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="8">
-              <span class="num">09</span>Stillbirths Asia
-            </button>
-
-            <button class="map-thumb" type="button" data-map-index="9">
-              <span class="num">10</span>PRHPS Pakistan
-            </button>
+        <div class="tool-summary">
+          <header class="tool-summary-heading">
+            <p class="eyebrow">Core tools</p>
+            <h3>Platforms and technologies</h3>
+          </header>
+          <div class="tool-groups">
+            <div class="tool-group">
+              <h4>GIS platforms</h4>
+              <p>ArcGIS Pro · ArcGIS Online · ArcGIS Enterprise · ArcGIS Field Maps · ArcGIS Dashboards · ArcGIS StoryMaps · ArcGIS Experience Builder · ArcGIS Business Analyst · ArcGIS Network Analyst · ArcMap · QGIS · Global Mapper · Mango Maps · GeoServer · Leaflet · Mapbox GL JS · Mapbox Studio · MapTiler · Google Earth Engine · ENVI · ERDAS Imagine</p>
+            </div>
+            <div class="tool-group">
+              <h4>Programming &amp; automation</h4>
+              <p>Python · ArcPy · R · SQL · JavaScript · HTML/CSS · Flask · GeoPandas · Shapely · GDAL · OpenCV · FME · FME Workbench · PostGIS · PostgreSQL · MS SQL · Docker · Tippecanoe</p>
+            </div>
+            <div class="tool-group">
+              <h4>Modelling &amp; workflow</h4>
+              <p>ArcGIS ModelBuilder · AutoCAD · RTK GPS · GPT-5 · Llama 3.1 8B · Microsoft Office</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Skill Stack</span>
-          <h2>GIS skills organized by workflow</h2>
-          <p>I have organized my skills around the kind of GIS work I actually do: building clean spatial data, running analysis, automating workflows, publishing maps, managing databases, and turning outputs into useful maps, tools, and reports.</p>
+    <section class="section wrap" id="beyond">
+      <header class="section-intro split-heading">
+        <div>
+          <p class="eyebrow">Beyond the Map</p>
+          <h2>Places, people, and moments away from the screen.</h2>
+        </div>
+        <p>GIS is how I study places. Travel, the outdoors, and time with people are how I experience them.</p>
+      </header>
+
+      <div class="photo-carousel" aria-roledescription="carousel" aria-label="Personal photo journal">
+        <div class="carousel-controls">
+          <p class="carousel-status" aria-live="polite"><span id="carouselCurrent">1</span> / <span id="carouselTotal">18</span></p>
+          <div>
+            <button class="carousel-button" id="carouselPrev" type="button" aria-label="Previous photos">← Previous</button>
+            <button class="carousel-button" id="carouselNext" type="button" aria-label="Next photos">Next →</button>
+          </div>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <div class="skill-num">01</div>
-            <h3>GIS Platforms & Enterprise</h3>
-            <p>I work mainly in the Esri GIS ecosystem for desktop GIS, enterprise GIS, field workflows, and online mapping.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Desktop GIS</span><span>Enterprise GIS</span><span>Field Data Collection</span><span>Portal-Based Mapping</span><span>GIS Services</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <div class="skill-chips"><span>ArcGIS Pro</span><span>ArcGIS Enterprise</span><span>ArcGIS Online</span><span>Portal for ArcGIS</span><span>ArcGIS Server</span><span>ArcGIS Field Maps</span><span>ArcGIS Insights</span><span>QGIS</span><span>Global Mapper</span></div>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-num">02</div>
-            <h3>Data Creation & Maintenance</h3>
-            <p>I create, clean, validate, and maintain spatial data so it can be used reliably in analysis, reporting, and operational GIS workflows.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Spatial Data Editing</span><span>Attribute Updates</span><span>Digitizing</span><span>CAD to GIS</span><span>As-Built Drawings</span><span>Data Validation</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Methods</h4>
-              <div class="skill-chips"><span>Topology Rules</span><span>QA/QC Protocols</span><span>Metadata Standards</span><span>Data Maintenance</span><span>Geodatabase Layers</span></div>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-num">03</div>
-            <h3>Spatial Analysis & Remote Sensing</h3>
-            <p>I use GIS and remote sensing methods to answer spatial questions and support planning, accessibility, environmental, and suitability analysis.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Spatial Analysis</span><span>Raster Analysis</span><span>Vector Analysis</span><span>Network Analysis</span><span>Accessibility Analysis</span><span>Suitability Modelling</span><span>MCDA</span><span>Spatial Statistical Modelling</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <div class="skill-chips"><span>ArcGIS Spatial Analyst</span><span>Remote Sensing</span><span>Google Earth Engine</span><span>ENVI</span><span>ERDAS Imagine</span><span>Machine Learning</span><span>Data Visualization</span></div>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-num">04</div>
-            <h3>Programming & Automation</h3>
-            <p>I build repeatable GIS workflows using scripting and automation tools to reduce manual work and make GIS processes more consistent.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Python Scripting</span><span>ArcPy Tools</span><span>ModelBuilder Workflows</span><span>GIS Automation</span><span>Workflow Scripting</span><span>Web Scraping</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <div class="skill-chips"><span>Python</span><span>ArcPy</span><span>ArcGIS ModelBuilder</span><span>Arcade</span><span>FME</span><span>SQL</span></div>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-num">05</div>
-            <h3>Web Mapping & Online GIS</h3>
-            <p>I create web-based mapping products for sharing, communication, dashboards, online publishing, and interactive GIS use.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Web Mapping Apps</span><span>Dashboards</span><span>Story Maps</span><span>Mobile Mapping Workflows</span><span>Online Data Publishing</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <div class="skill-chips"><span>Leaflet JS</span><span>Mapbox GL JS</span><span>Mapbox Studio</span><span>ArcGIS Dashboards</span><span>ArcGIS StoryMaps</span><span>MangoMaps</span><span>MapTiler</span><span>Tippecanoe</span><span>Flask</span><span>HTML</span><span>JavaScript</span></div>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <div class="skill-num">06</div>
-            <h3>Databases, Assets & Reporting</h3>
-            <p>I work with geodatabases, SQL, and operational GIS data structures to support analysis, infrastructure records, and reporting workflows.</p>
-            <div class="skill-group">
-              <h4>What I do</h4>
-              <div class="skill-chips"><span>Geodatabase Design</span><span>Database Administration</span><span>SQL Queries</span><span>Table Joins</span><span>Relates</span><span>Data Modelling</span><span>Versioned Editing</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Applied workflows</h4>
-              <div class="skill-chips"><span>Transportation Asset Data</span><span>Infrastructure Inventory</span><span>Asset Management Modules</span><span>Operational GIS Data</span><span>Strategic Reporting</span><span>Map Production</span></div>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <div class="skill-chips"><span>PostgreSQL</span><span>MySQL</span><span>GeoServer</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-        
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section section-alt" id="experience">
-      <div class="container exp-grid">
-        <div class="exp-intro reveal">
-          <span class="eyebrow">Experience & Education</span>
-          <h2>My GIS experience so far</h2>
-          <p>
-            My GIS background has grown through university training, professional mapping work,
-            freelance projects, and hands-on automation. I have worked across different
-            GIS contexts in Canada, Australia, and Pakistan, which helped me build both technical
-            skills and practical project experience.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">UC</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">Jan 2026 – Apr 2026</span><span class="exp-loc">Calgary, Canada</span></div>
-              <h3>GIS Research Assistant</h3>
-              <h4>University of Calgary</h4>
-              <p>Worked on Calgary public transit accessibility analysis to grocery stores and fresh food sources using GTFS data, street centreline data, ArcGIS transit workflows, and Network Analyst.</p>
-              <div class="exp-tags"><span>Transit Accessibility</span><span>GTFS</span><span>Network Analyst</span><span>ArcGIS Pro</span></div>
-            </div>
-          </article>
-
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">UC</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">2024 – 2026</span><span class="exp-loc">Calgary, Canada</span></div>
-              <h3>Master of Geographic Information Systems</h3>
-              <h4>University of Calgary</h4>
-              <p>Graduate-level GIS training focused on spatial analysis, cartography, geospatial databases, remote sensing, web mapping, and applied GIS projects.</p>
-              <div class="exp-tags"><span>Graduate GIS</span><span>Spatial Analysis</span><span>Cartography</span><span>Databases</span></div>
-            </div>
-          </article>
-
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/franchise-ready.png" alt="Franchise Ready logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">FR</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">2021 – 2024</span><span class="exp-loc">Remote</span></div>
-              <h3>GIS Analyst</h3>
-              <h4>Franchise Ready</h4>
-              <p>Worked on franchise territory mapping, demographic analysis, site selection, spatial reporting, and GIS workflow automation to support business expansion and territory planning projects.</p>
-              <div class="exp-tags"><span>Territory Mapping</span><span>Demographics</span><span>Site Selection</span><span>ArcGIS Pro</span><span>Automation</span></div>
-            </div>
-          </article>
-
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/greenage-services.png" alt="Greenage Services logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">GS</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">2021</span><span class="exp-loc">Islamabad, Pakistan</span></div>
-              <h3>GIS Associate</h3>
-              <h4>Greenage Services Pvt. Ltd</h4>
-              <p>Supported cadastral mapping, satellite imagery processing, GIS database work, and mapping outputs for land record and geospatial project workflows.</p>
-              <div class="exp-tags"><span>Cadastral Mapping</span><span>Remote Sensing</span><span>GIS Databases</span><span>ArcMap</span></div>
-            </div>
-          </article>
-
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/mer-solutions.jpeg" alt="MER Solutions logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">MS</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">2020 – 2021</span><span class="exp-loc">Rawalpindi, Pakistan</span></div>
-              <h3>GIS Technician</h3>
-              <h4>MER Solutions</h4>
-              <p>Worked on survey boundary mapping, georeferencing scanned maps, preparing field maps, linking household survey records with GIS features, and supporting data validation for a government social support program.</p>
-              <div class="exp-tags"><span>Survey Mapping</span><span>Georeferencing</span><span>Field Maps</span><span>Data Validation</span><span>ArcMap</span></div>
-            </div>
-          </article>
-
-          <article class="exp-card reveal">
-            <div class="exp-logo"><img src="assets/images/logos/pmas-arid.png" alt="PMAS-Arid Agriculture University Rawalpindi logo" onerror="this.parentElement.classList.add('missing')"><span class="fallback">PM</span></div>
-            <div class="exp-body">
-              <div class="exp-meta"><span class="exp-date">2016 – 2020</span><span class="exp-loc">Rawalpindi, Pakistan</span></div>
-              <h3>Bachelor of Science in Geoinformatics</h3>
-              <h4>PMAS-Arid Agriculture University Rawalpindi</h4>
-              <p>Built foundational skills in GIS, remote sensing, cartography, surveying, spatial data analysis, and geospatial project work.</p>
-              <div class="exp-tags"><span>Geoinformatics</span><span>GIS</span><span>Remote Sensing</span><span>Surveying</span><span>Cartography</span></div>
-            </div>
-          </article>
+        <div class="carousel-track" id="photoTrack" tabindex="0" aria-label="Scrollable personal photo gallery">
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/1000216434.webp" alt="Salman Haider standing near a lake with mountains in the background" loading="lazy" width="1200" height="1600"><figcaption>Langford Lake · Vancouver Island, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/1000216444.webp" alt="Salman Haider standing in front of a castle-style stone building" loading="lazy" width="1600" height="1200"><figcaption>Hatley Castle · Colwood, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/1000216467.webp" alt="Salman Haider walking on a pier beside the ocean" loading="lazy" width="1600" height="1200"><figcaption>Ogden Point Breakwater · Victoria, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/1000218307.webp" alt="Salman Haider standing on a walkway near rock formations" loading="lazy" width="1000" height="1459"><figcaption>Cave and Basin · Banff, Alberta</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/1000219493.webp" alt="Salman Haider standing near a totem pole in a park" loading="lazy" width="1600" height="1200"><figcaption>Beacon Hill Park · Victoria, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_2485.webp" alt="Salman Haider standing near water and trees" loading="lazy" width="1093" height="1600"><figcaption>Glen Lake · Vancouver Island, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_2721.webp" alt="Salman Haider standing on a rocky viewpoint with the ocean behind him" loading="lazy" width="1157" height="1600"><figcaption>Mount Douglas · Vancouver Island, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_5429.webp" alt="Salman Haider swimming in blue ocean water" loading="lazy" width="1600" height="1016"><figcaption>Transfer Beach · Ladysmith, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_5432.webp" alt="Salman Haider in open water with mountains in the background" loading="lazy" width="1208" height="1600"><figcaption>Transfer Beach · Ladysmith, BC</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_6313.webp" alt="Group photo with mountains and water in the background" loading="lazy" width="1600" height="1151"><figcaption>Canmore · Rocky Mountains, Alberta</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_6393.webp" alt="Salman Haider standing in front of Lake Louise in winter" loading="lazy" width="986" height="1600"><figcaption>Lake Louise · Banff National Park</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_6447.webp" alt="Group selfie in a snowy mountain landscape" loading="lazy" width="1200" height="1600"><figcaption>Banff National Park · Alberta</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_6497.webp" alt="Salman Haider standing under northern lights at night" loading="lazy" width="1200" height="1600"><figcaption>Banff · Alberta</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_9026.webp" alt="Salman Haider outside the British Columbia Parliament Buildings" loading="lazy" width="1200" height="1600"><figcaption>BC Parliament · Victoria</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_9052.webp" alt="Salman Haider sitting near the British Columbia Parliament Buildings" loading="lazy" width="1200" height="1600"><figcaption>Victoria · British Columbia</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_9097.webp" alt="Two people posing outdoors on a hiking trail" loading="lazy" width="960" height="640"><figcaption>Trail 5 · Islamabad, Pakistan</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/IMG_9099.webp" alt="Desert landscape seen from a moving vehicle" loading="lazy" width="736" height="1600"><figcaption>Thal Desert · Pakistan</figcaption></figure>
+          <figure class="photo-slide"><img src="assets/images/off-the-map/web/40772.webp" alt="Salman Haider standing with arms raised in front of mountains" loading="lazy" width="1600" height="1067"><figcaption>Namal Lake · Mianwali, Pakistan</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
-    <section class="section" id="certificates">
-      <div class="container cert-grid">
-        <div class="cert-intro reveal">
-          <span class="eyebrow">Certificates</span>
-            <h2>Training that supports my GIS work</h2>
-            <p>
-              I use certificates to keep improving the specific skills I use in GIS projects.
-              Most of my training connects directly to my work in ArcGIS Pro, cartography,
-              Python automation, web mapping, spatial analysis, data management, and remote sensing.
-            </p>
-          <div class="cert-badge">
-            <div class="num">34</div>
-            <p>certificates across Esri, LinkedIn Learning, and United Nations University / UNU-INWEH.</p>
-            <div class="cert-providers"><span>Esri</span><span>LinkedIn Learning</span><span>UNU-INWEH</span></div>
-          </div>
-        </div>
-
-        <div class="cert-list-wrap reveal">
-          <div class="cert-list" id="certificatesList">
-            <!-- 1 -->
-            <article class="cert-item">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/linkedin-learning.png" alt="LinkedIn Learning" onerror="this.parentElement.classList.add('missing')"><span class="fb">LI</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">LinkedIn Learning</span></div><h3>Learning ArcGIS Python Scripting</h3><a href="assets/docs/certificates/Learning ArcGIS Python Scripting.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 2 -->
-            <article class="cert-item">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Building Geoprocessing Models Using ArcGIS Pro</h3><a href="assets/docs/certificates/Building Geoprocessing Models Using ArcGIS Pro_Certificate_01262025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 3 -->
-            <article class="cert-item">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/linkedin-learning.png" alt="LinkedIn Learning" onerror="this.parentElement.classList.add('missing')"><span class="fb">LI</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">LinkedIn Learning</span></div><h3>PostgreSQL: Advanced Queries</h3><a href="assets/docs/certificates/PostgreSQL Advanced Queries.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 4 -->
-            <article class="cert-item">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/linkedin-learning.png" alt="LinkedIn Learning" onerror="this.parentElement.classList.add('missing')"><span class="fb">LI</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">LinkedIn Learning</span></div><h3>Advanced Python: Working with Databases</h3><a href="assets/docs/certificates/Advanced Python Working with Databases.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 5 -->
-            <article class="cert-item">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Creating a Web Map in ArcGIS Pro</h3><a href="assets/docs/certificates/Creating a Web Map in ArcGIS Pro_Certificate_03032025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 6 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Terrain Analysis Using ArcGIS Pro</h3><a href="assets/docs/certificates/Terrain Analysis Using ArcGIS Pro_Certificate_11272024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 7 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Creating Optimized Routes Using ArcGIS Pro</h3><a href="assets/docs/certificates/Creating Optimized Routes Using ArcGIS Pro_Certificate_11132024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 8 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Finding the Closest Facilities Using ArcGIS Pro</h3><a href="assets/docs/certificates/Finding the Closest Facilities Using ArcGIS Pro_Certificate_11132024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 9 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Generating Service Areas Using ArcGIS Pro</h3><a href="assets/docs/certificates/Generating Service Areas Using ArcGIS Pro_Certificate_11132024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 10 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Telling Stories with GIS Maps</h3><a href="assets/docs/certificates/Telling Stories with GIS Maps_Certificate_03102025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 11 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Creating a Map Layout</h3><a href="assets/docs/certificates/Creating a Map Layout_Certificate_09142025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 12 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Creating a Map Series in ArcGIS Pro</h3><a href="assets/docs/certificates/Creating a Map Series in ArcGIS Pro_Certificate_10012025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 13 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Symbolizing Map Layers</h3><a href="assets/docs/certificates/Symbolizing Map Layers_Certificate_10212024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 14 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Labeling Map Features</h3><a href="assets/docs/certificates/Labeling Map Features_Certificate_09142025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 15 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/unu-inweh.png" alt="UNU-INWEH" onerror="this.parentElement.classList.add('missing')"><span class="fb">UN</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">UNU-INWEH</span></div><h3>Big Data Analysis for Water-Related Applications</h3><a href="assets/docs/certificates/BIG DATA ANALYSIS FOR WATER-RELATED APPLICATIONS FOR WATER-RELATED APPLICATION.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 16 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Getting Started with Imagery and Remote Sensing</h3><a href="assets/docs/certificates/Getting Started with Imagery and Remote Sensing_Certificate_09062024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 17 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Performing Supervised Pixel-Based Image Classification</h3><a href="assets/docs/certificates/Performing Supervised Pixel-Based Image Classification_Certificate_12052024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 18 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Performing Unsupervised Pixel-Based Image Classification</h3><a href="assets/docs/certificates/Performing Unsupervised Pixel-Based Image Classification_Certificate_11052024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 19 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Performing Supervised Object-Based Image Classification</h3><a href="assets/docs/certificates/Performing Supervised Object-Based Image Classification_Certificate_12052024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 20 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Performing Accuracy Assessment for Image Classification</h3><a href="assets/docs/certificates/Performing Accuracy Assessment for Image Classification_Certificate_12052024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 21 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Suitability Modeling: Creating a Weighted Suitability Model</h3><a href="assets/docs/certificates/Suitability Modeling_ Creating a Weighted Suitability Model_Certificate_02132025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 22 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Suitability Modeling: Creating a Simple Suitability Model</h3><a href="assets/docs/certificates/Suitability Modeling_ Creating a Simple Suitability Model_Certificate_02132025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 23 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2025</span><span class="org">Esri</span></div><h3>Suitability Modeling: Introduction</h3><a href="assets/docs/certificates/Suitability Modeling_ Introduction_Certificate_02132025.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 24 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Getting Started with the Geodatabase</h3><a href="assets/docs/certificates/Getting Started with the Geodatabase_Certificate_09272024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 25 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Getting Started with Data Management</h3><a href="assets/docs/certificates/Getting Started with Data Management_Certificate_09062024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 26 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Introduction to Coordinate Systems</h3><a href="assets/docs/certificates/Introduction to Coordinate Systems_Certificate_09182024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 27 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Location-Enabling Data</h3><a href="assets/docs/certificates/Location-Enabling Data_Certificate_10252024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 28 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Mapping Addresses and Places</h3><a href="assets/docs/certificates/Mapping Addresses and Places_Certificate_10252024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 29 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Editing Basics in ArcGIS Pro</h3><a href="assets/docs/certificates/Editing Basics in ArcGIS Pro_Certificate_10042024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 30 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>GIS Basics</h3><a href="assets/docs/certificates/GIS Basics_Certificate_09062024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 31 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/esri.png" alt="Esri" onerror="this.parentElement.classList.add('missing')"><span class="fb">ES</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2024</span><span class="org">Esri</span></div><h3>Introduction to 3D Visualization</h3><a href="assets/docs/certificates/Introduction to 3D Visualization_Certificate_11272024.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 32 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/linkedin-learning.png" alt="LinkedIn Learning" onerror="this.parentElement.classList.add('missing')"><span class="fb">LI</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">LinkedIn Learning</span></div><h3>Using Python for Automation</h3><a href="assets/docs/certificates/Using Python for Automation.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 33 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/linkedin-learning.png" alt="LinkedIn Learning" onerror="this.parentElement.classList.add('missing')"><span class="fb">LI</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">LinkedIn Learning</span></div><h3>Data Fluency: Exploring and Describing Data</h3><a href="assets/docs/certificates/Data Fluency Exploring and Describing Data.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-            <!-- 34 -->
-            <article class="cert-item cert-extra">
-              <div class="cert-icon"><img src="assets/images/certificates/logos/unu-inweh.png" alt="UNU-INWEH" onerror="this.parentElement.classList.add('missing')"><span class="fb">UN</span></div>
-              <div class="cert-content"><div class="cert-meta"><span class="year">2023</span><span class="org">UNU-INWEH</span></div><h3>Mangroves Biodiversity & Ecosystem</h3><a href="assets/docs/certificates/Mangroves Biodiversity &amp; Ecosystem.pdf" target="_blank" rel="noopener">View Certificate →</a></div>
-            </article>
-          </div>
-          <button class="btn btn-primary" id="showMoreCertificates" type="button" aria-expanded="false" style="margin-top:20px;justify-self:center;"><span>Show more certificates</span></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="contact-wrap reveal">
-          <span class="eyebrow">Contact</span>
-          <h2>Let's connect</h2>
-          <p>I'm currently looking for opportunities where I can work with GIS analysis, cartography, spatial data, and automation. If my work looks relevant to your team or project, I would be happy to connect.</p>
-          <div class="contact-actions">
-            <a href="mailto:Salman12haider13@gmail.com" class="btn btn-primary">Email Me</a>
-            <a href="https://github.com/salman12haider13" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/salman12haider13" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2>Looking for a GIS analyst who can investigate the problem and communicate the answer?</h2>
+        <p>I’m open to GIS, spatial analysis, cartography, and automation opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:salman12haider13@gmail.com">Email me</a>
+          <a href="https://www.linkedin.com/in/salman12haider13" target="_blank" rel="me noopener">LinkedIn ↗</a>
+          <a href="https://github.com/salman12haider13" target="_blank" rel="me noopener">GitHub ↗</a>
+          <a href="assets/docs/Salman-Haider-GIS-Analyst-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Salman Haider. GIS Portfolio.</p>
-      <p>Built with HTML, CSS, and JavaScript.</p>
+    <div class="wrap footer-inner">
+      <p>© 2026 Salman Haider</p>
+      <p>GIS Analyst · Victoria, British Columbia</p>
+      <a href="#home">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <dialog class="map-dialog" id="mapDialog" aria-labelledby="mapDialogTitle">
+    <div class="map-dialog-header">
+      <div>
+        <p class="eyebrow">Full map</p>
+        <h2 id="mapDialogTitle">Map</h2>
+      </div>
+      <div class="map-controls" aria-label="Map viewer controls">
+        <button id="zoomOut" type="button" aria-label="Zoom out">−</button>
+        <button id="zoomReset" type="button">100%</button>
+        <button id="zoomIn" type="button" aria-label="Zoom in">+</button>
+        <button id="mapClose" type="button">Close</button>
+      </div>
+    </div>
+    <div class="map-stage" id="mapStage">
+      <img id="mapDialogImage" src="assets/images/maps/thumbs/calgary-park-accessibility.webp" alt="" width="990" height="1400">
+    </div>
+    <p class="map-help" id="mapHelp">Use + and − to zoom. Drag the map when enlarged.</p>
+  </dialog>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://salmanhaider.pro/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/calgary-park-accessibility.jpg</image:loc>
+      <image:title>Calgary Park Accessibility and Social Deprivation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/calgary-new-park-location.jpg</image:loc>
+      <image:title>Optimal Location for a New Community Park in Calgary</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/heathrow-global-reach.jpg</image:loc>
+      <image:title>Heathrow Global Reach</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/flood-affected-settlements.jpg</image:loc>
+      <image:title>Flood-Affected Settlements</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/friends-of-greens-tree-canopy.jpg</image:loc>
+      <image:title>Friends of Greens Tree Canopy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/global-stillbirths-population.jpg</image:loc>
+      <image:title>Global Stillbirths and Population</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/heathrow-north-america-tourism.jpg</image:loc>
+      <image:title>Heathrow North America Tourism</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/housing-affordability-ct-2016-2021.png</image:loc>
+      <image:title>Housing Affordability Change 2016 to 2021</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/housing-cost-ct-2016-2021.png</image:loc>
+      <image:title>Housing Cost Change 2016 to 2021</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/housing-cost-da-vs-ct.png</image:loc>
+      <image:title>Housing Cost at Dissemination Area and Census Tract Scales</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/pakistan-prhps-coverage-map.jpg</image:loc>
+      <image:title>Pakistan PRHPS Coverage Map</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/paradise-valley-trail-run.jpg</image:loc>
+      <image:title>Paradise Valley Trail Run</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/red-carpet-community-overview.jpg</image:loc>
+      <image:title>Red Carpet Community Overview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/stillbirths-neonatal-deaths-asia.jpg</image:loc>
+      <image:title>Stillbirths and Neonatal Deaths in Asia</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://salmanhaider.pro/assets/images/maps/full/town-of-olds-reference-map.jpg</image:loc>
+      <image:title>Town of Olds Reference Map</image:title>
+    </image:image>
+  </url>
+</urlset>
