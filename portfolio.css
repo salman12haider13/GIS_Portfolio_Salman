@@ -272,7 +272,7 @@ main {
   content: "/";
 }
 
-.text-links,
+.hero-actions,
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -280,7 +280,49 @@ main {
   margin-top: 24px;
 }
 
-.text-links a,
+.hero-actions {
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.hero-action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.hero-action-primary {
+  color: var(--bg);
+  background: var(--text);
+}
+
+.hero-action-primary:hover {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.hero-action-secondary {
+  background: transparent;
+}
+
+.hero-action-secondary:hover {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .contact-links a {
   font-weight: 500;
 }
@@ -1050,6 +1092,10 @@ main {
 
   .hero-proof li + li::before {
     margin-right: 9px;
+  }
+
+  .hero-action {
+    flex: 1 1 140px;
   }
 
   .capability-list {

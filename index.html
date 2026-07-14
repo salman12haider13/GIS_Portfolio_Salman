@@ -105,10 +105,10 @@
       </button>
 
       <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#maps">Maps</a>
+        <a href="#work">Selected Work</a>
         <a href="#profile">Profile</a>
+        <a href="#maps">Maps</a>
+        <a href="#projects">Projects</a>
         <a href="#beyond">Beyond the Map</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -127,9 +127,9 @@
 
       <div class="hero-intro">
         <p>I turn complex spatial data into clear maps, defensible analysis, and repeatable GIS workflows for planning and operational decisions.</p>
-        <div class="text-links">
-          <a href="#work">Explore GIS projects ↓</a>
-          <a href="assets/docs/Salman-Haider-GIS-Analyst-Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+        <div class="hero-actions" aria-label="Professional links">
+          <a class="hero-action hero-action-primary" href="assets/docs/Salman-Haider-GIS-Analyst-Resume.pdf" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
+          <a class="hero-action hero-action-secondary" href="https://www.linkedin.com/in/salman12haider13" target="_blank" rel="me noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -146,10 +146,11 @@
     <section class="section wrap" id="work">
       <header class="section-intro split-heading">
         <div>
-          <p class="eyebrow">Selected work</p>
-          <h2>Analysis with a clear question and a useful answer.</h2>
+          <h3>Selected work</h3>
+          <br
+          <p class="eyebrow">Case studies in spatial analysis and cartography</p>
         </div>
-        <p>Featured case studies connect spatial questions to transparent methods, defensible findings, and clear communication.</p>
+        
       </header>
 
       <article class="case-study">
@@ -197,104 +198,121 @@
       </article>
     </section>
 
-    <section class="section section-tinted" id="projects">
+    <section class="section section-tinted" id="profile">
       <div class="wrap">
-        <header class="section-intro split-heading">
+        <header class="section-intro profile-intro">
           <div>
-            <p class="eyebrow">Programming &amp; GIS automation</p>
-            <h2>Tools built to make spatial work more useful and repeatable.</h2>
+            <p class="eyebrow">Profile</p>
+            <h3>I work where spatial thinking, visual communication, and practical automation meet.</h3>
           </div>
-          <p>Practical GIS tools spanning desktop analysis, spatial databases, web mapping, remote sensing, and data-quality workflows.</p>
+          <p>My experience spans research, public-sector analysis, consulting, land records, and field-survey support. I care about analytical choices being explainable and maps being useful to the people who read them.</p>
         </header>
 
-        <div class="project-grid">
-          <article class="project-card" id="project-geo-copilot">
-            <img class="project-image" src="assets/images/projects/geo-copilot/case-study-wide.webp" alt="Geo Copilot workflow connecting ArcGIS Pro with GPT-5 and Llama 3.1" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">MGIS capstone · GIS automation</p>
-              <h3>Geo Copilot</h3>
-              <p>An ArcGIS Pro script tool that turns plain-language requests into controlled, inspectable geoprocessing workflows. Across 36 test scenarios, the strongest GPT-based workflow reached 91.7% function-selection accuracy and 83.3% parameter accuracy.</p>
-              <p class="method">ArcGIS Pro · ArcPy · GPT-5 · Llama 3.1</p>
-              <a href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" target="_blank" rel="noopener">View Geo Copilot source code on GitHub ↗</a>
-            </div>
-          </article>
+        <div class="profile-block">
+          <header class="profile-block-heading">
+            <p class="eyebrow">Experience</p>
+            <h3>Where I have worked</h3>
+          </header>
 
-          <article class="project-card" id="project-logistics-routing">
-            <img class="project-image" src="assets/images/projects/logistics-routing/card-wide.webp" alt="Logistics routing project with a mapped route and route-alternative technology stack" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">Routing · Web GIS</p>
-              <h3>Logistics Routing MVP</h3>
-              <p>A self-hosted routing application that calculates alternatives around blocked zones and traffic-delay points using OpenStreetMap data, PostGIS, pgRouting, Flask, Docker, and Leaflet.</p>
-              <p class="method">PostGIS · pgRouting · Flask · Leaflet · Docker</p>
-              <a href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo" target="_blank" rel="noopener">View Logistics Routing source code on GitHub ↗</a>
-            </div>
-          </article>
+          <ol class="experience-list">
+            <li class="experience-item">
+              <time datetime="2026-01">Jan 2026<br>— Apr 2026</time>
+              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
+              <div>
+                <p class="organization">University of Calgary</p>
+                <h4>GIS Research Assistant</h4>
+                <p>Built a multimodal public-transit accessibility analysis for fresh-food destinations. The work identified 12 Calgary dissemination areas with no access and 32 with limited access, affecting more than 33,000 residents.</p>
+              </div>
+            </li>
 
-          <article class="project-card" id="project-drone-route-automation">
-            <img class="project-image" src="assets/images/projects/drone-route-automation/card-wide.webp" alt="Drone route automation comparing direct flight and driving routes with report metrics" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">Freelance · Applied automation</p>
-              <h3>Drone Route Report Automation</h3>
-              <p>A toolbox built for Talyn Air that reads route inputs from Excel, generates drone and driving paths, calculates time and greenhouse-gas savings, and creates report-ready GIS outputs.</p>
-              <p class="method">ArcGIS Pro · ArcPy · Google Maps API · Excel</p>
-              <a href="https://github.com/salman12haider13/arcgis-drone-route-report-automation" target="_blank" rel="noopener">View Drone Route Automation source code on GitHub ↗</a>
-            </div>
-          </article>
+            <li class="experience-item">
+              <time datetime="2025-10">Oct 2025<br>— Nov 2025</time>
+              <div class="organization-logo organization-monogram" aria-label="British Columbia government"><span>BC</span></div>
+              <div>
+                <p class="organization">BC Ministry of Water, Land and Resource Stewardship</p>
+                <h4>Volunteer Student Research Assistant</h4>
+                <p>Created greenhouse-gas maps and environmental visualizations in ArcGIS Pro, Python, and R for economists and policy analysts in the Socio-Economic and Technical Analysis Division.</p>
+              </div>
+            </li>
 
-          <article class="project-card" id="project-forestry-sampling">
-            <img class="project-image" src="assets/images/projects/forestry-sampling/card-wide.webp" alt="Forestry sampling workflow showing valid points, slope constraints, and road exclusions" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">Environmental GIS · ArcPy</p>
-              <h3>Forestry Sampling Point Generator</h3>
-              <p>Generates candidate sampling locations from forest cover, slope, road proximity, and minimum-spacing constraints.</p>
-              <p class="method">ArcPy · Spatial analysis · Forestry</p>
-              <a href="https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator" target="_blank" rel="noopener">View Forestry Sampling source code on GitHub ↗</a>
-            </div>
-          </article>
+            <li class="experience-item">
+              <time datetime="2021-11">Nov 2021<br>— Aug 2024</time>
+              <div class="organization-logo"><img src="assets/images/logos/franchise-ready.png" alt="Franchise Ready logo" loading="lazy" width="440" height="136"></div>
+              <div>
+                <p class="organization">Franchise Ready</p>
+                <h4>GIS Analyst</h4>
+                <p>Delivered more than 105 franchise territory projects using demographics, service areas, competitors, points of interest, dashboards, and web maps, while automating repeatable production and quality checks with Python and ArcPy.</p>
+              </div>
+            </li>
 
-          <article class="project-card" id="project-ndvi-zonal-stats">
-            <img class="project-image" src="assets/images/projects/ndvi-zonal-stats/card-wide.webp" alt="NDVI raster zones connected to mean vegetation statistics" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">Remote sensing · Cloud GIS</p>
-              <h3>GEE NDVI Zonal Stats</h3>
-              <p>Calculates vegetation-index summaries by polygon for environmental monitoring and area-based comparison in Google Earth Engine.</p>
-              <p class="method">Earth Engine · NDVI · Zonal statistics</p>
-              <a href="https://github.com/salman12haider13/GEE_NDVI_ZonalStats" target="_blank" rel="noopener">View NDVI Zonal Stats source code on GitHub ↗</a>
-            </div>
-          </article>
+            <li class="experience-item">
+              <time datetime="2021-04">Apr 2021<br>— Nov 2021</time>
+              <div class="organization-logo"><img src="assets/images/logos/greenage-services.png" alt="Greenage Services logo" loading="lazy" width="200" height="200"></div>
+              <div>
+                <p class="organization">Greenage Services</p>
+                <h4>GIS Associate</h4>
+                <p>Converted scanned cadastral records and AutoCAD plans into structured parcel datasets, maintained geodatabases, and used Python and OpenCV for map-record organization and attribute QA/QC.</p>
+              </div>
+            </li>
 
-          <article class="project-card" id="project-spatial-reference-checker">
-            <img class="project-image" src="assets/images/projects/spatial-reference-checker/card-wide.webp" alt="Spatial reference quality-control workflow comparing dataset EPSG codes with a target projection" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">GIS QA/QC</p>
-              <h3>Spatial Reference Checker</h3>
-              <p>Batch-inspects coordinate systems across GIS datasets and flags projection problems before they compromise analysis.</p>
-              <p class="method">ArcPy · Projections · Quality control</p>
-              <a href="https://github.com/salman12haider13/arcpy-spatial-reference-checker" target="_blank" rel="noopener">View Spatial Reference Checker on GitHub ↗</a>
-            </div>
-          </article>
+            <li class="experience-item">
+              <time datetime="2020-10">Oct 2020<br>— Apr 2021</time>
+              <div class="organization-logo"><img src="assets/images/logos/mer-solutions.jpeg" alt="MER Solutions logo" loading="lazy" width="200" height="200"></div>
+              <div>
+                <p class="organization">MER Solutions</p>
+                <h4>GIS Technician</h4>
+                <p>Prepared survey-boundary and field maps for a government social-support program, linked household records to GIS features, and supported spatial and attribute validation.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
 
-          <article class="project-card" id="project-csv-survey-points">
-            <img class="project-image" src="assets/images/projects/csv-survey-points/card-wide.webp" alt="CSV survey rows converted into mapped points and a GIS feature class" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">Survey data · ArcPy</p>
-              <h3>CSV Survey Points to Feature Class</h3>
-              <p>Converts structured field-survey records into mapped point features with coordinate handling and repeatable feature-class creation.</p>
-              <p class="method">Python · ArcPy · CSV</p>
-              <a href="https://github.com/salman12haider13/csv-survey-points-arcpy" target="_blank" rel="noopener">View CSV Survey Points source code on GitHub ↗</a>
-            </div>
-          </article>
+        <div class="profile-block education-block">
+          <header class="profile-block-heading">
+            <p class="eyebrow">Education</p>
+            <h3>Academic foundation</h3>
+          </header>
 
-          <article class="project-card" id="project-lidar-metadata">
-            <img class="project-image" src="assets/images/projects/lidar-metadata/card-wide.webp" alt="LiDAR point cloud with extracted extent, elevation range, and point-count metadata" loading="lazy" width="1600" height="1000">
-            <div class="project-content">
-              <p class="project-type">LiDAR · Terrain data</p>
-              <h3>ASCII XYZ LiDAR Metadata Extractor</h3>
-              <p>Reads ASCII XYZ point data and reports extents, point counts, elevation ranges, and tile-level metadata for faster data inspection.</p>
-              <p class="method">Python · LiDAR · Metadata</p>
-              <a href="https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor" target="_blank" rel="noopener">View LiDAR Metadata source code on GitHub ↗</a>
+          <div class="education-grid">
+            <article class="education-item">
+              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
+              <div>
+                <time datetime="2024-08">Aug 2024 — May 2026</time>
+                <h4>Master of Geographic Information Systems</h4>
+                <p>University of Calgary · Calgary, Canada</p>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <div class="organization-logo"><img src="assets/images/logos/pmas-arid.png" alt="Arid Agriculture University logo" loading="lazy" width="1243" height="1232"></div>
+              <div>
+                <time datetime="2016-09">Sep 2016 — Oct 2020</time>
+                <h4>BSc Geoinformatics &amp; Earth Observation</h4>
+                <p>Arid Agriculture University · Rawalpindi, Pakistan</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tool-summary">
+          <header class="tool-summary-heading">
+            <p class="eyebrow">Core tools</p>
+            <h3>Platforms and technologies</h3>
+          </header>
+          <div class="tool-groups">
+            <div class="tool-group">
+              <h4>GIS platforms</h4>
+              <p>ArcGIS Pro · ArcGIS Online · ArcGIS Enterprise · ArcGIS Field Maps · ArcGIS Dashboards · ArcGIS StoryMaps · ArcGIS Experience Builder · ArcGIS Business Analyst · ArcGIS Network Analyst · ArcMap · QGIS · Global Mapper · Mango Maps · GeoServer · Leaflet · Mapbox GL JS · Mapbox Studio · MapTiler · Google Earth Engine · ENVI · ERDAS Imagine</p>
             </div>
-          </article>
+            <div class="tool-group">
+              <h4>Programming &amp; automation</h4>
+              <p>Python · ArcPy · R · SQL · JavaScript · HTML/CSS · Flask · GeoPandas · Shapely · GDAL · OpenCV · FME · FME Workbench · PostGIS · PostgreSQL · MS SQL · Docker · Tippecanoe</p>
+            </div>
+            <div class="tool-group">
+              <h4>Modelling &amp; workflow</h4>
+              <p>ArcGIS ModelBuilder · AutoCAD · RTK GPS · GPT-5 · Llama 3.1 8B · Microsoft Office</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -303,7 +321,7 @@
       <header class="section-intro split-heading">
         <div>
           <p class="eyebrow">Map gallery</p>
-          <h2>A complete gallery of cartographic work, shown without cropping.</h2>
+          <h2>A complete gallery of cartographic work.</h2>
         </div>
         <p>Select any map to open a full-page viewer with zoom and drag controls.</p>
       </header>
@@ -446,121 +464,104 @@
       </div>
     </section>
 
-    <section class="section section-tinted" id="profile">
+    <section class="section section-tinted" id="projects">
       <div class="wrap">
-        <header class="section-intro profile-intro">
+        <header class="section-intro split-heading">
           <div>
-            <p class="eyebrow">Profile</p>
-            <h2>I work where spatial thinking, visual communication, and practical automation meet.</h2>
+            <p class="eyebrow">Programming &amp; GIS automation</p>
+            <h2>Tools built to make spatial work more useful and repeatable.</h2>
           </div>
-          <p>My experience spans research, public-sector analysis, consulting, land records, and field-survey support. I care about analytical choices being explainable and maps being useful to the people who read them.</p>
+          <p>Practical GIS tools spanning desktop analysis, spatial databases, web mapping, remote sensing, and data-quality workflows.</p>
         </header>
 
-        <div class="profile-block">
-          <header class="profile-block-heading">
-            <p class="eyebrow">Experience</p>
-            <h3>Where I have worked</h3>
-          </header>
-
-          <ol class="experience-list">
-            <li class="experience-item">
-              <time datetime="2026-01">Jan 2026<br>— Apr 2026</time>
-              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
-              <div>
-                <p class="organization">University of Calgary</p>
-                <h4>GIS Research Assistant</h4>
-                <p>Built a multimodal public-transit accessibility analysis for fresh-food destinations. The work identified 12 Calgary dissemination areas with no access and 32 with limited access, affecting more than 33,000 residents.</p>
-              </div>
-            </li>
-
-            <li class="experience-item">
-              <time datetime="2025-10">Oct 2025<br>— Nov 2025</time>
-              <div class="organization-logo organization-monogram" aria-label="British Columbia government"><span>BC</span></div>
-              <div>
-                <p class="organization">BC Ministry of Water, Land and Resource Stewardship</p>
-                <h4>Volunteer Student Research Assistant</h4>
-                <p>Created greenhouse-gas maps and environmental visualizations in ArcGIS Pro, Python, and R for economists and policy analysts in the Socio-Economic and Technical Analysis Division.</p>
-              </div>
-            </li>
-
-            <li class="experience-item">
-              <time datetime="2021-11">Nov 2021<br>— Aug 2024</time>
-              <div class="organization-logo"><img src="assets/images/logos/franchise-ready.png" alt="Franchise Ready logo" loading="lazy" width="440" height="136"></div>
-              <div>
-                <p class="organization">Franchise Ready</p>
-                <h4>GIS Analyst</h4>
-                <p>Delivered more than 105 franchise territory projects using demographics, service areas, competitors, points of interest, dashboards, and web maps, while automating repeatable production and quality checks with Python and ArcPy.</p>
-              </div>
-            </li>
-
-            <li class="experience-item">
-              <time datetime="2021-04">Apr 2021<br>— Nov 2021</time>
-              <div class="organization-logo"><img src="assets/images/logos/greenage-services.png" alt="Greenage Services logo" loading="lazy" width="200" height="200"></div>
-              <div>
-                <p class="organization">Greenage Services</p>
-                <h4>GIS Associate</h4>
-                <p>Converted scanned cadastral records and AutoCAD plans into structured parcel datasets, maintained geodatabases, and used Python and OpenCV for map-record organization and attribute QA/QC.</p>
-              </div>
-            </li>
-
-            <li class="experience-item">
-              <time datetime="2020-10">Oct 2020<br>— Apr 2021</time>
-              <div class="organization-logo"><img src="assets/images/logos/mer-solutions.jpeg" alt="MER Solutions logo" loading="lazy" width="200" height="200"></div>
-              <div>
-                <p class="organization">MER Solutions</p>
-                <h4>GIS Technician</h4>
-                <p>Prepared survey-boundary and field maps for a government social-support program, linked household records to GIS features, and supported spatial and attribute validation.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-
-        <div class="profile-block education-block">
-          <header class="profile-block-heading">
-            <p class="eyebrow">Education</p>
-            <h3>Academic foundation</h3>
-          </header>
-
-          <div class="education-grid">
-            <article class="education-item">
-              <div class="organization-logo"><img src="assets/images/logos/ucalgary.png" alt="University of Calgary logo" loading="lazy" width="400" height="164"></div>
-              <div>
-                <time datetime="2024-08">Aug 2024 — May 2026</time>
-                <h4>Master of Geographic Information Systems</h4>
-                <p>University of Calgary · Calgary, Canada</p>
-              </div>
-            </article>
-
-            <article class="education-item">
-              <div class="organization-logo"><img src="assets/images/logos/pmas-arid.png" alt="Arid Agriculture University logo" loading="lazy" width="1243" height="1232"></div>
-              <div>
-                <time datetime="2016-09">Sep 2016 — Oct 2020</time>
-                <h4>BSc Geoinformatics &amp; Earth Observation</h4>
-                <p>Arid Agriculture University · Rawalpindi, Pakistan</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="tool-summary">
-          <header class="tool-summary-heading">
-            <p class="eyebrow">Core tools</p>
-            <h3>Platforms and technologies</h3>
-          </header>
-          <div class="tool-groups">
-            <div class="tool-group">
-              <h4>GIS platforms</h4>
-              <p>ArcGIS Pro · ArcGIS Online · ArcGIS Enterprise · ArcGIS Field Maps · ArcGIS Dashboards · ArcGIS StoryMaps · ArcGIS Experience Builder · ArcGIS Business Analyst · ArcGIS Network Analyst · ArcMap · QGIS · Global Mapper · Mango Maps · GeoServer · Leaflet · Mapbox GL JS · Mapbox Studio · MapTiler · Google Earth Engine · ENVI · ERDAS Imagine</p>
+        <div class="project-grid">
+          <article class="project-card" id="project-geo-copilot">
+            <img class="project-image" src="assets/images/projects/geo-copilot/case-study-wide.webp" alt="Geo Copilot workflow connecting ArcGIS Pro with GPT-5 and Llama 3.1" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">MGIS capstone · GIS automation</p>
+              <h3>Geo Copilot</h3>
+              <p>An ArcGIS Pro script tool that turns plain-language requests into controlled, inspectable geoprocessing workflows. Across 36 test scenarios, the strongest GPT-based workflow reached 91.7% function-selection accuracy and 83.3% parameter accuracy.</p>
+              <p class="method">ArcGIS Pro · ArcPy · GPT-5 · Llama 3.1</p>
+              <a href="https://github.com/salman12haider13/arcgis-geo-copilot-llm" target="_blank" rel="noopener">View Geo Copilot source code on GitHub ↗</a>
             </div>
-            <div class="tool-group">
-              <h4>Programming &amp; automation</h4>
-              <p>Python · ArcPy · R · SQL · JavaScript · HTML/CSS · Flask · GeoPandas · Shapely · GDAL · OpenCV · FME · FME Workbench · PostGIS · PostgreSQL · MS SQL · Docker · Tippecanoe</p>
+          </article>
+
+          <article class="project-card" id="project-logistics-routing">
+            <img class="project-image" src="assets/images/projects/logistics-routing/card-wide.webp" alt="Logistics routing project with a mapped route and route-alternative technology stack" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Routing · Web GIS</p>
+              <h3>Logistics Routing MVP</h3>
+              <p>A self-hosted routing application that calculates alternatives around blocked zones and traffic-delay points using OpenStreetMap data, PostGIS, pgRouting, Flask, Docker, and Leaflet.</p>
+              <p class="method">PostGIS · pgRouting · Flask · Leaflet · Docker</p>
+              <a href="https://github.com/salman12haider13/Logistics-Routing-MVP-Demo" target="_blank" rel="noopener">View Logistics Routing source code on GitHub ↗</a>
             </div>
-            <div class="tool-group">
-              <h4>Modelling &amp; workflow</h4>
-              <p>ArcGIS ModelBuilder · AutoCAD · RTK GPS · GPT-5 · Llama 3.1 8B · Microsoft Office</p>
+          </article>
+
+          <article class="project-card" id="project-drone-route-automation">
+            <img class="project-image" src="assets/images/projects/drone-route-automation/card-wide.webp" alt="Drone route automation comparing direct flight and driving routes with report metrics" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Freelance · Applied automation</p>
+              <h3>Drone Route Report Automation</h3>
+              <p>A toolbox built for Talyn Air that reads route inputs from Excel, generates drone and driving paths, calculates time and greenhouse-gas savings, and creates report-ready GIS outputs.</p>
+              <p class="method">ArcGIS Pro · ArcPy · Google Maps API · Excel</p>
+              <a href="https://github.com/salman12haider13/arcgis-drone-route-report-automation" target="_blank" rel="noopener">View Drone Route Automation source code on GitHub ↗</a>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card" id="project-forestry-sampling">
+            <img class="project-image" src="assets/images/projects/forestry-sampling/card-wide.webp" alt="Forestry sampling workflow showing valid points, slope constraints, and road exclusions" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Environmental GIS · ArcPy</p>
+              <h3>Forestry Sampling Point Generator</h3>
+              <p>Generates candidate sampling locations from forest cover, slope, road proximity, and minimum-spacing constraints.</p>
+              <p class="method">ArcPy · Spatial analysis · Forestry</p>
+              <a href="https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator" target="_blank" rel="noopener">View Forestry Sampling source code on GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-ndvi-zonal-stats">
+            <img class="project-image" src="assets/images/projects/ndvi-zonal-stats/card-wide.webp" alt="NDVI raster zones connected to mean vegetation statistics" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Remote sensing · Cloud GIS</p>
+              <h3>GEE NDVI Zonal Stats</h3>
+              <p>Calculates vegetation-index summaries by polygon for environmental monitoring and area-based comparison in Google Earth Engine.</p>
+              <p class="method">Earth Engine · NDVI · Zonal statistics</p>
+              <a href="https://github.com/salman12haider13/GEE_NDVI_ZonalStats" target="_blank" rel="noopener">View NDVI Zonal Stats source code on GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-spatial-reference-checker">
+            <img class="project-image" src="assets/images/projects/spatial-reference-checker/card-wide.webp" alt="Spatial reference quality-control workflow comparing dataset EPSG codes with a target projection" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">GIS QA/QC</p>
+              <h3>Spatial Reference Checker</h3>
+              <p>Batch-inspects coordinate systems across GIS datasets and flags projection problems before they compromise analysis.</p>
+              <p class="method">ArcPy · Projections · Quality control</p>
+              <a href="https://github.com/salman12haider13/arcpy-spatial-reference-checker" target="_blank" rel="noopener">View Spatial Reference Checker on GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-csv-survey-points">
+            <img class="project-image" src="assets/images/projects/csv-survey-points/card-wide.webp" alt="CSV survey rows converted into mapped points and a GIS feature class" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">Survey data · ArcPy</p>
+              <h3>CSV Survey Points to Feature Class</h3>
+              <p>Converts structured field-survey records into mapped point features with coordinate handling and repeatable feature-class creation.</p>
+              <p class="method">Python · ArcPy · CSV</p>
+              <a href="https://github.com/salman12haider13/csv-survey-points-arcpy" target="_blank" rel="noopener">View CSV Survey Points source code on GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-lidar-metadata">
+            <img class="project-image" src="assets/images/projects/lidar-metadata/card-wide.webp" alt="LiDAR point cloud with extracted extent, elevation range, and point-count metadata" loading="lazy" width="1600" height="1000">
+            <div class="project-content">
+              <p class="project-type">LiDAR · Terrain data</p>
+              <h3>ASCII XYZ LiDAR Metadata Extractor</h3>
+              <p>Reads ASCII XYZ point data and reports extents, point counts, elevation ranges, and tile-level metadata for faster data inspection.</p>
+              <p class="method">Python · LiDAR · Metadata</p>
+              <a href="https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor" target="_blank" rel="noopener">View LiDAR Metadata source code on GitHub ↗</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
