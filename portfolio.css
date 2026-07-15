@@ -614,7 +614,7 @@ main {
 
 .experience-item {
   display: grid;
-  grid-template-columns: 116px 58px minmax(0, 1fr);
+  grid-template-columns: 150px 58px minmax(0, 1fr);
   gap: 18px;
   padding-bottom: 32px;
 }
@@ -631,6 +631,7 @@ main {
 .experience-item time,
 .education-item time {
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .organization-logo {
@@ -1032,7 +1033,7 @@ main {
   }
 
   .experience-item {
-    grid-template-columns: 108px 56px minmax(0, 1fr);
+    grid-template-columns: 150px 56px minmax(0, 1fr);
   }
 
   .education-grid {
@@ -1099,11 +1100,25 @@ main {
   }
 
   .capability-list {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: initial;
+    column-gap: 16px;
+    row-gap: 10px;
   }
 
   .project-grid,
-  .map-grid,
+  .map-grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .project-card:not(:last-child),
+  .map-card:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line-light);
+  }
+
   .case-media-pair {
     grid-template-columns: 1fr;
   }
