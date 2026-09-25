@@ -1,0 +1,578 @@
+[
+  {
+    "slug": "geo-copilot",
+    "title": "Geo Copilot",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "I built an ArcGIS Pro tool that uses Large Language Models (LLMs) to turn written requests into geoprocessing commands, with a review window before execution.",
+    "intro": [
+      "Someone asking for schools near a road may know the question without knowing which ArcGIS tools to use or how to pass one result to the next. I built Geo Copilot to let them describe the task in ordinary language, using the layers already open in ArcGIS Pro.",
+      "The prototype connects GPT 5 or a locally hosted Llama model to ArcGIS Pro. I developed the script tool, prompts and review interface, then tested whether the models chose the right operations and parameters. I wanted the project to include evidence of where the approach worked and where it needed more work."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Python",
+      "ArcPy",
+      "Tkinter",
+      "OpenAI API",
+      "Ollama"
+    ],
+    "facts": [
+      {
+        "label": "My contribution",
+        "value": "Design, development and evaluation"
+      },
+      {
+        "label": "Tool definitions",
+        "value": "12 geoprocessing operations"
+      },
+      {
+        "label": "Evaluation",
+        "value": "36 queries, two models"
+      },
+      {
+        "label": "Project report",
+        "value": "December 2025"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Building the request from the active map",
+        "paragraphs": [
+          "A model cannot choose a useful input if it does not know what data is available. When the tool starts, I collect the active layers, geometry types, field names and types, coordinate systems and map units. The request also includes the workspace and scratch workspace settings.",
+          "I defined 12 available operations, including buffers, overlays, selections and field calculations. Each definition contains the command syntax, an example and the position of the output parameter. The prompt asks the model to use these tools and the supplied layers, keep distance and units together, and flag projection conflicts.",
+          "The model returns an ordered list of command strings. I use arcpy.Command to run those strings, which gave the tool one way to execute the different operations. The tool definitions guide the model through the prompt; they are not yet enforced by a separate command validator."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Keeping the user involved",
+        "paragraphs": [
+          "I built two review stages into the Tkinter window. The Prompts tab shows what will be sent to the model, including the map context. The user chooses Send to LLM when they are ready. The Results tab then shows the original response alongside the commands extracted from it.",
+          "The parser checks that the response is a Python list of strings before enabling Execute. Layer choices, distances and operation order still need review. Choosing Execute runs the commands in sequence; an execution error is reported and stops that sequence. The user can also quit without running it."
+        ],
+        "figureIndices": [
+          1
+        ]
+      },
+      {
+        "title": "Testing against work I had done manually",
+        "paragraphs": [
+          "I used Calgary schools, major roads, water bodies and boundaries from the City of Calgary open data portal. Working with a known set of layers let me compare the model responses with operations I could inspect and carry out myself.",
+          "I prepared 36 queries and completed each one manually, recording the required functions, their order and their parameters. Twelve queries used one operation, twelve used two, and twelve required more than two. Examples ranged from a 500 metre school buffer to selecting elementary schools near roads and copying the selection.",
+          "Both models received the same queries. I scored function selection and order separately from parameter selection. A wrong function sequence also received a zero parameter score, so the measures are related. This produced 72 model responses to compare with the manual references."
+        ],
+        "figureIndices": [
+          2
+        ]
+      },
+      {
+        "title": "What the two models returned",
+        "paragraphs": [
+          "GPT 5 received a correct function and order score on 33 of 36 queries, and a correct parameter score on 30. Those totals include seven projection warnings that received full scores because the model followed the instruction to flag the conflict instead of proposing a reprojection. They are evaluation scores, not counts of completed analyses.",
+          "The local Llama 3.1 8B model returned paragraphs instead of parseable command lists on all 36 queries. I had chosen that model because I could host it on the available computer. The result describes this model, prompt and setup; it does not settle whether a different local model could perform the work."
+        ],
+        "figureIndices": [
+          3
+        ]
+      },
+      {
+        "title": "Looking at the number of operations",
+        "paragraphs": [
+          "Parameter scores were 11 of 12 for single operation queries, 10 of 12 for two operations and 9 of 12 for longer workflows. Function and order scores were 12, 10 and 11 respectively. Choosing the tools and filling their parameters were different problems.",
+          "The counts helped me locate the weaker cases, but this small test set did not establish a statistically significant relationship between complexity and accuracy. I would not use the pattern alone to predict how another workflow will perform."
+        ],
+        "figureIndices": [
+          4
+        ]
+      },
+      {
+        "title": "Separating warnings from workflows",
+        "paragraphs": [
+          "I also separated the seven warning responses from the score totals to make their meaning clearer. Of the 36 GPT 5 responses, 23 proposed workflows matched both the function and parameter reference. Six contained a mismatch. Seven reported a projection conflict without producing a workflow.",
+          "This breakdown is derived from the query score table and the warning cases recorded in the report. A warning can be an appropriate response to the data, but it is different from a completed GIS operation. The chart keeps those outcomes separate."
+        ],
+        "figureIndices": [
+          5
+        ]
+      },
+      {
+        "title": "The missing school filter",
+        "paragraphs": [
+          "Query Q50 asked for elementary schools within 500 metres of major roads, followed by a copy of that selection. The model skipped the attribute filter for elementary schools. That left a result which could look reasonable on the map while answering a different question.",
+          "The comparison shows the manually selected schools in yellow and the model result in red. The mismatch was a useful reminder to check the selection criteria as well as the position of the points.",
+          "The other recorded errors were different: two queries introduced extra operations, and three used incorrect parameters even though the function sequence was right. I kept those distinctions in the evaluation because an overall score would hide what needed correcting."
+        ],
+        "figureIndices": [
+          6
+        ]
+      },
+      {
+        "title": "What I would build next",
+        "paragraphs": [
+          "Adding a new operation currently means editing the tool definition dictionary. I would make that configurable through the interface and add independent checks of proposed tool names, inputs and parameter structure before execution.",
+          "I would also test larger local models, more datasets and a broader set of requests. The report did not measure time savings or usability with other users, so those would need their own evaluation. I would keep the prompt and command review visible as the tool develops, especially for requests where one missing selection changes the result."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/projects/evidence/geo-copilot-overview.svg",
+        "alt": "Flowchart: a GIS request and current map context feed a language model; its proposed commands are reviewed; the user chooses Execute to run them in ArcGIS Pro or quits.",
+        "title": "How Geo Copilot works",
+        "caption": "Overview of the main interaction. Map metadata is collected when the tool starts. The user reviews the prompt before sending it and reviews the returned commands before choosing Execute. Response format checks happen before execution is enabled."
+      },
+      {
+        "src": "assets/images/projects/evidence/geo-copilot-results.png",
+        "alt": "Actual Geo Copilot Results window with the raw language model response, a parsed sequence of two commands and the Execute button.",
+        "title": "The command review window",
+        "caption": "An actual response for intersecting communities with major roads and dissolving the result by class. The original model response stays visible above the parsed commands."
+      },
+      {
+        "src": "assets/images/projects/evidence/geo-copilot-test-data.png",
+        "alt": "Map of the Calgary test data, showing schools, major roads, water bodies, city boundary and community boundaries coloured by resident count.",
+        "title": "The layers used for testing",
+        "caption": "The Calgary map from my report. These layers supplied the features, attributes and spatial relationships used in the test queries. The community colours show resident counts."
+      },
+      {
+        "src": "assets/images/projects/charts/geo-copilot-evaluation.svg",
+        "alt": "GPT 5 evaluation: function selection and order scored correct for 33 of 36 queries, and parameter selection for 30 of 36. Both totals include seven projection warnings with no workflow.",
+        "title": "Overall evaluation scores",
+        "caption": "Each query was scored against the manual reference. For workflow responses, function and order had to match; parameters also had to match for a correct parameter score. Seven projection warnings without a workflow received full scores under the evaluation rules. These two measures are not independent."
+      },
+      {
+        "src": "assets/images/projects/charts/geo-copilot-complexity.svg",
+        "alt": "Scores out of 12 at each complexity level: one operation, 12 function and order and 11 parameter; two operations, 10 and 10; more than two operations, 11 and 9. Scores include seven warning responses across the groups.",
+        "title": "Scores by task complexity",
+        "caption": "Twelve queries were tested in each group. Seven projection warnings are included in the scores: one in the first group, three in the second and three in the third."
+      },
+      {
+        "src": "assets/images/projects/charts/geo-copilot-response-outcomes.svg",
+        "alt": "Of 36 GPT 5 responses, 23 proposed workflows matched the manual function and parameter reference, six workflows had a mismatch, and seven reported a projection conflict without a workflow.",
+        "title": "What the responses contained",
+        "caption": "Derived from the report: 30 parameter correct scores minus seven warning responses leaves 23 matching workflows. Six responses had a function or parameter mismatch. This is a classification of recorded responses, not an execution success rate."
+      },
+      {
+        "src": "assets/images/projects/evidence/geo-copilot-q50.png",
+        "alt": "Calgary comparison for Q50: yellow points show the manually selected schools and red points show the model result, which omitted the elementary school attribute filter.",
+        "title": "Q50: the effect of a missed selection",
+        "caption": "The request was to select elementary schools within 500 metres of major roads and copy the selection. Yellow points show the manual result; red points show the model result. The elementary school attribute filter was missing from the model workflow."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Geo Copilot source code",
+        "url": "https://github.com/salman12haider13/arcgis-geo-copilot-llm/blob/main/scripts/geo_copilot.py"
+      },
+      {
+        "label": "Original project interface screenshots",
+        "url": "https://github.com/salman12haider13/arcgis-geo-copilot-llm/tree/main/screenshots"
+      },
+      {
+        "label": "Evaluation and figures: my Geo Copilot report, December 2025. Methods, results and Appendix B query scores."
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/arcgis-geo-copilot-llm",
+    "featured": true,
+    "leadFigure": 0,
+    "thumbnail": {
+      "src": "assets/images/projects/evidence/geo-copilot-overview.svg",
+      "alt": "Geo Copilot overview: a written GIS request and map context go to a language model; the user reviews the proposed commands before choosing whether to run them in ArcGIS Pro."
+    }
+  },
+  {
+    "slug": "logistics-routing",
+    "title": "Logistics Routing",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A routing prototype for comparing time, distance and alternative journeys when part of the road network is blocked.",
+    "intro": [
+      "The shortest route is not always the one a journey can use. A closure may cut through it, or a delay may make another route worth considering. I built this prototype so a user can choose two locations, draw areas to avoid and compare alternatives by estimated time or distance.",
+      "I used selected major roads from a Pakistan OpenStreetMap extract and connected the network to a browser map. My work covered road preparation in PostGIS, routing with pgRouting, a Flask service and the Leaflet interface."
+    ],
+    "tools": [
+      "PostgreSQL",
+      "PostGIS",
+      "pgRouting",
+      "Flask",
+      "Leaflet",
+      "SQL",
+      "Docker"
+    ],
+    "facts": [
+      {
+        "label": "Road data",
+        "value": "OpenStreetMap"
+      },
+      {
+        "label": "Route objectives",
+        "value": "Time or distance"
+      },
+      {
+        "label": "Status",
+        "value": "Local prototype"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Making the road network usable",
+        "paragraphs": [
+          "I split the roads into connected segments while using bridge, tunnel and layer attributes to distinguish crossings at different levels. I assigned distance costs and travel time estimates from assumed road speeds, with separate costs for forward and reverse travel on one way roads.",
+          "A drawn barrier can cover only part of a segment. I locate and combine the blocked intervals, then create temporary connections for the remaining portions. Selected endpoints connect to nearby roads, and traffic points add simulated delays."
+        ]
+      },
+      {
+        "title": "Comparing the alternatives",
+        "paragraphs": [
+          "The result is a set of route geometries, distances, estimated times and steps. The user can select an alternative on the map and see how an avoidance area changes the journey. This gives the route lines a practical meaning beyond their appearance on the screen.",
+          "I packaged the components with Docker Compose for local use. This remains a prototype: traffic is simulated, speeds are assumed, smaller road classes are omitted and the vehicle selector does not yet apply vehicle restrictions. Those parts need further work before the results could support operational delivery planning."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/projects/evidence/logistics-routing-console.webp",
+        "alt": "Actual Logistics Routing Console interface with time and distance controls beside an OpenStreetMap view of Islamabad.",
+        "title": "The routing interface",
+        "caption": "The project's browser interface, showing route controls beside the map. This screenshot shows the starting view before a route is selected. Map data © OpenStreetMap contributors."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Routing service",
+        "url": "https://github.com/salman12haider13/Logistics-Routing-MVP-Demo/blob/main/backend/app/services/routing_service.py"
+      },
+      {
+        "label": "Network preparation",
+        "url": "https://github.com/salman12haider13/Logistics-Routing-MVP-Demo/blob/main/database/build/02_build_routing_network.sql"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/Logistics-Routing-MVP-Demo",
+    "featured": true
+  },
+  {
+    "slug": "drone-route-reporting",
+    "title": "Drone Route Reporting",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A toolbox for comparing a list of direct flight paths with road journeys, including range, payload and reporting checks.",
+    "intro": [
+      "Comparing delivery routes means working through the same questions for each origin and destination: how far is the journey, how long might it take, and does the proposed flight fit the stated range and payload limits? I built this ArcGIS Pro toolbox to apply those calculations to an Excel route list and put the results into one map and report table."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "ArcPy",
+      "Python",
+      "pandas",
+      "Google Maps API",
+      "Excel"
+    ],
+    "facts": [
+      {
+        "label": "Input",
+        "value": "Excel route records"
+      },
+      {
+        "label": "Output",
+        "value": "Route layers and report table"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Turning the route list into a comparison",
+        "paragraphs": [
+          "The toolbox reads the workbook's sheet names into the interface and geocodes the route addresses. I use Google Directions for the driving geometry and create a direct line between each pair of endpoints for the flight comparison.",
+          "The tool estimates flight time from distance and assumed speeds, then checks distance and payload against the user's limits. Green flight lines pass those two checks and red lines fail them; driving routes appear in blue. The colour distinction makes it easier to review the route list alongside the report."
+        ]
+      },
+      {
+        "title": "What the report can tell me",
+        "paragraphs": [
+          "The output brings together distances, times, time differences and an emissions estimate based on driving distance and a fixed factor. It is a starting point for comparing route options, rather than a measured operational outcome. The emissions calculation does not include the drone's energy use.",
+          "The flight lines do not account for airspace, terrain, weather or battery reserves, so passing the range and payload checks is only an initial screen. Historical departure dates are also moved to an upcoming matching weekday for the directions request. I would keep those assumptions with the report so its numbers are read in context."
+        ]
+      }
+    ],
+    "figures": [],
+    "sources": [
+      {
+        "label": "Toolbox implementation",
+        "url": "https://github.com/salman12haider13/arcgis-drone-route-report-automation/blob/main/scripts/Routes%20Report%20Automation%20v1.py"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/arcgis-drone-route-report-automation"
+  },
+  {
+    "slug": "forestry-sampling",
+    "title": "Forestry Sampling Point Generator",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A field planning tool that generates candidate forest sampling points within a study area, using slope and road proximity criteria.",
+    "intro": [
+      "Before a forest survey, the proposed sampling locations need to fit both the study area and the conditions set for fieldwork. I built this tool to narrow the candidate area using three criteria: forest presence, slopes below five degrees and locations within 1,000 metres of a road.",
+      "The user supplies the study boundary, vegetation, roads and elevation data, then chooses the number of points to create. The output gives a field team a set of candidate locations to review while keeping the spatial selection rules consistent."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "ArcPy",
+      "Spatial Analyst",
+      "Python"
+    ],
+    "facts": [
+      {
+        "label": "Slope threshold",
+        "value": "Below 5 degrees"
+      },
+      {
+        "label": "Road distance",
+        "value": "Within 1,000 metres"
+      },
+      {
+        "label": "Coordinate system",
+        "value": "WKID 3400"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Applying the field planning criteria",
+        "paragraphs": [
+          "I check that the inputs use NAD 1983 10TM AEP Forest, WKID 3400, then buffer the roads and clip the buffer to the study area. I select vegetation polygons with a positive AVI species percentage value and calculate slope from the elevation model.",
+          "Raster calculations combine forest presence, slope and road proximity. I convert the suitable cells into one multipart polygon before generating random points, so the requested count applies across the whole candidate area rather than separately to each polygon."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Reading the sampling output",
+        "paragraphs": [
+          "The script checks the final point count and adds the locations to the active map. The points show where all three mapped conditions are satisfied, giving the user a starting set of proposed survey stops and a clear account of how they were selected.",
+          "A nearby road does not necessarily provide access, and low mapped slope does not establish safe ground conditions. I would review the points against land access, current conditions and the particular survey design before arranging field visits. The tool prepares candidates; the field programme still determines whether they are suitable."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/projects/evidence/forestry-sampling-criteria.svg",
+        "title": "Choosing candidate sampling locations",
+        "alt": "Forest cover, gentle slopes and road proximity combined to select candidate sampling points.",
+        "caption": "The tool combines three criteria inside the study boundary, then generates random points in the area where all three are met."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sampling script",
+        "url": "https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator/blob/main/scripts/sampling_point_generator.py"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/arcpy-forestry-sampling-point-generator",
+    "thumbnail": {
+      "src": "assets/images/projects/evidence/forestry-sampling-criteria.svg",
+      "alt": "Forest cover, gentle slopes and road proximity combined to select candidate sampling points."
+    },
+    "leadFigure": 0
+  },
+  {
+    "slug": "ndvi-zonal-stats",
+    "title": "NDVI Zonal Statistics",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "An Earth Engine workflow that turns Sentinel 2 imagery into a map and a table of average vegetation index values for city polygons.",
+    "intro": [
+      "A vegetation image shows variation across a landscape, but comparing named areas also needs a table. I wrote this Google Earth Engine workflow to calculate NDVI from Sentinel 2 imagery and summarise it for city polygons. It connects the mapped pattern with a value that can be reviewed alongside other information about each city."
+    ],
+    "tools": [
+      "Google Earth Engine",
+      "JavaScript",
+      "Sentinel 2",
+      "NDVI"
+    ],
+    "facts": [
+      {
+        "label": "Source imagery",
+        "value": "Sentinel 2"
+      },
+      {
+        "label": "Summary",
+        "value": "Mean NDVI by city polygon"
+      },
+      {
+        "label": "Reduction scale",
+        "value": "10 metres"
+      }
+    ],
+    "sections": [
+      {
+        "title": "From satellite images to city summaries",
+        "paragraphs": [
+          "I select images for the chosen area and dates, calculate NDVI from the near infrared and red bands, B8 and B4, and combine the NDVI images into a median image. I clip the result to the area of interest and use reduceRegions to calculate a mean for each city at a 10 metre reduction scale.",
+          "The script displays the vegetation index image and exports the polygon summaries to Google Drive. Those outputs let a reader inspect both the variation within an area and the average assigned to it."
+        ]
+      },
+      {
+        "title": "What the values represent",
+        "paragraphs": [
+          "NDVI describes the contrast between near infrared and red reflectance. It can help examine vegetation patterns, but a city average combines different land covers and conceals variation within the boundary. It is not a direct measure of tree canopy area or a diagnosis of vegetation health.",
+          "The published script sorts images by reported cloud percentage but does not remove cloudy images or mask cloudy pixels. Sorting does not clean the median composite. I would add cloud filtering and masking, inspect the resulting image and keep the seasonal window consistent before using the values for comparisons between places or dates."
+        ]
+      }
+    ],
+    "figures": [],
+    "sources": [
+      {
+        "label": "Earth Engine script",
+        "url": "https://github.com/salman12haider13/GEE_NDVI_ZonalStats/blob/main/Code.js"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/GEE_NDVI_ZonalStats"
+  },
+  {
+    "slug": "spatial-reference-checker",
+    "title": "Spatial Reference Checker",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A batch coordinate system check and reprojection script for preparing vector datasets to work together in NAD83 UTM Zone 12N.",
+    "intro": [
+      "When vector layers come from different sources, their coordinate systems need checking before the layers are combined or used for measurement. I wrote this script to inspect a folder or file geodatabase, identify datasets already in the target system and bring the others into NAD83 UTM Zone 12N.",
+      "The output is a consistent set of vector datasets and a summary showing which inputs matched the target, used another reference or had no defined reference."
+    ],
+    "tools": [
+      "Python",
+      "ArcPy",
+      "ArcGIS Pro"
+    ],
+    "facts": [
+      {
+        "label": "Target system",
+        "value": "NAD83 UTM Zone 12N"
+      },
+      {
+        "label": "Target WKID",
+        "value": "26912"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Checking and standardising the layers",
+        "paragraphs": [
+          "I read each dataset's spatial reference and compare it with WKID 26912. Matching datasets are left as they are. For the others, the script creates projected temporary outputs and uses those to replace the originals. The workspace path is set in the script.",
+          "The summary makes the coordinate system issues visible across the batch, including the names of inputs whose reference was unknown. That is useful preparation for a project that needs a common local coordinate system, but it does not check the positional accuracy of the source features."
+        ]
+      },
+      {
+        "title": "The assumption that needs checking",
+        "paragraphs": [
+          "For unknown inputs, this version defines geographic NAD83 before projecting. Defining a reference describes existing coordinates; it does not discover what system those coordinates originally used. An incorrect assumption can therefore place the output in the wrong location.",
+          "I would verify the source reference from metadata or a known reference dataset and work on copies, since this version replaces the originals. I would also confirm that UTM Zone 12N is appropriate for the project area before choosing it as the common target."
+        ]
+      }
+    ],
+    "figures": [],
+    "sources": [
+      {
+        "label": "Reference checking script",
+        "url": "https://github.com/salman12haider13/arcpy-spatial-reference-checker/blob/main/scripts/spatial_reference_checker.py"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/arcpy-spatial-reference-checker"
+  },
+  {
+    "slug": "csv-survey-points",
+    "title": "CSV Survey Points",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A survey data tool that converts coordinate strings into mapped points and reports the outermost recorded species presence locations.",
+    "intro": [
+      "Field observations often arrive as spreadsheet rows, while the questions about them are spatial. I built this tool to turn a CSV of survey IDs, coordinates and species presence into a GIS point layer. It also summarises the recorded presence locations so their geographic spread can be checked alongside the map."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "ArcPy",
+      "Python",
+      "CSV"
+    ],
+    "facts": [
+      {
+        "label": "Input coordinates",
+        "value": "Degrees, minutes and seconds"
+      },
+      {
+        "label": "Output system",
+        "value": "WGS 84"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Making the observations mappable",
+        "paragraphs": [
+          "I import the CSV into a temporary table and add decimal latitude and longitude fields. The script reads degrees, minutes, seconds and hemisphere from each coordinate string, converts them to decimal degrees and warns when a coordinate cannot be converted.",
+          "The converted fields become an XY event layer, which I export as a WGS 84 point feature class. The output places the survey records in a form that can be displayed, queried and compared with other GIS layers without manually entering each point."
+        ]
+      },
+      {
+        "title": "Reading the presence summary",
+        "paragraphs": [
+          "For records marked present, the tool counts observations and reports up to three northernmost, southernmost, easternmost and westernmost locations. These help identify the edges of the recorded observations and give the reader specific survey locations to inspect.",
+          "Those extremes describe the supplied records, not the species' full range. Areas without records may not have been surveyed, and a small coordinate error can affect an extreme location. I would review conversion warnings and check the mapped positions before interpreting the summary. The CSV field names and coordinate strings also need to follow the format expected by the script."
+        ]
+      }
+    ],
+    "figures": [],
+    "sources": [
+      {
+        "label": "Survey conversion script",
+        "url": "https://github.com/salman12haider13/csv-survey-points-arcpy/blob/main/scripts/DMS_to_DD.py"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/csv-survey-points-arcpy"
+  },
+  {
+    "slug": "lidar-metadata",
+    "title": "ASCII XYZ LiDAR Metadata",
+    "category": "tools",
+    "kind": "tool",
+    "summary": "A small Python reader for checking the coverage and elevation range of an ASCII XYZ tile without loading all its rows into memory.",
+    "intro": [
+      "Before using an elevation tile in GIS, I want to know what area it covers and what values it contains. I wrote this reader for an ASCII XYZ file derived from a LiDAR elevation model. It reports the point count, coordinate extents, tile dimensions and minimum, maximum and mean elevation in a text summary."
+    ],
+    "tools": [
+      "Python",
+      "ASCII XYZ",
+      "LiDAR elevation data"
+    ],
+    "facts": [
+      {
+        "label": "Input",
+        "value": "Easting, northing and elevation"
+      },
+      {
+        "label": "Output",
+        "value": "Text metadata summary"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Inspecting the file one row at a time",
+        "paragraphs": [
+          "Each row contains an easting, northing and elevation. As I read the file, I update a running count, elevation total and the smallest and largest coordinate and elevation values. The script does not need to retain every point in memory.",
+          "At the end, I calculate the mean elevation and derive the tile width and height from its coordinate ranges. This approach suits a large text file when the immediate need is a basic description rather than a detailed display of every point."
+        ]
+      },
+      {
+        "title": "Using the metadata summary",
+        "paragraphs": [
+          "The extents help check whether the tile covers the expected location, while the dimensions and elevation range provide a quick comparison with the source description or neighbouring tiles. An unexpected value gives me something specific to investigate before continuing the analysis.",
+          "The file must contain three numeric values per row, and horizontal coordinates must be in metres for the reported dimensions to have the intended meaning. The summary does not establish the coordinate reference system, assess elevation accuracy or describe gaps within the tile. It is a format specific inspection step, not a point classification or LAS processing tool."
+        ]
+      }
+    ],
+    "figures": [],
+    "sources": [
+      {
+        "label": "XYZ reader",
+        "url": "https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor/blob/main/scripts/lidar_xyz_extractor.py"
+      }
+    ],
+    "repo": "https://github.com/salman12haider13/ascii-xyz-lidar-metadata-extractor"
+  }
+]

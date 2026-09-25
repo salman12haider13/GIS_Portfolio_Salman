@@ -1,0 +1,258 @@
+{
+  "intro": [
+    "I am a GIS professional in Canada with over four years of applied experience and a Master of Geographic Information Systems from the University of Calgary. I am based in Victoria and looking for GIS opportunities across Canada. My work has covered land records, franchise territories, environmental analysis and public transit. I use spatial analysis, cartography and programming to answer practical questions, and build GIS automation tools for tasks that need to be repeated.",
+    "I began with field and mapping work in Pakistan, then spent nearly three years working on franchise territories for an Australian consultancy before moving to Canada for my master’s degree."
+  ],
+  "experience": [
+    {
+      "organization": "University of Calgary",
+      "logo": "assets/images/logos/ucalgary.png",
+      "title": "GIS Research Assistant",
+      "dates": "January to April 2026",
+      "paragraphs": [
+        "I studied access to fresh food in Calgary using walking routes and scheduled public transit. I combined streets, stops, timetables and destination data in a network that accounted for waiting, transfers and the walking portions of each journey.",
+        "For a departure at 11 a.m. on April 1, 2026, with a 45 minute travel limit, 33,212 residents lived in areas classified as having poor or no access. I built an Experience Builder application for exploring those results and maintained and published the supporting layers through ArcGIS Enterprise."
+      ]
+    },
+    {
+      "organization": "BC Ministry of Water, Land and Resource Stewardship",
+      "logo": "assets/images/logos/bc-government.png",
+      "title": "Volunteer Student Research Assistant",
+      "dates": "2025",
+      "paragraphs": [
+        "I prepared maps and charts for economists and policy analysts, including comparisons of greenhouse gas emissions across Canadian provinces. I also calculated forest area inside and outside Old Growth Management Areas and other protected areas using provincial forest and boundary data.",
+        "The work involved checking overlaps and area totals, turning them into percentages, and revising maps and figures for internal briefings. I used ArcGIS Pro, Python and R to prepare the analysis and supporting graphics."
+      ]
+    },
+    {
+      "organization": "Franchise Ready",
+      "logo": "assets/images/logos/franchise-ready.png",
+      "title": "GIS Analyst",
+      "dates": "November 2021 to August 2024",
+      "paragraphs": [
+        "I delivered more than 105 franchise territory projects for clients with different markets, customer groups and service requirements. I worked from the initial criteria through data preparation, territory design, review and delivery in maps, reports and web applications.",
+        "Alongside the project work, I built reusable demographic and business location datasets, automated recurring tasks with Python and ArcPy, and coordinated and reviewed work for two GIS assistants. I also helped clients access and use their published territory maps."
+      ]
+    },
+    {
+      "organization": "Greenage Services",
+      "logo": "assets/images/logos/greenage-services.png",
+      "title": "GIS Associate",
+      "dates": "April to November 2021",
+      "paragraphs": [
+        "I helped convert paper and cloth cadastral records into parcel datasets for a government land digitization project. The work combined scanned records, imagery, CAD drawings and field control points, with georeferencing and digitizing in ArcMap and QGIS.",
+        "Thousands of unsorted scans were slowing the team down. I wrote a Python and OpenCV routine that read locality text and sorted the sheets into the right folders, then added scripts for production reporting and attribute checks."
+      ]
+    },
+    {
+      "organization": "MER Solutions",
+      "logo": "assets/images/logos/mer-solutions.jpeg",
+      "title": "GIS Technician",
+      "dates": "October 2020 to April 2021",
+      "paragraphs": [
+        "I supported the Benazir Income Support Programme household survey with boundary maps, field maps and Survey123 forms. I also conducted household interviews and linked the collected records to their mapped locations.",
+        "Being involved in fieldwork helped me see where questions and forms needed adjustment. I revised field options and validation rules using feedback from the survey team, and checked the spatial and household information used in reporting."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Geographic Information Systems",
+      "institution": "University of Calgary",
+      "logo": "assets/images/logos/ucalgary.png",
+      "dates": "August 2024 to May 2026"
+    },
+    {
+      "degree": "Graduate coursework in Environmental Science",
+      "institution": "Bahria University, Islamabad",
+      "logo": "assets/images/logos/bahria-university.png",
+      "dates": "2023 · 24 credits completed"
+    },
+    {
+      "degree": "BSc Geoinformatics and Earth Observation",
+      "institution": "Pir Meher Ali Shah Arid Agriculture University",
+      "logo": "assets/images/logos/pmas-arid.png",
+      "dates": "September 2016 to October 2020"
+    }
+  ],
+  "capabilities": [
+    {
+      "title": "Spatial analysis",
+      "text": "Service areas, transit networks, territory design and environmental overlays. I work mainly in ArcGIS Pro, with PostGIS and pgRouting for database and routing projects."
+    },
+    {
+      "title": "GIS programming",
+      "text": "Python and ArcPy tools for recurring GIS work, from sorting scanned maps and checking attributes to producing reports and reviewing generated geoprocessing commands."
+    },
+    {
+      "title": "Data and fieldwork",
+      "text": "Survey123 forms, household interviews, RTK control points, cadastral digitizing and versioned enterprise editing. I have worked with both field observations and legacy records."
+    },
+    {
+      "title": "Maps and applications",
+      "text": "Reference and thematic maps, charts, web maps and Experience Builder applications. I adapt the level of detail for clients, field teams and readers outside GIS."
+    }
+  ],
+  "toolGroups": [
+    {
+      "title": "Desktop GIS and spatial analysis",
+      "items": [
+        "ArcGIS Pro",
+        "ArcMap",
+        "QGIS",
+        "ArcGIS Network Analyst",
+        "ArcGIS Business Analyst",
+        "ArcGIS Spatial Analyst",
+        "ArcGIS ModelBuilder",
+        "ArcGIS Public Transit Data Model"
+      ]
+    },
+    {
+      "title": "Esri web GIS and field tools",
+      "items": [
+        "ArcGIS Enterprise for data editing and publishing",
+        "ArcGIS Enterprise Portal",
+        "ArcGIS Online",
+        "ArcGIS Dashboards",
+        "ArcGIS Experience Builder",
+        "ArcGIS Survey123",
+        "RTK GPS"
+      ]
+    },
+    {
+      "title": "Programming and application development",
+      "items": [
+        "Python",
+        "ArcPy",
+        "SQL",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "R",
+        "Flask",
+        "FastAPI for service architecture",
+        "PySide6 / Qt",
+        "Tkinter"
+      ]
+    },
+    {
+      "title": "Spatial databases and data processing",
+      "items": [
+        "PostgreSQL",
+        "PostGIS",
+        "pgRouting",
+        "File and enterprise geodatabases",
+        "FME Workbench, including AutoCAD drawing conversion",
+        "GDAL",
+        "GeoPandas",
+        "Shapely",
+        "Rasterio",
+        "osm2pgsql",
+        "Overpass Turbo",
+        "Google Maps geocoding and directions APIs",
+        "OpenCV and OCR"
+      ]
+    },
+    {
+      "title": "Data analysis and reporting",
+      "items": [
+        "pandas",
+        "NumPy",
+        "scikit-learn",
+        "statsmodels",
+        "mlxtend",
+        "Matplotlib",
+        "ReportLab",
+        "Jupyter Notebook",
+        "Microsoft Excel",
+        "Google Sheets",
+        "Microsoft Office"
+      ]
+    },
+    {
+      "title": "Remote sensing and AI tools",
+      "items": [
+        "Google Earth Engine",
+        "ENVI",
+        "PyTorch",
+        "CUDA",
+        "Ultralytics YOLO",
+        "Segment Anything Model and samgeo for workflow design",
+        "OpenAI API",
+        "Ollama",
+        "GPT-5",
+        "Llama 3.1"
+      ]
+    },
+    {
+      "title": "Web maps and deployment",
+      "items": [
+        "Mango Maps",
+        "Leaflet",
+        "Leaflet Draw",
+        "Mapbox",
+        "Docker and Docker Compose",
+        "Nginx",
+        "Git",
+        "GitHub",
+        "GitHub Pages",
+        "AWS for project architecture"
+      ]
+    },
+    {
+      "title": "Additional platform knowledge and training",
+      "items": [
+        "ArcGIS StoryMaps",
+        "ArcGIS Field Maps",
+        "Global Mapper",
+        "ERDAS Imagine",
+        "Mapbox GL JS",
+        "Mapbox Studio",
+        "MapTiler",
+        "GeoServer",
+        "Tippecanoe"
+      ]
+    }
+  ],
+  "personal": {
+    "text": "Outside work, I enjoy exploring new places and spending time outdoors. These are a few moments from walks, hikes and trips in British Columbia, Alberta and Pakistan.",
+    "photos": [
+      {
+        "src": "assets/images/off-the-map/web/1000216467.webp",
+        "alt": "Salman Haider walking on a pier beside the ocean",
+        "caption": "Ogden Point Breakwater, Victoria, BC"
+      },
+      {
+        "src": "assets/images/off-the-map/web/1000218307.webp",
+        "alt": "Salman Haider standing on a walkway near rock formations",
+        "caption": "Cave and Basin, Banff, Alberta"
+      },
+      {
+        "src": "assets/images/off-the-map/web/IMG_2721.webp",
+        "alt": "Salman Haider standing on a rocky viewpoint with the ocean behind him",
+        "caption": "Mount Douglas, Vancouver Island, BC"
+      },
+      {
+        "src": "assets/images/off-the-map/web/IMG_6393.webp",
+        "alt": "Salman Haider standing in front of Lake Louise in winter",
+        "caption": "Lake Louise, Banff National Park"
+      },
+      {
+        "src": "assets/images/off-the-map/web/IMG_9097.webp",
+        "alt": "Two people posing outdoors on a hiking trail",
+        "caption": "Trail 5, Islamabad, Pakistan"
+      },
+      {
+        "src": "assets/images/off-the-map/web/40772.webp",
+        "alt": "Salman Haider standing with arms raised in front of mountains",
+        "caption": "Namal Lake, Mianwali, Pakistan"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Salman Haider | GIS Professional in Canada",
+    "description": "Salman Haider, GIS professional in Canada with 4+ years of applied experience and a Master of Geographic Information Systems. Open to GIS roles across Canada.",
+    "aboutTitle": "About Salman Haider | GIS Professional in Canada",
+    "aboutDescription": "Meet Salman Haider, a GIS professional in Canada with over four years of applied experience, a University of Calgary MGIS and skills in Python and spatial analysis."
+  }
+}

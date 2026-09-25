@@ -1,0 +1,708 @@
+[
+  {
+    "slug": "calgary-parks",
+    "title": "Calgary park access",
+    "category": "analysis",
+    "kind": "map",
+    "summary": "I examined who was outside a 15 minute walk from a community park and tested where one new park could help.",
+    "intro": [
+      "I used Calgary's community parks to investigate two questions: where does walking access fall short, and do those gaps overlap with communities experiencing greater social deprivation? I then tested where one additional park could serve demand that was being missed.",
+      "The aim was to give park planning a useful starting point. Finding empty space on a map would not be enough; the proposed location also needed to make sense for the people living nearby."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Network Analyst",
+      "Service Area",
+      "Location Allocation"
+    ],
+    "facts": [
+      {
+        "label": "Study area",
+        "value": "Calgary, Alberta"
+      },
+      {
+        "label": "Walking threshold",
+        "value": "15 minutes"
+      },
+      {
+        "label": "New facilities",
+        "value": "One candidate site selected"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Who was outside walking range?",
+        "paragraphs": [
+          "I calculated 15 minute walking service areas around community parks, then examined the gaps against income, employment and Pampalon social deprivation quintiles. The first map combines the parks, their walking coverage and the deprivation pattern so the gaps can be read in their social context.",
+          "Several gaps overlapped with greater deprivation, lower income or lower employment. The pattern was not uniform: some better off areas also lacked coverage. I took this as a reason to examine those factors together when deciding which gaps deserved closer attention."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Testing one additional park",
+        "paragraphs": [
+          "I used a location allocation model with Maximum Attendance as the objective, a 15 minute walking limit and one new facility to select. I weighted demand by population multiplied by the social deprivation value, so an area with more residents and greater deprivation had more influence on the choice.",
+          "Each dissemination area was represented by a demand point. That made the population data usable in the network model, though it simplified the walking distances for residents spread across the area."
+        ],
+        "figureIndices": [
+          1
+        ]
+      },
+      {
+        "title": "Why I questioned the selected site",
+        "paragraphs": [
+          "The selected site was inside a service gap. When I turned on the basemap, however, much of the nearby dense housing already fell within existing park coverage. The selected area was still developing, which made the immediate benefit less clear than the model result first suggested.",
+          "I would use the result to guide a closer review of residential density and planned growth before recommending a location. For a planning team, the maps identify access gaps and a candidate worth investigating. They also show why checking the surrounding land use matters before accepting a modelled optimum."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/calgary-park-accessibility.jpg",
+        "alt": "Complete Calgary map showing community parks, blue walking service areas and social deprivation quintiles.",
+        "title": "Existing park access",
+        "caption": "Green points are community parks and blue areas are within the modelled 15 minute walk. Gaps in that coverage can be compared with the underlying social deprivation classes, from pale yellow to dark red."
+      },
+      {
+        "src": "assets/images/maps/full/calgary-new-park-location.jpg",
+        "alt": "Complete Calgary location allocation map with weighted demand circles, candidate parks and a selected site in the southeast.",
+        "title": "Candidate location for a new park",
+        "caption": "The star marks the selected site in the southeast. Blue circles show demand weighted by population and social deprivation. The model favoured this site, but the surrounding residential pattern still needed closer review."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Pampalon social deprivation index"
+      },
+      {
+        "label": "Community park, population and dissemination area data used in the project"
+      }
+    ],
+    "featured": true,
+    "outcome": "The model selected a site in the southeast, but my basemap check showed a developing area with little dense housing nearby. That changed how I interpreted the result.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "calgary-housing",
+    "title": "Calgary housing patterns",
+    "category": "analysis",
+    "kind": "map",
+    "summary": "I compared Calgary housing costs and income across two census years to see where costs were highest and how geography affected the picture.",
+    "intro": [
+      "I wanted to see how housing costs varied across Calgary, how the pattern changed between 2016 and 2021, and what happened when I compared cost with income. I also mapped the same year at two census scales to see how much local detail was lost in the larger areas.",
+      "I made three comparisons: dissemination areas versus census tracts, housing cost across the two years, and housing cost relative to income. Together they give someone examining housing a better starting point than a single citywide figure."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Table joins",
+      "Natural Breaks classification",
+      "Field Calculator"
+    ],
+    "facts": [
+      {
+        "label": "Study area",
+        "value": "Calgary, Alberta"
+      },
+      {
+        "label": "Census years",
+        "value": "2016 and 2021"
+      },
+      {
+        "label": "Geographies",
+        "value": "Dissemination areas and census tracts"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What changes when the areas get larger?",
+        "paragraphs": [
+          "I joined Statistics Canada housing tables to the matching census boundaries and clipped them to Calgary. The 2021 dissemination area map reveals small pockets of different values within areas that look more uniform at the census tract scale. That distinction matters when the question concerns a particular neighbourhood.",
+          "The distributions were positively skewed, so I used Natural Breaks separately for each geography. This showed clusters within each dataset, but produced different class ranges. A purple shade in the first panel must be read against its own legend before comparing it with the second."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Comparing the two census years",
+        "paragraphs": [
+          "For the 2016 and 2021 maps, I set matching class breaks so the colours kept the same meaning. In my comparison, more tracts appeared in higher cost classes in 2021. Central and southwestern areas remained expensive, while some northwestern areas moved into lower classes.",
+          "That apparent improvement in the northwest needed care. Census tract boundaries changed between the two years, so some of the difference may come from the areas being grouped differently. I retained each year's geography and read the maps as two distributions, rather than a measure of price change within identical boundaries."
+        ],
+        "figureIndices": [
+          1
+        ]
+      },
+      {
+        "title": "Adding income to the comparison",
+        "paragraphs": [
+          "I divided the supplied median housing cost by median total income. Central and western areas generally had higher ratios in both years. The southeast and parts of the northeast more often fell into lower ratio classes. This helps locate contrasts that a cost map alone would miss.",
+          "A housing or planning reader could use these patterns to choose areas for a closer look. The ratio compares area summaries; it does not measure an individual household's monthly housing burden. I also checked zero or blank areas against imagery and found parks, industrial land and the airport among them. Missing or suppressed records can create gaps too, so those areas should not be treated as cheap housing."
+        ],
+        "figureIndices": [
+          2
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/housing-cost-da-vs-ct.png",
+        "alt": "Complete side by side comparison of Calgary housing cost in 2021 at dissemination area and census tract scales.",
+        "title": "Dissemination areas and census tracts",
+        "caption": "The smaller dissemination areas show local variation that becomes less distinct at the census tract scale. Class breaks were calculated separately, so each panel has its own legend ranges."
+      },
+      {
+        "src": "assets/images/maps/full/housing-cost-ct-2016-2021.png",
+        "alt": "Complete side by side Calgary census tract maps showing housing cost classes in 2016 and 2021.",
+        "title": "Housing cost in 2016 and 2021",
+        "caption": "Matching class ranges show the persistence of higher cost areas in central and southwestern Calgary. Boundary changes between census years also affect the comparison."
+      },
+      {
+        "src": "assets/images/maps/full/housing-affordability-ct-2016-2021.png",
+        "alt": "Complete paired Calgary maps comparing housing cost divided by income in 2016 and 2021.",
+        "title": "Housing cost relative to income",
+        "caption": "Higher ratios are shown in darker red. Central and western areas stand out in both years, while parts of the outer east have lower ratios. These are relative classes, not official household affordability thresholds."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Statistics Canada, 2016 and 2021 census tables and boundaries"
+      }
+    ],
+    "featured": true,
+    "outcome": "Higher cost classes remained prominent in central and southwestern Calgary. Central and western areas also tended to have higher housing cost relative to income, while parts of the outer east fell into lower housing cost to income classes.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "heathrow-connections",
+    "title": "Heathrow connections",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I turned a day of Heathrow flight records into two maps for a travel audience, showing worldwide reach and North American destinations.",
+    "intro": [
+      "I designed these maps to help a travel audience see where Heathrow connects, first across the world and then within North America. A table of airport names gives the destinations, but a map makes their spread and distance from London easier to understand.",
+      "I used arrivals and departures from 22 October 2018, with 2018 international tourism arrivals for the regional context. The result is a pair of historical travel map concepts."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Custom map projections",
+      "Flow mapping"
+    ],
+    "facts": [
+      {
+        "label": "Flight snapshot",
+        "value": "22 October 2018"
+      },
+      {
+        "label": "Tourism data",
+        "value": "2018 international arrivals"
+      },
+      {
+        "label": "Outputs",
+        "value": "Global and North America layouts"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Showing how far the network reaches",
+        "paragraphs": [
+          "I connected the airport locations and grouped the global lines into three distance classes. A Natural Earth projection centred near Heathrow makes London the common origin of the visual pattern. I kept short connections quieter so the cluster around Europe would not hide longer links across the Atlantic, through Asia and as far as Australia."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Giving destinations room to be read",
+        "paragraphs": [
+          "For North America, I enlarged the regional view, labelled the airports and used blue connections over country colours representing tourism arrivals. This lets a reader pick out destinations such as Vancouver, Calgary, Toronto and New York rather than just see a bundle of lines.",
+          "The two layouts could serve different parts of a travel presentation: the global map establishes the extent of the network, and the regional map supports a conversation about destinations. The lines connect airports rather than reproduce aircraft tracks. Tourism totals describe arrivals to countries, not passengers on the Heathrow routes, and the snapshot is not a current timetable."
+        ],
+        "figureIndices": [
+          1
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/heathrow-global-reach.jpg",
+        "alt": "Complete world map of Heathrow flight connections, with route lines grouped into three distance classes.",
+        "title": "Global connections",
+        "caption": "The longest distance class is highlighted in blue. The lines show how widely the 2018 connections extended from Heathrow; the source table includes both arrivals and departures."
+      },
+      {
+        "src": "assets/images/maps/full/heathrow-north-america-tourism.jpg",
+        "alt": "Complete regional layout with Heathrow connections to labelled North American airports and countries shaded by tourism arrivals.",
+        "title": "North American destinations",
+        "caption": "The regional view makes the dense eastern group and the western destinations readable by name. Country shading is based on 2018 tourism arrivals, separately from the flight data."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Flightradar24, arrival and departure snapshot from 22 October 2018",
+        "url": "https://www.flightradar24.com/"
+      },
+      {
+        "label": "Natural Earth country boundaries",
+        "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/"
+      },
+      {
+        "label": "UNWTO international tourism arrivals, supplied through the World Bank"
+      }
+    ],
+    "featured": false,
+    "outcome": "The North America view reveals a dense group of destinations in the eastern United States and Canada, alongside connections to western and inland cities that are harder to distinguish on the world map.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "paradise-valley",
+    "title": "Paradise Valley trail map",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I combined a route map with terrain and an elevation profile so runners could understand the climbs as well as the course.",
+    "intro": [
+      "For this fictional trail running event near San Francisco, I wanted a runner to see where the two courses go, where they share a trail and what the terrain would be like. The route line alone could not explain the effort involved, so I added contours, shaded terrain and a profile of the longer course."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Terrain analysis",
+      "3D Analyst"
+    ],
+    "facts": [
+      {
+        "label": "Format",
+        "value": "Trail map design concept"
+      },
+      {
+        "label": "Routes",
+        "value": "Approximate 5 km and 10 km routes"
+      },
+      {
+        "label": "Contour interval",
+        "value": "20 metres"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Building the terrain background",
+        "paragraphs": [
+          "I generated contours, hillshade and curvature from the elevation model. After testing different contour intervals, I chose 20 metres: smaller intervals crowded the route, while larger ones removed too much detail. Curvature helped bring out ridges and changes in the land surface.",
+          "I then placed the red and yellow courses over that background, with different distance markers, direction arrows, water stops and start and finish symbols. The colours keep the shorter and longer routes distinguishable where they overlap."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "What a runner can read from the layout",
+        "paragraphs": [
+          "The main map shows where the routes split and rejoin; the profile shows the sequence of climbs and descents along the 10 km course. Together they could help someone studying the route anticipate the harder sections and locate the marked water stops.",
+          "The 3D view makes the hills more tangible, but I found that it repeated some of the profile's information. I would prioritise the main map and profile in a smaller handout. This remains a design concept with approximate routes and markers, rather than a verified course for navigation."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/paradise-valley-trail-run.jpg",
+        "alt": "Complete fictional Paradise Valley trail running map with red and yellow routes, contours, water stops, a location inset, a 3D view and an elevation profile.",
+        "title": "Routes and terrain",
+        "caption": "Read the two route colours on the main map, then follow the 10 km course through its two major climbs in the profile below. The event is fictional and route lengths and markers are approximate."
+      }
+    ],
+    "sources": [
+      {
+        "label": "The National Map, base data and digital elevation model"
+      },
+      {
+        "label": "Penn State, supplied fictional Paradise Valley route dataset"
+      }
+    ],
+    "featured": false,
+    "outcome": "The 10 km profile shows two prominent climbing sections separated by a lower middle stretch. That course shape is much easier to read in the profile than from the route line alone.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "town-of-olds",
+    "title": "Town of Olds reference map",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I made a reference map for residents and visitors to locate Olds, its main roads and the surrounding landscape.",
+    "intro": [
+      "I wanted this map to help someone unfamiliar with Olds understand how the town connects to the surrounding area. It needed to show the main routes into town while keeping local streets, water features and boundaries available for a closer look."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Label classes",
+      "Map layout design"
+    ],
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Olds, Alberta"
+      },
+      {
+        "label": "Main map scale",
+        "value": "1:50,000"
+      },
+      {
+        "label": "Base dataset",
+        "value": "CanVec, 2017"
+      }
+    ],
+    "sections": [
+      {
+        "title": "From the regional network to local streets",
+        "paragraphs": [
+          "I worked with CanVec roads, water features and boundaries in ArcGIS Pro. The main map shows the town at 1:50,000, while the smaller inset connects it to nearby counties and Highway 2. A reader can first locate the town regionally, then move into its named roads and surrounding landscape.",
+          "I used stronger colour and line weight for major roads and lighter grey for local streets. Labels and halos needed careful adjustment around the denser street network. I also offset the dashed town boundary where it met roads so that one feature did not obscure the other."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "What the map helps someone find",
+        "paragraphs": [
+          "The result gives residents or visitors a compact reference for the road network and the water features west and south of town. Highways remain easy to follow across the sheet without losing the smaller streets in the centre.",
+          "The closest symbol choices still deserve refinement. Collector and local roads look similar in places, as do some lake and reservoir colours. Increasing those differences would make the detailed reading easier while keeping the same overall hierarchy."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/town-of-olds-reference-map.jpg",
+        "alt": "Complete reference map of Olds, Alberta with a road hierarchy, water features, town boundary and regional inset.",
+        "title": "Olds and surrounding area",
+        "caption": "Highway 27 and Highway 2A organise the main view. The inset shows Olds in relation to Highway 2 and the surrounding counties, allowing regional and local orientation on the same sheet."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Natural Resources Canada, CanVec Series, 2017"
+      }
+    ],
+    "featured": false,
+    "outcome": "The finished map separates the east to west Highway 27 connection from the north to south Highway 2A route, while the inset places Olds within the wider Highway 2 corridor.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "health-geography",
+    "title": "Stillbirths and population",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I explored how population size changes the way national stillbirth and neonatal death counts are read on a map.",
+    "intro": [
+      "I wanted to examine a problem in comparing national health totals: a country can dominate a count map partly because it has more people. I used UNICEF data to see how the picture changed when I showed counts, divided stillbirths by total population, and changed the symbol method."
+    ],
+    "tools": [
+      "ArcGIS Pro",
+      "Microsoft Excel",
+      "Dot density",
+      "Graduated and proportional symbols"
+    ],
+    "facts": [
+      {
+        "label": "Mapped year",
+        "value": "2021"
+      },
+      {
+        "label": "Data source",
+        "value": "UNICEF statistical tables"
+      },
+      {
+        "label": "Geographic unit",
+        "value": "Country"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Comparing totals with population adjusted values",
+        "paragraphs": [
+          "I prepared the UNICEF table in Excel and joined it to Natural Earth country boundaries in ArcGIS Pro. Circle size represents stillbirths and colour represents neonatal deaths. I compared graduated circles grouped with Natural Breaks against continuously sized proportional circles.",
+          "The larger population countries are prominent in the counts. Dividing stillbirths by total population changes that balance, making some smaller countries more visible. For a reader comparing countries, the side by side views demonstrate why the denominator needs to be understood before drawing a conclusion."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "Putting the regional view in context",
+        "paragraphs": [
+          "The global dot map brings the stillbirth and population totals into one view. South Asia and parts of Africa stand out in the displayed pattern. I used a regional inset to make smaller countries easier to inspect and adjusted transparency where symbols overlapped.",
+          "The dots are randomly distributed within countries. They describe national totals spread over an area, not the locations of births or households."
+        ],
+        "figureIndices": [
+          1
+        ]
+      },
+      {
+        "title": "Limits of the comparison",
+        "paragraphs": [
+          "These are cartographic comparisons, not estimates of health risk. The adjusted panels use total population rather than births, so they do not show stillbirth or neonatal mortality rates. The population source is also expressed in thousands, and the original dot legends do not resolve the conversion. I would check the working table and correct those labels before using the numerical values in a report."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/stillbirths-neonatal-deaths-asia.jpg",
+        "alt": "Complete Asia layout comparing graduated and proportional symbols for stillbirths, neonatal deaths and population adjusted stillbirth values.",
+        "title": "Comparing symbol methods in Asia",
+        "caption": "Compare which countries draw attention in the absolute count panel and in the two population adjusted panels. The denominator is total population, so the adjusted symbols are not mortality rates."
+      },
+      {
+        "src": "assets/images/maps/full/global-stillbirths-population.jpg",
+        "alt": "Complete world dot density map comparing national stillbirth and population totals, with a Southeast Asia inset.",
+        "title": "Global dot density comparison",
+        "caption": "The dot pattern gives a global view of the national totals, with a closer view of Southeast Asia. Dots are not event locations, and the original dot values need a population unit check before numerical reuse."
+      }
+    ],
+    "sources": [
+      {
+        "label": "UNICEF, The State of the World's Children 2023 statistical tables",
+        "url": "https://data.unicef.org/resources/dataset/the-state-of-the-worlds-children-2023-statistical-tables/"
+      },
+      {
+        "label": "Natural Earth country boundaries",
+        "url": "https://www.naturalearthdata.com/"
+      }
+    ],
+    "featured": false,
+    "outcome": "India stands out in the absolute count view, while Pakistan and Afghanistan become more prominent in the population adjusted views. The comparison shows how the choice of measure changes the visual emphasis.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "tree-canopy",
+    "title": "Calgary tree canopy and planting",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I mapped canopy cover alongside tree planting to show where recorded planting activity coincided with areas of limited cover.",
+    "intro": [
+      "I brought tree canopy and planting activity into one Calgary map to examine them together. The question was whether places with limited existing cover also showed planting activity, and where the contrast might deserve a closer look. The layout covers January 2018 to April 2019."
+    ],
+    "tools": [],
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Calgary, Alberta"
+      },
+      {
+        "label": "Period shown",
+        "value": "January 2018 to April 2019"
+      },
+      {
+        "label": "Map type",
+        "value": "Choropleth and graduated symbols"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Comparing existing cover with planting",
+        "paragraphs": [
+          "I used blue and green area colours for canopy cover and warm coloured circles for the planting classes. Keeping the two variables visually separate lets a reader compare the amount of cover with the recorded activity without switching between maps.",
+          "The contrast is clearest in the large outer areas: some have low canopy cover but prominent planting symbols. A planting team could use this kind of view to identify areas for a site review, then check planting opportunities and the condition of existing trees on the ground."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "What the comparison can support",
+        "paragraphs": [
+          "Planting activity and existing canopy describe different things, so the map cannot establish that recent planting caused the cover shown. It provides an overview of where to look more closely.",
+          "The original legend also mixes neighbourhood and electoral division labels and includes an area normalization note. I would reconcile those labels with the source table before using the circles as exact planting totals."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/friends-of-greens-tree-canopy.jpg",
+        "alt": "Complete Calgary thematic map with blue and green canopy cover classes and warm coloured tree planting circles.",
+        "title": "Canopy and planting layout",
+        "caption": "Look at the larger planting symbols in several low canopy outer areas, then compare them with the greener central and southern areas. The original planting geography and normalization labels need reconciliation before exact totals are reused."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Canopy data credited to catalog.data.gov in the original layout"
+      },
+      {
+        "label": "Electoral division data credited to Open Canada in the original layout"
+      }
+    ],
+    "featured": false,
+    "outcome": "Several large outer areas fall in the lower canopy classes, and some of the largest planting symbols appear in those areas. Higher canopy classes are more visible among the smaller central and southern areas.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "flood-settlements",
+    "title": "Flood affected settlements of Chiniot",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I mapped settlements affected by the 2013 Chiniot flood so their names and positions could be understood in relation to the river.",
+    "intro": [
+      "I made this layout to give the settlements affected by the 2013 Chiniot flood a clear geographic context. Bringing the named places, district boundary and satellite image together makes the pattern easier to understand than a list of settlement names alone."
+    ],
+    "tools": [],
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Chiniot, Pakistan"
+      },
+      {
+        "label": "Event shown",
+        "value": "2013 flooding"
+      },
+      {
+        "label": "Output",
+        "value": "Settlement reference layout"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Locating the affected places",
+        "paragraphs": [
+          "I placed yellow settlement points over the image and used a red outline for the district. Numbered markers link locations to a place name index without covering the river with long labels. A Pakistan inset locates Chiniot for readers unfamiliar with the area.",
+          "The settlement pattern becomes visible along the river as it crosses the district. For a field briefing or a followup review, this type of reference could help people locate named communities and agree which places they are discussing."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "The information still needed for a response",
+        "paragraphs": [
+          "The points identify settlements, but do not measure water depth, damage or household impacts. Those would need separate evidence before the map could guide response priorities.",
+          "The original layout describes the image as a view after the flood but does not provide its acquisition date or a detailed source citation. I retain it here as an earlier settlement mapping example, with the interpretation limited to the locations and event context shown."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/flood-affected-settlements.jpg",
+        "alt": "Complete Chiniot flood map with yellow numbered settlements, a red district boundary, satellite imagery and a Pakistan location inset.",
+        "title": "Chiniot settlement map",
+        "caption": "Yellow points follow the river corridor through Chiniot, with a name index below and a national locator at the right. The points identify affected settlements in the original layout, not levels of damage."
+      }
+    ],
+    "sources": [],
+    "featured": false,
+    "outcome": "The mapped settlements largely follow the river corridor through the district. The pattern shows why the river and surrounding settlement locations need to be read together.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "red-carpet",
+    "title": "Red Carpet community map",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I mapped the Red Carpet community to show how its housing, open space and everyday services fit together.",
+    "intro": [
+      "I wanted to make the Red Carpet community readable at neighbourhood scale: where the housing is, how the local streets connect, and where bus stops, shops and open space sit around them. I combined City of Calgary open data and OpenStreetMap features in one reference layout."
+    ],
+    "tools": [],
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Red Carpet, Calgary"
+      },
+      {
+        "label": "Data",
+        "value": "City open data and OpenStreetMap"
+      },
+      {
+        "label": "Output",
+        "value": "Neighbourhood reference map"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Bringing the local features together",
+        "paragraphs": [
+          "I separated houses, apartments, retail and other buildings by colour, with green for parks and open space. Road labels and recognizable bus stop and postbox symbols make it possible to relate the land uses to particular streets.",
+          "The main view follows the community's triangular outline. I used the city inset to show its position in southeast Calgary, leaving enough space in the main map to read individual buildings."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "What the neighbourhood view reveals",
+        "paragraphs": [
+          "The rows of small houses inside the community contrast with the larger apartment footprints near its edges. Bus stops line the surrounding streets, and the mapped retail is close to 17 Avenue SE. These relationships would help a resident or someone reviewing the area orient themselves before examining a particular service or street.",
+          "The map shows where features are located. Bus stop locations alone do not establish service frequency or walking access, and building footprints do not tell us how many residents live there."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/red-carpet-community-overview.jpg",
+        "alt": "Complete reference map of Calgary's Red Carpet community showing coloured building types, roads, parks, bus stops, postboxes and a city inset.",
+        "title": "Neighbourhood overview",
+        "caption": "Pink residential footprints fill much of the interior. Purple apartment buildings and bus stop symbols are more prominent around the edges, while green areas show open space among the housing."
+      }
+    ],
+    "sources": [
+      {
+        "label": "City of Calgary Open Data Portal"
+      },
+      {
+        "label": "OpenStreetMap contributors"
+      }
+    ],
+    "featured": false,
+    "outcome": "Small residential buildings dominate the interior, while apartment buildings and the mapped bus stops are concentrated toward the southern and eastern edges. A large area of open space sits beside the residential streets.",
+    "leadFigure": 0
+  },
+  {
+    "slug": "prhps-coverage",
+    "title": "Pakistan household survey coverage",
+    "category": "cartography",
+    "kind": "map",
+    "summary": "I mapped the districts included in the Pakistan Rural Household Panel Survey so readers could place its findings geographically.",
+    "intro": [
+      "A reader of household survey results needs to know where the underlying observations came from. I made this map to show the district coverage of rounds I to III of the Pakistan Rural Household Panel Survey, or PRHPS, in the context of Pakistan as a whole."
+    ],
+    "tools": [],
+    "facts": [
+      {
+        "label": "Coverage",
+        "value": "Pakistan"
+      },
+      {
+        "label": "Survey rounds",
+        "value": "I to III"
+      },
+      {
+        "label": "Geographic unit",
+        "value": "District"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Turning a district list into a geographic view",
+        "paragraphs": [
+          "I highlighted the surveyed districts against a grey national boundary layer and added direct labels. The colours distinguish district names, while the quieter surrounding boundaries let a reader see how the selected areas are distributed.",
+          "The administrative boundaries are credited to World Food Programme data shared through OCHA's Humanitarian Data Exchange in 2024. I kept the map at district scale, with no household locations displayed."
+        ],
+        "figureIndices": []
+      },
+      {
+        "title": "How it could accompany survey results",
+        "paragraphs": [
+          "Beside a report or presentation, the map could help a reader locate an unfamiliar district and understand which parts of the country are represented in the displayed coverage. The groups in Punjab and Sindh are much easier to recognize on the map than in a list of names.",
+          "Coverage does not describe the number of sampled households, survey outcomes or statistical representativeness. Those need to be read from the survey documentation; the map supplies the geographic context."
+        ],
+        "figureIndices": []
+      }
+    ],
+    "figures": [
+      {
+        "src": "assets/images/maps/full/pakistan-prhps-coverage-map.jpg",
+        "alt": "Complete Pakistan map showing labelled districts included in rounds I to III of the Pakistan Rural Household Panel Survey against grey surrounding districts.",
+        "title": "District coverage for rounds I to III",
+        "caption": "Coloured districts show the coverage of rounds I to III against the national district network. Their colours identify names and do not rank sample size or survey outcomes."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Pakistan Rural Household Panel Survey, rounds I to III"
+      },
+      {
+        "label": "World Food Programme SDI administrative boundaries via OCHA Humanitarian Data Exchange, 2024"
+      }
+    ],
+    "featured": false,
+    "outcome": "The highlighted districts form groups across Punjab and Sindh, with Mansehra and Nowshera farther north. The national view makes the selected coverage visible alongside the districts outside it.",
+    "leadFigure": 0
+  }
+]

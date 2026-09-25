@@ -1,0 +1,242 @@
+{
+  "assets/images/logos/bahria-university.png": [
+    49,
+    26
+  ],
+  "assets/images/logos/bc-government.png": [
+    848,
+    327
+  ],
+  "assets/images/logos/franchise-ready.png": [
+    440,
+    136
+  ],
+  "assets/images/logos/greenage-services.png": [
+    200,
+    200
+  ],
+  "assets/images/logos/mer-solutions.jpeg": [
+    200,
+    200
+  ],
+  "assets/images/logos/pmas-arid.png": [
+    1243,
+    1232
+  ],
+  "assets/images/logos/ucalgary.png": [
+    400,
+    164
+  ],
+  "assets/images/profile/salman-headshot.webp": [
+    1254,
+    1254
+  ],
+  "assets/images/social/favicon.png": [
+    96,
+    96
+  ],
+  "assets/images/social/portfolio-preview.png": [
+    1200,
+    630
+  ],
+  "assets/images/maps/display/calgary-new-park-location.webp": [
+    1556,
+    2200
+  ],
+  "assets/images/maps/display/calgary-park-accessibility.webp": [
+    1980,
+    2800
+  ],
+  "assets/images/maps/display/flood-affected-settlements.webp": [
+    1981,
+    2800
+  ],
+  "assets/images/maps/display/friends-of-greens-tree-canopy.webp": [
+    1979,
+    2800
+  ],
+  "assets/images/maps/display/global-stillbirths-population.webp": [
+    2200,
+    1424
+  ],
+  "assets/images/maps/display/heathrow-global-reach.webp": [
+    2200,
+    1554
+  ],
+  "assets/images/maps/display/heathrow-north-america-tourism.webp": [
+    1978,
+    2800
+  ],
+  "assets/images/maps/display/housing-affordability-ct-2016-2021.webp": [
+    2200,
+    1555
+  ],
+  "assets/images/maps/display/housing-cost-ct-2016-2021.webp": [
+    2200,
+    1555
+  ],
+  "assets/images/maps/display/housing-cost-da-vs-ct.webp": [
+    2200,
+    1555
+  ],
+  "assets/images/maps/display/pakistan-prhps-coverage-map.webp": [
+    2200,
+    1556
+  ],
+  "assets/images/maps/display/paradise-valley-trail-run.webp": [
+    2200,
+    1556
+  ],
+  "assets/images/maps/display/red-carpet-community-overview.webp": [
+    2200,
+    1700
+  ],
+  "assets/images/maps/display/stillbirths-neonatal-deaths-asia.webp": [
+    2200,
+    1424
+  ],
+  "assets/images/maps/display/town-of-olds-reference-map.webp": [
+    2164,
+    2800
+  ],
+  "assets/images/maps/full/calgary-new-park-location.jpg": [
+    1556,
+    2200
+  ],
+  "assets/images/maps/full/calgary-park-accessibility.jpg": [
+    2481,
+    3508
+  ],
+  "assets/images/maps/full/flood-affected-settlements.jpg": [
+    2481,
+    3507
+  ],
+  "assets/images/maps/full/friends-of-greens-tree-canopy.jpg": [
+    2480,
+    3508
+  ],
+  "assets/images/maps/full/global-stillbirths-population.jpg": [
+    5100,
+    3300
+  ],
+  "assets/images/maps/full/heathrow-global-reach.jpg": [
+    9934,
+    7016
+  ],
+  "assets/images/maps/full/heathrow-north-america-tourism.jpg": [
+    7016,
+    9934
+  ],
+  "assets/images/maps/full/housing-affordability-ct-2016-2021.png": [
+    3508,
+    2480
+  ],
+  "assets/images/maps/full/housing-cost-ct-2016-2021.png": [
+    3508,
+    2480
+  ],
+  "assets/images/maps/full/housing-cost-da-vs-ct.png": [
+    3508,
+    2480
+  ],
+  "assets/images/maps/full/pakistan-prhps-coverage-map.jpg": [
+    3508,
+    2481
+  ],
+  "assets/images/maps/full/paradise-valley-trail-run.jpg": [
+    4961,
+    3508
+  ],
+  "assets/images/maps/full/red-carpet-community-overview.jpg": [
+    3300,
+    2550
+  ],
+  "assets/images/maps/full/stillbirths-neonatal-deaths-asia.jpg": [
+    5100,
+    3300
+  ],
+  "assets/images/maps/full/town-of-olds-reference-map.jpg": [
+    2550,
+    3300
+  ],
+  "assets/images/off-the-map/web/1000216467.webp": [
+    1600,
+    1200
+  ],
+  "assets/images/off-the-map/web/1000218307.webp": [
+    1000,
+    1459
+  ],
+  "assets/images/off-the-map/web/40772.webp": [
+    1600,
+    1067
+  ],
+  "assets/images/off-the-map/web/IMG_2721.webp": [
+    1157,
+    1600
+  ],
+  "assets/images/off-the-map/web/IMG_6393.webp": [
+    986,
+    1600
+  ],
+  "assets/images/off-the-map/web/IMG_9097.webp": [
+    960,
+    640
+  ],
+  "assets/images/projects/charts/geo-copilot-complexity.png": [
+    864,
+    1134
+  ],
+  "assets/images/projects/charts/geo-copilot-complexity.svg": [
+    3456,
+    4536
+  ],
+  "assets/images/projects/charts/geo-copilot-evaluation.png": [
+    864,
+    792
+  ],
+  "assets/images/projects/charts/geo-copilot-evaluation.svg": [
+    3456,
+    3168
+  ],
+  "assets/images/projects/charts/geo-copilot-response-outcomes.png": [
+    864,
+    954
+  ],
+  "assets/images/projects/charts/geo-copilot-response-outcomes.svg": [
+    3456,
+    3816
+  ],
+  "assets/images/projects/evidence/forestry-sampling-criteria.png": [
+    1116,
+    738
+  ],
+  "assets/images/projects/evidence/forestry-sampling-criteria.svg": [
+    4464,
+    2952
+  ],
+  "assets/images/projects/evidence/geo-copilot-overview.png": [
+    1152,
+    1116
+  ],
+  "assets/images/projects/evidence/geo-copilot-overview.svg": [
+    4608,
+    4464
+  ],
+  "assets/images/projects/evidence/geo-copilot-q50.png": [
+    1428,
+    1007
+  ],
+  "assets/images/projects/evidence/geo-copilot-results.png": [
+    1002,
+    735
+  ],
+  "assets/images/projects/evidence/geo-copilot-test-data.png": [
+    1430,
+    960
+  ],
+  "assets/images/projects/evidence/logistics-routing-console.webp": [
+    1918,
+    915
+  ]
+}
